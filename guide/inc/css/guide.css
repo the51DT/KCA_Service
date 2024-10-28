@@ -766,7 +766,7 @@ nav .layout-list li:first-child a {
   padding: 10px 30px;
   font-weight: bold;
   /* mix-blend-mode: exclusion; */
-  color: #999999;
+  color: #fff;
 }
 .color-type01 {
   background: #121c72;
