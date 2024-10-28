@@ -228,21 +228,6 @@ body {
   padding: 0 !important;
   box-sizing: border-box;
 }
-
-/* *::-webkit-scrollbar {
-  background-color: transparent;
-}
-
-*::-webkit-scrollbar-thumb {
-  width: 30px;
-  background: linear-gradient(transparent, #30ff00);
-  border-radius: 6px;
-  border-radius: 20px;
-}
-
-*::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(transparent, #00c6ff, transparent);
-} */
 body * {
   outline: none;
 }
