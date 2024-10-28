@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>KCA서비스 | path</title>
+  <link type="text/css" rel="stylesheet" href="./inc/css/guide.css" />
+</head>
+
+<body>
+  <div id="guideWrap">
+    <header>
+      <!-- Guide Header -->
+      <div id="guideHeader">
+        <div>
+          <h1>KCA서비스<span> : Path</span></h1>
+          <div class="total"></div>
+        </div>
+      </div>
+      <!-- //Guide Header -->
+      <div class="nav-wrap">
+        <ul class="nav">
+          <li class="nav-item nav-item1"><a class="on">Path</a></li>
+          <li class="nav-item nav-item2"><a href="setting.html">Setting</a></li>
+          <li class="nav-item nav-item3"><a href="ui-guide.html">Component</a></li>
+          <li class="nav-item nav-item4"><a href="#">Layout</a></li>
+        </ul>
+      </div>
+      <!-- Navi Menu -->
+      <div class="path-head">
+        <div class="naviMenu"></div>
+        <ul class="mark-wrap">
+          <li><span class="icon-state"></span>대기</li>
+          <li><span class="icon-state working"></span>작업중</li>
+          <li><span class="icon-state examine"></span>검수요청</li>
+          <li><span class="icon-state retouch"></span>수정</li>
+          <li><span class="icon-state comp"></span>완료</li>
+        </ul>
+      </div>
+      <!-- // Navi Menu -->
+    </header>
+    <!-- Path List -->
+    <div class="pathList">
+      <!-- Path -->
+
+      <div id="path-wrap">
+        <table class="pathTbl">
+          <caption>Path List</caption>
+          <colgroup>
+            <col width='6%' />
+            <col width='8%' />
+            <col width='8%' />
+            <col width='8%' />
+            <col width='8%' />
+            <col width='15%' />
+            <col width='7%' />
+            <col width='3%' />
+            <col width='17%' />
+          </colgroup>
+          <thead>
+            <tr>
+              <th scope="col">Depth 1</th>
+              <th scope="col">Depth 2</th>
+              <th scope="col">Depth 3</th>
+              <th scope="col">Depth 4</th>
+              <th scope="col">Depth 5</th>
+              <th scope="col">URL</th>
+              <th scope="col">Date</th>
+              <th scope="col">State</th>
+              <th scope="col">Notice</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+      </div>
+      <!-- // Path -->
+    </div>
+    <!-- // Path List -->
+
+    <!-- Footer -->
+    <!-- <div id="footer">Media4th&amp;Company</div> -->
+    <!-- // Footer -->
+  </div>
+</body>
+
+<script type="text/javascript" src="./inc/js/jquery-1.12.4.min.js"></script>
+
+<script>
+  // date:'<span>2017-04-10</span> <span>2017-04-11</span>''
+  // noti: '<li date-noti="2017-04-10">설명</li><li date-noti="2017-04-11">설명2</li>'
+  var path = [{
+      dep1: '메인',
+      dep2: '',
+      dep3: '',
+      dep4: '',
+      dep5: '',
+      url: 'main/main_001.html',
+      date: '',
+      check: "<span class='icon-state'></span>",
+      noti: ''
+    },
+    {
+      dep1: '회사소개',
+      dep2: 'KCA서비스 소개',
+      dep3: '',
+      dep4: '',
+      dep5: '',
+      url: 'INT/INT_001.html',
+      date: '',
+      check: "<span class='icon-state'></span>",
+      noti: ''
+    },
+    {
+      dep1: '회사소개',
+      dep2: '우리의 비전',
+      dep3: '',
+      dep4: '',
+      dep5: '',
+      url: 'INT/INT_002.html',
+      date: '',
+      check: "<span class='icon-state'></span>",
+      noti: ''
+    },
+    {
+      dep1: '회사소개',
+      dep2: '대표이사 인사말',
+      dep3: '',
+      dep4: '',
+      dep5: '',
+      url: 'INT/INT_003.html',
+      date: '',
+      check: "<span class='icon-state'></span>",
+      noti: ''
+    },
+    {
+      dep1: '회사소개',
+      dep2: '조직도',
+      dep3: '',
+      dep4: '',
+      dep5: '',
+      url: 'INT/INT_004.html',
+      date: '',
+      check: "<span class='icon-state'></span>",
+      noti: ''
+    },
+    {
+      dep1: '회사소개',
+      dep2: '연혁',
+      dep3: '',
+      dep4: '',
+      dep5: '',
+      url: 'INT/INT_005.html',
+      date: '',
+      check: "<span class='icon-state'></span>",
+      noti: ''
+    },
+    {
+      dep1: '회사소개',
+      dep2: 'CI 소개',
+      dep3: '',
+      dep4: '',
+      dep5: '',
+      url: 'INT/INT_006.html',
+      date: '',
+      check: "<span class='icon-state'></span>",
+      noti: ''
+    },
+    {
+      dep1: '회사소개',
+      dep2: '찾아오시는 길',
+      dep3: '',
+      dep4: '',
+      dep5: '',
+      url: 'INT/INT_007.html',
+      date: '',
+      check: "<span class='icon-state'></span>",
+      noti: ''
+    },
+    {
+      dep1: '상담업무',
+      dep2: '보험상담',
+      dep3: '',
+      dep4: '',
+      dep5: '',
+      url: 'CAL/CAL_001.html',
+      date: '',
+      check: "<span class='icon-state'></span>",
+      noti: ''
+    },
+    {
+      dep1: '상담업무',
+      dep2: '여신상담',
+      dep3: '',
+      dep4: '',
+      dep5: '',
+      url: 'CAL/CAL_002.html',
+      date: '',
+      check: "<span class='icon-state'></span>",
+      noti: ''
+    },
+    {
+      dep1: '상담업무',
+      dep2: '방카상담',
+      dep3: '',
+      dep4: '',
+      dep5: '',
+      url: 'CAL/CAL_003.html',
+      date: '',
+      check: "<span class='icon-state'></span>",
+      noti: ''
+    },
+    {
+      dep1: '상담업무',
+      dep2: '법인/퇴직연금 상담',
+      dep3: '',
+      dep4: '',
+      dep5: '',
+      url: 'CAL/CAL_004.html',
+      date: '',
+      check: "<span class='icon-state'></span>",
+      noti: ''
+    },
+    {
+      dep1: '상담업무',
+      dep2: '실버상담',
+      dep3: '',
+      dep4: '',
+      dep5: '',
+      url: 'CAL/CAL_005.html',
+      date: '',
+      check: "<span class='icon-state'></span>",
+      noti: ''
+    },
+    {
+      dep1: '상담업무',
+      dep2: '콜센터 아웃바운드 업무',
+      dep3: '',
+      dep4: '',
+      dep5: '',
+      url: 'CAL/CAL_006.html',
+      date: '',
+      check: "<span class='icon-state'></span>",
+      noti: ''
+    },
+    {
+      dep1: '상담업무',
+      dep2: '모바일 채팅/챗봇 상담',
+      dep3: '',
+      dep4: '',
+      dep5: '',
+      url: 'CAL/CAL_007.html',
+      date: '',
+      check: "<span class='icon-state'></span>",
+      noti: ''
+    },
+    {
+      dep1: '상담업무',
+      dep2: '상품 모니터링',
+      dep3: '',
+      dep4: '',
+      dep5: '',
+      url: 'CAL/CAL_008.html',
+      date: '',
+      check: "<span class='icon-state'></span>",
+      noti: ''
+    },
+    {
+      dep1: '대외사업',
+      dep2: '퇴직연금 전문상담',
+      dep3: '',
+      dep4: '',
+      dep5: '',
+      url: 'BSN/BSN_001.html',
+      date: '',
+      check: "<span class='icon-state'></span>",
+      noti: ''
+    },
+    {
+      dep1: '대외사업',
+      dep2: '상담인력 아웃소싱',
+      dep3: '',
+      dep4: '',
+      dep5: '',
+      url: 'BSN/BSN_002.html',
+      date: '',
+      check: "<span class='icon-state'></span>",
+      noti: ''
+    },
+    {
+      dep1: '대외사업',
+      dep2: '상담사 양성 교육',
+      dep3: '',
+      dep4: '',
+      dep5: '',
+      url: 'BSN/BSN_003.html',
+      date: '',
+      check: "<span class='icon-state'></span>",
+      noti: ''
+    },
+    {
+      dep1: '대외사업',
+      dep2: '리서치 서비스',
+      dep3: '',
+      dep4: '',
+      dep5: '',
+      url: 'BSN/BSN_004.html',
+      date: '',
+      check: "<span class='icon-state'></span>",
+      noti: ''
+    },
+    {
+      dep1: '대외사업',
+      dep2: '콜센터 운영대행',
+      dep3: '',
+      dep4: '',
+      dep5: '',
+      url: 'BSN/BSN_005.html',
+      date: '',
+      check: "<span class='icon-state'></span>",
+      noti: ''
+    },
+    {
+      dep1: '대외사업',
+      dep2: '콜센터 운영 컨설팅',
+      dep3: '',
+      dep4: '',
+      dep5: '',
+      url: 'BSN/BSN_006.html',
+      date: '',
+      check: "<span class='icon-state'></span>",
+      noti: ''
+    },
+    {
+      dep1: '인재채용',
+      dep2: '인재상',
+      dep3: '',
+      dep4: '',
+      dep5: '',
+      url: 'RCT/RCT_001.html',
+      date: '',
+      check: "<span class='icon-state'></span>",
+      noti: ''
+    },
+    {
+      dep1: '인재채용',
+      dep2: '인사제도',
+      dep3: '',
+      dep4: '',
+      dep5: '',
+      url: 'RCT/RCT_002.html',
+      date: '',
+      check: "<span class='icon-state'></span>",
+      noti: ''
+    },
+    {
+      dep1: '인재채용',
+      dep2: '직무소개',
+      dep3: '',
+      dep4: '',
+      dep5: '',
+      url: 'RCT/RCT_003.html',
+      date: '',
+      check: "<span class='icon-state'></span>",
+      noti: ''
+    },
+    {
+      dep1: '인재채용',
+      dep2: '채용공고',
+      dep3: '',
+      dep4: '',
+      dep5: '',
+      url: 'RCT/RCT_005.html',
+      date: '',
+      check: "<span class='icon-state'></span>",
+      noti: ''
+    },
+    {
+      dep1: '인재채용',
+      dep2: '채용공고',
+      dep3: '상세',
+      dep4: '',
+      dep5: '',
+      url: 'RCT/RCT_006.html',
+      date: '',
+      check: "<span class='icon-state'></span>",
+      noti: ''
+    },
+    {
+      dep1: '인재채용',
+      dep2: '채용 FAQ',
+      dep3: '',
+      dep4: '',
+      dep5: '',
+      url: 'RCT/RCT_007.html',
+      date: '',
+      check: "<span class='icon-state'></span>",
+      noti: ''
+    },
+    {
+      dep1: '뉴스룸',
+      dep2: '보도자료',
+      dep3: '',
+      dep4: '',
+      dep5: '',
+      url: 'NWS/NWS_001.html',
+      date: '',
+      check: "<span class='icon-state'></span>",
+      noti: ''
+    },
+    {
+      dep1: '뉴스룸',
+      dep2: '보도자료',
+      dep3: '상세',
+      dep4: '',
+      dep5: '',
+      url: 'NWS/NWS_002.html',
+      date: '',
+      check: "<span class='icon-state'></span>",
+      noti: ''
+    },
+    {
+      dep1: '뉴스룸',
+      dep2: '우리들 소식',
+      dep3: '',
+      dep4: '',
+      dep5: '',
+      url: 'NWS/NWS_003.html',
+      date: '',
+      check: "<span class='icon-state'></span>",
+      noti: ''
+    },
+    {
+      dep1: '뉴스룸',
+      dep2: '우리들 소식',
+      dep3: '상세',
+      dep4: '',
+      dep5: '',
+      url: 'NWS/NWS_004.html',
+      date: '',
+      check: "<span class='icon-state'></span>",
+      noti: ''
+    },
+    {
+      dep1: '뉴스룸',
+      dep2: '공지사항',
+      dep3: '',
+      dep4: '',
+      dep5: '',
+      url: 'NWS/NWS_005.html',
+      date: '',
+      check: "<span class='icon-state'></span>",
+      noti: ''
+    },
+    {
+      dep1: '뉴스룸',
+      dep2: '공지사항',
+      dep3: '상세',
+      dep4: '',
+      dep5: '',
+      url: 'NWS/NWS_006.html',
+      date: '',
+      check: "<span class='icon-state'></span>",
+      noti: ''
+    },
+    {
+      dep1: '공통',
+      dep2: '일반 게시판',
+      dep3: '',
+      dep4: '',
+      dep5: '',
+      url: 'CMD/CMD_001.html',
+      date: '',
+      check: "<span class='icon-state'></span>",
+      noti: ''
+    },
+    {
+      dep1: '공통',
+      dep2: '이미지 게시판',
+      dep3: '',
+      dep4: '',
+      dep5: '',
+      url: 'CMD/CMD_002.html',
+      date: '',
+      check: "<span class='icon-state'></span>",
+      noti: ''
+    },
+    {
+      dep1: '공통',
+      dep2: '게시판 상세',
+      dep3: '',
+      dep4: '',
+      dep5: '',
+      url: 'CMD/CMD_003.html',
+      date: '',
+      check: "<span class='icon-state'></span>",
+      noti: ''
+    },
+    {
+      dep1: '공통',
+      dep2: '오류',
+      dep3: '',
+      dep4: '',
+      dep5: '',
+      url: 'CMD/CMD_004.html',
+      date: '',
+      check: "<span class='icon-state'></span>",
+      noti: ''
+    },
+    {
+      dep1: '공통',
+      dep2: '점검',
+      dep3: '',
+      dep4: '',
+      dep5: '',
+      url: 'CMD/CMD_005.html',
+      date: '',
+      check: "<span class='icon-state'></span>",
+      noti: ''
+    },
+    {
+      dep1: '공통',
+      dep2: '(pop)팝업',
+      dep3: '',
+      dep4: '',
+      dep5: '',
+      url: 'CMD/CMD_006.html',
+      date: '',
+      check: "<span class='icon-state'></span>",
+      noti: ''
+    },
+    {
+      dep1: '10.유틸',
+      dep2: '(pop)로그인',
+      dep3: '',
+      dep4: '',
+      dep5: '',
+      url: 'UTL/UTL_100.html',
+      date: '',
+      check: "<span class='icon-state'></span>",
+      noti: ''
+    },
+    {
+      dep1: '10.유틸',
+      dep2: '최초 비밀번호 설정/비밀번호 변경',
+      dep3: '',
+      dep4: '',
+      dep5: '',
+      url: 'UTL/UTL_001.html',
+      date: '',
+      check: "<span class='icon-state'></span>",
+      noti: ''
+    },
+    {
+      dep1: '10.유틸',
+      dep2: '비밀번호 변경',
+      dep3: '',
+      dep4: '',
+      dep5: '',
+      url: 'UTL/UTL_00.html',
+      date: '',
+      check: "<span class='icon-state'></span>",
+      noti: ''
+    },
+    {
+      dep1: '10.유틸',
+      dep2: '보안유지서약서',
+      dep3: '',
+      dep4: '',
+      dep5: '',
+      url: 'UTL/UTL_002.html',
+      date: '',
+      check: "<span class='icon-state'></span>",
+      noti: ''
+    },
+    {
+      dep1: '10.유틸',
+      dep2: 'KCA서비스인의 직무윤리강령',
+      dep3: '',
+      dep4: '',
+      dep5: '',
+      url: 'UTL/UTL_003.html',
+      date: '',
+      check: "<span class='icon-state'></span>",
+      noti: ''
+    },
+    {
+      dep1: '10.유틸',
+      dep2: '개인정보처리방침',
+      dep3: '',
+      dep4: '',
+      dep5: '',
+      url: 'UTL/UTL_004.html',
+      date: '',
+      check: "<span class='icon-state'></span>",
+      noti: ''
+    },
+    {
+      dep1: '10.유틸',
+      dep2: '문의하기',
+      dep3: '',
+      dep4: '',
+      dep5: '',
+      url: 'UTL/UTL_200.html',
+      date: '',
+      check: "<span class='icon-state'></span>",
+      noti: ''
+    },
+    {
+      dep1: '10.유틸',
+      dep2: 'ENG',
+      dep3: '',
+      dep4: '',
+      dep5: '',
+      url: 'UTL/UTL_300.html',
+      date: '',
+      check: "<span class='icon-state'></span>",
+      noti: ''
+    },
+  ];
+
+
+  var _tablePath = "";
+
+
+  // for (var i = 0; i < arr.length; i++) {
+
+  // }
+  // document.addEventListener("DOMContentLoaded", function () {
+  // var $listTbody = document.querySelector(".list tbody");
+  var pathWrap = document.getElementById('path-wrap');
+  var pathTbody = pathWrap.querySelector('tbody')
+  path.forEach(function (e) {
+    pathTbody.innerHTML += "<tr><th class='dep1'><p class='tit'>" + e.dep1 +
+      "</p></th><td class='dep2'><p class='tit'>" + e.dep2 + "</p></td><td class='dep3'><p class='tit'>" + e
+      .dep3 + "</p></td><td class='dep4'><p class='tit'>" + e.dep4 +
+      "</p></td><td class='dep5'><p class='tit'>" + e.dep5 + "</p></td><td class='url'><span>" + e.url +
+      "</span></td><td class='date'>" + e.date + "</td><td class='check'>" + e.check +
+      "</td><td class='txt'><ul>" + e.noti + "</ul></td></tr>"
+  });
+  // });
+
+  // $('.path-wrap')
+  // pathWrap.write(_tablePath);
+</script>
+<script type="text/javascript" src="./inc/js/guideUi.js"></script>
+
+</html>
