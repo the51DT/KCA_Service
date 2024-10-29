@@ -9,6 +9,34 @@
   display: none;
 }
 
+/* root */
+:root {
+  /* 타이틀 */
+  --tit-type_xl:3.75rem;
+  --tit-type_lg:3rem;
+  --tit-type_md:2.5rem;
+  --tit-type_sm:2.25rem;
+  --tit-type_xs:2rem;
+  /* 텍스트 */
+  --size-body-xl:1.75rem;
+  --size-body-lg:1.5rem;
+  --size-body-md:1.25rem;
+  --size-body-sm:1.125rem;
+  --size-body-xs:1rem;
+  /* 캡션 */
+  --caption-type_xl:0.875rem;
+  --caption-type_lg:0.8125rem;
+  --caption-type_md:0.75rem;
+  --caption-type_sm:0.6875rem;
+  --caption-type_xs:0.625rem;
+  /* 두깨 */
+  --fw-type_eb:800;
+  --fw-type_b:700;
+  --fw-type_sb:600;
+  --fw-type_r:400;
+  --fw-type_l:300;
+}
+
 /*********
     font
   **********/
@@ -19,23 +47,23 @@
   font-weight: 600;
 }
 .tit-type_xl {
-  font-size: 5rem;
+  font-size: 3.75rem;
   line-height: 130%;
 }
 .tit-type_lg {
-  font-size: 3.5rem;
+  font-size: 3rem;
   line-height: 130%;
 }
 .tit-type_md {
-  font-size: 2rem;
+  font-size: 2.5rem;
   line-height: 130%;
 }
 .tit-type_sm {
-  font-size: 1.5rem;
+  font-size: 2.25rem;
   line-height: 130%;
 }
 .tit-type_xs {
-  font-size: 1.25rem;
+  font-size: 2rem;
   line-height: 160%;
 }
 
@@ -47,19 +75,19 @@
   font-weight: 400;
 }
 .txt-type_xl {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
 }
 .txt-type_lg {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
 }
 .txt-type_md {
-  font-size: 1rem;
+  font-size: 1.25rem;
 }
 .txt-type_sm {
-  font-size: 0.875rem;
+  font-size: 1.125rem;
 }
 .txt-type_xs {
-  font-size: 0.75rem;
+  font-size: 1rem;
 }
 
 /* caption */
@@ -70,19 +98,19 @@
   font-weight: 400;
 }
 .caption-type_xl {
-  font-size: 1.5rem;
-}
-.caption-type_lg {
-  font-size: 1.25rem;
-}
-.caption-type_md {
-  font-size: 1rem;
-}
-.caption-type_sm {
   font-size: 0.875rem;
 }
-.caption-type_xs {
+.caption-type_lg {
+  font-size: 0.8125rem;
+}
+.caption-type_md {
   font-size: 0.75rem;
+}
+.caption-type_sm {
+  font-size: 0.6875rem;
+}
+.caption-type_xs {
+  font-size: 0.625rem;
 }
 
 /* weight */
@@ -169,7 +197,7 @@ input[type="radio"]:focus + label {
   z-index: 1;
 }
 
-/* btn */
+/* 안보이는 텍스트 */
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -180,6 +208,8 @@ input[type="radio"]:focus + label {
   clip: rect(0, 0, 0, 0);
   border: 0;
 }
+
+/* 버튼 */
 .btn {
   border-radius: 4px;
   background: transparent;
