@@ -4567,9 +4567,9 @@ table {
   position: relative;
   width: 100%;
   font-family: "Pretendard", sans-serif;
-  font-size: 1.25rem;
-  font-weight: 700;
-  line-height: 1.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.6rem;
   text-align: left;
 }
 .wrap-form.label-tit-type01 label span,
@@ -4580,7 +4580,7 @@ table {
   content: " *";
   position: absolute;
   right: -0.8rem;
-  color: #e63312;
+  color: #005EE2;
 }
 
 /* 유효성 검사 문구 시작 */
@@ -4609,35 +4609,62 @@ table {
 /* 유효성 검사 문구 끝 */
 
 /* 2) 폼 인풋 텍스트,  start*/
-.wrap-form.text {
+.wrap-form-input {
   display: flex;
   flex-direction: row;
-  border-bottom: 4px solid #000;
-  padding-right: 8px;
-  column-gap: 0.625rem;
+  border: 1px solid #ccc;
+  background: #fff;
 }
-.wrap-form input[type="text"] {
+.wrap-form-input > input {
   font-family: "Pretendard", sans-serif;
-  margin-top: 8px;
   font-size: 1rem;
-  font-weight: 500;
-  line-height: 1.4rem;
-  padding: 10px 8px;
+  font-weight: 400;
+  line-height: 1.6rem;
+  padding: 1rem;
   color: #000;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  border-bottom: none;
+  border: 0;
   width: 100%;
 }
-.wrap-form input[type="text"]::placeholder {
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 140%;
-  color: #777;
+.wrap-form-input > input::placeholder {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6rem;  
+  color: #999;
   font-family: "Pretendard", sans-serif;
 }
-span.text-comment {
+.wrap-form-input > input:disabled {
+  border:1px solid #eee;
+  background: #f5f5f5;
+}
+.wrap-form-input > input[type="password"] {
+  letter-spacing: 0.1rem;
+}
+
+.wrap-form-input.password {
+  position: relative;
+}
+.wrap-form-input.password > .password-hidden {
+  width: 1.125rem;
+  height: 1.125rem;
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+}
+.wrap-form-input.password > .password-hidden::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/icon/passwd_icon.svg");
+  background-size: contain;
+}
+.wrap-form-input.password > .password-hidden.on::after {  
+  background-image: url("../images/icon/passwd_icon_off.svg");
+}
+
+
+/* span.text-comment {
   font-family: "Pretendard", sans-serif;
   font-size: 0.875rem;
   font-weight: 400;
@@ -4691,7 +4718,7 @@ p.text-num-chk {
 .clear-text .icon-close-wh {
   width: 100%;
   height: 100%;
-}
+} */
 
 /* comment-type01, comment-type02 */
 .wrap-form .wrap-form-bottom {

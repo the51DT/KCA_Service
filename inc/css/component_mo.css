@@ -1430,6 +1430,11 @@ min-width : 1024 css
     width: fit-content;
   }
 
+  .wrap-form-input > input {
+    font-size: 0.875rem;
+    line-height: 1.4rem;
+  }
+
   /* swiper */
   .swiper .swiper-button-next,
   .swiper .swiper-button-prev {
