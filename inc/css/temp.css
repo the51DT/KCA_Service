@@ -1,0 +1,146 @@
+@charset "utf-8";
+
+.INT {
+  height: auto;
+  padding: 6.25rem 0;
+}
+.INT-padding {
+  padding: 0 10rem;
+}
+.mt-10 {
+  margin-top: 10rem;
+}
+.quotation {
+  font-size: 2.25rem;
+  font-weight: 800;
+  line-height: 130%;
+}
+.split {
+  display: flex;
+  justify-content: space-between;
+}
+.split.ty2 {
+  justify-content: flex-start;
+  gap: 1.25rem;
+}
+.split.ty2 .split-left {
+  width: 40.9375rem;
+  flex-shrink: 0;
+}
+.split.ty2 .split-tit {
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 130%;
+}
+.split.ty2 .split-tit.bold {
+  font-weight: 600;
+}
+.split.ty2 .split-text {
+  font-size: 1.5rem;
+  line-height: 160%;
+}
+.split.ty2 .split-text + .split-text {
+  margin-top: 2.5rem;
+}
+
+/* 003 */
+.greetings-box {
+  position: relative;
+  width: 100%;
+  padding: 8rem 8.75rem;
+  background: linear-gradient(92deg, #5A5858 -0.07%, #474649 99.93%);
+  color: #fff;
+}
+.greetings-img {
+  position: absolute;
+  bottom: -2.55rem;
+  right: 12.87rem;
+  width: 37.8125rem;
+  height: auto;
+}
+.greetings-text {
+  font-size: 2.5rem;
+  font-weight: 300;
+  line-height: 130%;
+}
+.greetings-text.bold {
+  font-weight: 700;
+}
+.greetings-ceo {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-top: 3.75rem;
+}
+.greetings-ceo span {
+  font-size: 1.75rem;
+  font-weight: 800;
+}
+
+@media screen and (max-width: 768px) {
+  .INT {
+    padding: 3.75rem 0;
+  }
+  .INT-padding {
+    padding: 0 1.87rem;
+  }
+  .INT-padding.p-pc {
+    padding: 0;
+  }
+  .mt-10 {
+    margin-top: 3.75rem;
+  }
+  .quotation {
+    font-size: 1rem;
+    font-weight: 900;
+    line-height: 160%;
+  }
+  .split {
+    flex-direction: column;
+  }
+  .split.ty2 {
+    justify-content: flex-start;
+    gap: 2.5rem;
+  }
+  .split.ty2 .split-left {
+    width: 100%;
+    flex-shrink: 0;
+  }
+  .split.ty2 .split-tit {
+    font-size: 1.5rem;
+  }
+  .split.ty2 .split-tit.bold {
+    font-weight: 700;
+  }
+  .split.ty2 .split-text {
+    font-size: 0.875rem;
+  }
+  .split.ty2 .split-text + .split-text {
+    margin-top: 1.25rem;
+  }
+
+  /* 003 */
+  .greetings-box {
+    width: 100%;
+    height: 23.75rem;
+    padding: 3.75rem 1.87rem;
+  }
+  .greetings-img {
+    position: absolute;
+    bottom: -1.365rem;
+    right: -1.35rem;
+    width: 19.813rem;
+  }
+  .greetings-text {
+    font-size: 1.375rem;
+  }
+  .greetings-ceo {
+    display: flex;
+    gap: 0.625rem;
+    margin-top: 1.25rem;
+  }
+  .greetings-ceo span {
+    font-size: 1rem;
+    font-weight: 700;
+  }
+}
