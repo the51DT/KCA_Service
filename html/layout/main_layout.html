@@ -200,8 +200,8 @@
           </ul>
         </div>
         <div class="footer-item02">
-          <div class="select-wrap select-js">
-            <button class="select-btn"></button>
+          <div class="select-wrap">
+            <button class="select-btn select-js">관계사 사이트</button>
             <ul class="select-cont">
               <li><a herf="#">교보생명</a></li>
               <li><a herf="#">교보증권(주)</a></li>
@@ -218,8 +218,8 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <COPYRIGHT class="capy">
-          </p>
+        <address>(07291)서울시 영등포구 영등포로 96 교보생명빌딩 5층​</address>
+        <p class="copyright">COPYRIGHT©KCA서비스(주).Co., LTD. ALL RIGHTS RESERVED.</p>
       </div>
     </footer>
     <!-- // footer -->
@@ -238,6 +238,14 @@
     $(function () {
       $(".nav-wrap").mouseenter(function () {
         $(this).parents("header").addClass("on");
+
+      })
+      $(".header-wrap").mouseleave(function () {
+        $(this).removeClass("on");
+      })
+
+      $(".select-js").click(function () {
+        $(this).parent().toggleClass("on");
       })
     })
   </script>
