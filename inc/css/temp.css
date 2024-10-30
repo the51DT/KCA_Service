@@ -3,12 +3,16 @@
 .INT {
   height: auto;
   padding: 6.25rem 0;
+  color: #1A1A1A;
 }
 .INT-padding {
   padding: 0 10rem;
 }
 .mt-10 {
   margin-top: 10rem;
+}
+.mt-12-5 {
+  margin-top: 12.5rem;
 }
 .quotation {
   font-size: 2.25rem;
@@ -27,6 +31,21 @@
   width: 40.9375rem;
   flex-shrink: 0;
 }
+.split .split-right {
+  width: 65.879rem;
+  flex-shrink: 0;
+}
+.split .split-tit {
+  font-size: 3.75rem;
+  font-weight: 700;
+  line-height: 130%;
+}
+.split .split-subtit {
+  margin-top: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 160%;
+}
 .split.ty2 .split-tit {
   font-size: 3rem;
   font-weight: 300;
@@ -34,6 +53,11 @@
 }
 .split.ty2 .split-tit.bold {
   font-weight: 600;
+}
+.split .split-text {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 160%;
 }
 .split.ty2 .split-text {
   font-size: 1.5rem;
@@ -77,6 +101,107 @@
   font-weight: 800;
 }
 
+/* 006 */
+.ci-box-wrap {
+  width: 100%;
+}
+.ci-box-wrap + .ci-box-wrap {
+  margin-top: 2.5rem;
+}
+.ci-box {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 22.5rem;
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+.ci-box::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  height: 12.5rem;
+  border-left: 1px solid #ccc;
+}
+img.ci-box {
+  margin-top: 2.5rem;
+  height: auto;
+  border: none;
+}
+.ci-img {
+  width: 15rem;
+  height: 9.75rem;
+  object-fit: cover;
+}
+.ci-img:nth-child(odd) {
+  margin-right: 8.75rem;
+}
+.ci-img:nth-child(even) {
+  margin-left: 8.75rem;
+}
+.ci-text {
+  margin-top: 1.25rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 160%;
+  text-align: center;
+}
+.ci-color-wrap {
+  display: flex;
+  gap: 2.5rem;
+}
+.ci-color-area {
+  width: calc(50% - 1.25rem);
+}
+.ci-color-tit {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 160%;
+}
+.ci-color-tit + .ci-color {
+  margin-top: 2.5rem;
+}
+.ci-color::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 6.25rem;
+  margin-bottom: 2.5rem;
+}
+.ci-color.color-main::before {
+  background-color: #121C72;
+}
+.ci-color.color-sub1::before {
+  background-color: #1C4196;
+}
+.ci-color.color-sub2::before {
+  background-color: #4DAC26;
+}
+.ci-color.color-sub3::before {
+  background-color: #CCCCCC;
+}
+.ci-color + .ci-color {
+  margin-top: 5rem;
+}
+.ci-color-text {
+  display: flex;
+  gap: 2.5rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 160%;
+}
+.ci-color-text span {
+  font-weight: 700;
+}
+.ci-color-text + .ci-color-text {
+  margin-top: 0.25rem;
+}
+
 @media screen and (max-width: 768px) {
   .INT {
     padding: 3.75rem 0;
@@ -88,6 +213,9 @@
     padding: 0;
   }
   .mt-10 {
+    margin-top: 3.75rem;
+  }
+  .mt-12-5 {
     margin-top: 3.75rem;
   }
   .quotation {
@@ -106,11 +234,27 @@
     width: 100%;
     flex-shrink: 0;
   }
+  .split .split-right {
+    margin-top: 2.5rem;
+    width: 100%;
+  }
+  .split .split-tit {
+    font-size: 1.75rem;
+  }
+  .split .split-subtit {
+    margin-top: 0.75rem;
+    font-size: 1rem;
+    color: #333;
+  }
   .split.ty2 .split-tit {
     font-size: 1.5rem;
   }
   .split.ty2 .split-tit.bold {
     font-weight: 700;
+  }
+  .split .split-text {
+    font-size: 1rem;
+    letter-spacing: -0.02rem;
   }
   .split.ty2 .split-text {
     font-size: 0.875rem;
@@ -142,5 +286,60 @@
   .greetings-ceo span {
     font-size: 1rem;
     font-weight: 700;
+  }
+
+  /* 006 */
+  .ci-box {
+    height: 10rem;
+  }
+  .ci-box::after {
+    height: 5rem;
+  }
+  img.ci-box {
+    margin-top: 1.25rem;
+  }
+  .ci-img {
+    width: 6.25rem;
+    height: 4.375rem;
+  }
+  .ci-img:nth-child(odd) {
+    margin-right: 2rem;
+  }
+  .ci-img:nth-child(even) {
+    margin-left: 2rem;
+  }
+  .ci-text {
+    margin-top: 0.75rem;
+    font-size: 0.875rem;
+  }
+  .ci-color-wrap {
+    display: block;
+  }
+  .ci-color-area {
+    width: 100%;
+  }
+  .ci-color-area + .ci-color-area {
+    margin-top: 2.5rem;
+  }
+  .ci-color-tit {
+    font-size: 1.375rem;
+    font-weight: 800;
+    line-height: 125%;
+  }
+  .ci-color-tit + .ci-color {
+    margin-top: 0.75rem;
+  }
+  .ci-color::before {
+    height: 3.75rem;
+    margin-bottom: 0.75rem;
+  }
+  .ci-color + .ci-color {
+    margin-top: 2.5rem;
+  }
+  .ci-color-text {
+    font-size: 0.875rem;
+  }
+  .ci-color-text + .ci-color-text {
+    margin-top: 0.25rem;
   }
 }
