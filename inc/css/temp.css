@@ -2,11 +2,13 @@
 
 .INT {
   height: auto;
-  padding: 6.25rem 0;
+  padding-top: 6.25rem;
+  padding-bottom: 6.25rem;
   color: #1A1A1A;
 }
 .INT-padding {
-  padding: 0 10rem;
+  padding-left: 10rem;
+  padding-right: 10rem;
 }
 .mt-10 {
   margin-top: 10rem;
@@ -91,6 +93,59 @@
 }
 .tab-wrap + .tab-cont {
   margin-top: 6.25rem;
+}
+
+/* 001 */
+.int-text {
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 130%;
+}
+.int-text .bold {
+  font-weight: 700;
+}
+.int-text + .int-text {
+  margin-top: 2.5rem;
+}
+.int-text.sm {
+  font-size: 1.5rem;
+  line-height: 160%;
+}
+.int-text.center {
+  text-align: center;
+}
+.int-tit {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 130%;
+}
+.int-bg-wrap {
+  display: flex;
+  width: 100%;
+  height: 67.5rem;
+  padding: 10rem;
+  background-size: cover;
+  color: #fff;
+}
+.int-bg-wrap.bg1 {
+  justify-content: flex-end;
+  background-image: url(../images/img/INT_001_bg_01_pc.png);
+  background-position: center bottom;
+}
+.int-bg-wrap.bg1 .int-tit {
+  width: 100%;
+  max-width: 49.375rem;
+}
+.int-bg-wrap.bg2 {
+  background-image: url(../images/img/INT_001_bg_02_pc.png);
+  background-position: center bottom;
+}
+.int-bg-text {
+  flex-shrink: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  justify-content: center;
 }
 
 /* 003 */
@@ -367,10 +422,12 @@ img.ci-box {
 
 @media screen and (max-width: 768px) {
   .INT {
-    padding: 3.75rem 0;
+    padding-top: 3.75rem;
+    padding-bottom: 3.75rem;
   }
   .INT-padding {
-    padding: 0 1.87rem;
+    padding-left: 1.87rem;
+    padding-right: 1.87rem;
   }
   .INT-padding.p-pc {
     padding: 0;
@@ -447,6 +504,38 @@ img.ci-box {
   }
   .tab-wrap + .tab-cont {
     margin-top: 3.75rem;
+  }
+
+  /* 001 */
+  .int-text {
+    font-size: 1.5rem;
+    line-height: 130%;
+    letter-spacing: -0.03rem;
+  }
+  .int-text.sm {
+    font-size: 0.875rem;
+    letter-spacing: -0.0175rem;
+  }
+  .int-text.center.mo-left {
+    text-align: left;
+  }
+  .int-tit {
+    font-size: 1.625rem;
+  }
+  .int-bg-wrap {
+    height: 50.75rem;
+    padding: 6.25rem 1.87rem;
+  }
+  .int-bg-wrap.bg1 {
+    justify-content: flex-start;
+    background-image: url(../images/img/INT_001_bg_01_mo.png);
+  }
+  .int-bg-wrap.bg2 {
+    background-image: url(../images/img/INT_001_bg_02_mo.png);
+  }
+  .int-bg-text {
+    gap: 1.25rem;
+    justify-content: flex-start;
   }
 
   /* 003 */
