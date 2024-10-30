@@ -22,6 +22,7 @@
 .split {
   display: flex;
   justify-content: space-between;
+  gap: 8.44rem;
 }
 .split.ty2 {
   justify-content: flex-start;
@@ -31,9 +32,11 @@
   width: 40.9375rem;
   flex-shrink: 0;
 }
+.split .split-left {
+  flex-shrink: 0;
+}
 .split .split-right {
   width: 65.879rem;
-  flex-shrink: 0;
 }
 .split .split-tit {
   font-size: 3.75rem;
@@ -65,6 +68,29 @@
 }
 .split.ty2 .split-text + .split-text {
   margin-top: 2.5rem;
+}
+.tab-wrap {
+  width: 100%;
+  display: flex;
+}
+.tab {
+  flex-grow: 1;
+  padding: 0.88rem 2.5rem;
+  border-bottom: 1px solid #1A1A1A;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 160%;
+  text-align: center;
+  color: #666;
+}
+.tab.on {
+  border: 1px solid #1A1A1A;
+  border-bottom: none;
+  font-weight: 800;
+  color: #1A1A1A;
+}
+.tab-wrap + .tab-cont {
+  margin-top: 6.25rem;
 }
 
 /* 003 */
@@ -134,15 +160,15 @@ img.ci-box {
   border: none;
 }
 .ci-img {
-  width: 15rem;
-  height: 9.75rem;
-  object-fit: cover;
+  width: calc(50% - 26%);
+  max-width: 15rem;
+  height: auto;
 }
 .ci-img:nth-child(odd) {
-  margin-right: 8.75rem;
+  margin-right: 13.282%;
 }
 .ci-img:nth-child(even) {
-  margin-left: 8.75rem;
+  margin-left: 13.282%;
 }
 .ci-text {
   margin-top: 1.25rem;
@@ -202,6 +228,143 @@ img.ci-box {
   margin-top: 0.25rem;
 }
 
+/* 007 */
+.split .split-location {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 160%;
+}
+.split .split-location::before {
+  content: '';
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-image: url(../images/icon/icon_location.svg);
+  background-size: cover;
+}
+.map-wrap {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+.map-btn_wrap {
+  position: absolute;
+  bottom: 2.755rem;
+  right: 2.755rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+.map-plus {
+  width: 3.25rem;
+  height: 3.25rem;
+  background-image: url(../images/img/btn_map_puls.svg);
+}
+.map-minus {
+  width: 3.25rem;
+  height: 3.25rem;
+  background-image: url(../images/img/btn_map_minus.svg);
+}
+.map-wrap + .transport-wrap {
+  margin-top: 3.75rem;
+}
+.transport-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+.transport-area {
+  width: calc(50% - 3.125rem);
+}
+.transport-tit {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.88rem;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 160%;
+}
+.transport-tit.subway::before {
+  content: '';
+  width: 2rem;
+  height: 2rem;
+  background-image: url(../images/icon/icon_subway.svg);
+  background-size: cover;
+}
+.transport-tit.bus::before {
+  content: '';
+  width: 2rem;
+  height: 2rem;
+  background-image: url(../images/icon/icon_bus.svg);
+  background-size: cover;
+}
+.transport-method {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 160%;
+}
+.transport-mark {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 1.25rem;
+  background-color: #39BE08;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 160%;
+  color: #fff;
+}
+.transport-mark.purple {
+  background-color: #9700E8;
+}
+.transport-mark.blue {
+  background-color: #0022CA;
+}
+.transport-text {
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 160%;
+  color: #333;
+}
+.subway-wrap {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+.subway-wrap .transport-method {
+  width: 6.25rem;
+}
+.subway-wrap + .subway-wrap {
+  margin-top: 1.88rem;
+}
+.bus-num {
+  font-weight: 300;
+  color: #999;
+}
+.bus-wrap + .bus-wrap {
+  margin-top: 3.12rem;
+}
+.bus-wrap .transport-method {
+  margin-bottom: 1rem;
+}
+.bus-wrap .transport-text {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+.bus-wrap .transport-text + .transport-text{
+  margin-top: 0.63rem;
+}
+
 @media screen and (max-width: 768px) {
   .INT {
     padding: 3.75rem 0;
@@ -225,6 +388,7 @@ img.ci-box {
   }
   .split {
     flex-direction: column;
+    gap: 2.5rem;
   }
   .split.ty2 {
     justify-content: flex-start;
@@ -235,7 +399,6 @@ img.ci-box {
     flex-shrink: 0;
   }
   .split .split-right {
-    margin-top: 2.5rem;
     width: 100%;
   }
   .split .split-tit {
@@ -261,6 +424,29 @@ img.ci-box {
   }
   .split.ty2 .split-text + .split-text {
     margin-top: 1.25rem;
+  }
+  .tab-wrap {
+    gap: 2rem;
+    padding: 0 1.88rem;
+    border-bottom: 1px solid #E5E5E5;
+    overflow-x: auto;
+  }
+  .tab-wrap.p-pc {
+    padding: 0 1.88rem;
+  }
+  .tab {
+    flex-grow: 1;
+    flex-shrink: 0;
+    padding: 0 0 0.75rem 0;
+    border: none;
+    font-size: 0.875rem;
+  }
+  .tab.on {
+    border: none;
+    border-bottom: 2px solid #1A1A1A;
+  }
+  .tab-wrap + .tab-cont {
+    margin-top: 3.75rem;
   }
 
   /* 003 */
@@ -341,5 +527,69 @@ img.ci-box {
   }
   .ci-color-text + .ci-color-text {
     margin-top: 0.25rem;
+  }
+
+  /* 007 */
+  .split .split-location {
+    font-size: 0.875rem;
+  }
+  .split .split-location::before {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+  .map-wrap + .transport-wrap {
+    margin-top: 2.5rem;
+  }
+  .transport-wrap {
+    flex-direction: column;
+    gap: 3.75rem;
+  }
+  .transport-area {
+    width: 100%;
+  }
+  .transport-tit {
+    margin-bottom: 1.5rem;
+    font-size: 1.375rem;
+  }
+  .transport-tit.subway::before {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  .transport-tit.bus::before {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  .transport-method {
+    font-size: 0.875rem;
+  }
+  .transport-mark {
+    width: 1.25rem;
+    height: 1.25rem;
+    font-size: 0.75rem;
+    line-height: normal;
+  }
+  .transport-text {
+    font-size: 0.875rem;
+  }
+  .subway-wrap {
+    gap: 0;
+  }
+  .subway-wrap .transport-method {
+    width: 6.25rem;
+  }
+  .subway-wrap + .subway-wrap {
+    margin-top: 0.75rem;
+  }
+  .bus-wrap + .bus-wrap {
+    margin-top: 1.5rem;
+  }
+  .bus-wrap .transport-method {
+    margin-bottom: 0.5rem;
+  }
+  .bus-wrap .transport-text {
+    gap: 0.5rem;
+  }
+  .bus-wrap .transport-text + .transport-text{
+    margin-top: 0.625rem;
   }
 }
