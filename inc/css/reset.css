@@ -220,8 +220,22 @@ textarea::placeholder {
   -webkit-box-shadow: 0 0 0 1000px #fff inset;
   box-shadow: 0 0 0 1000px #fff inset;
 }
-::-webkit-scrollbar {
-  display: none;
+@media screen and (min-width: 768px) {
+  *::-webkit-scrollbar {
+    background-color: transparent;
+    width: 4px;
+    height: 4px;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background: #999;
+    border-radius: 6px;
+    border-radius: 20px;
+  }
+
+  *::-webkit-scrollbar-thumb:hover {
+    background: #aacae6;
+  }
 }
 body {
   word-break: break-all;

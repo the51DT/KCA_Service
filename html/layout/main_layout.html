@@ -24,6 +24,10 @@
             <a href="/"><img src="../../inc/images/img/img_logo_on.svg" alt="KCA서비스" /></a>
           </h1>
           <div class="sitemap-wrap">
+            <button class="mo-only nav-btn" title="메뉴 열기">
+              <span class="line"></span>
+              <span class="line"></span>
+            </button>
             <nav class="nav-wrap">
               <ul class="gnb__tab-btn-wrap">
                 <li>
@@ -119,6 +123,31 @@
     <!-- //header -->
     <!-- section -->
     <section id="container" class="content-wrap">
+      <div class="content-header">
+        <div class="content-header-cont">
+          <div class="subp-tit-area">
+            <p class="subp-txt">Introduction to KCA Service</p>
+            <h3 class="subp-tit">KCA서비스 소개</h3>
+          </div>
+          <ul class="page-map-wrap">
+            <li><a href="/">홈</a></li>
+            <li><a href="#">회사소개</a></li>
+            <li>
+              <button>KCA서비스 소개</button>
+              <ul class="page-map">
+                <li><a herf="#"></a></li>
+                <li><a herf="#"></a></li>
+                <li><a herf="#"></a></li>
+                <li><a herf="#"></a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="content-header_bg">
+          <!-- <div class="white_bg"></div> -->
+          <img src="../../inc/images/img/INT_001_img_submain.png" alt="">
+        </div>
+      </div>
       <div class="content-area">
         <!-- content-item01 -->
         <div class="content-item01">
@@ -218,8 +247,15 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <address>(07291)서울시 영등포구 영등포로 96 교보생명빌딩 5층​</address>
-        <p class="copyright">COPYRIGHT©KCA서비스(주).Co., LTD. ALL RIGHTS RESERVED.</p>
+        <ul class="footer-util">
+          <li><a href="#">개인정보처리방침</a></li>
+          <li><a href="#">찾아오시는 길</a></li>
+          <li>대표전화<a href="tel:02-2167-2500">02-2167-2500</a></li>
+        </ul>
+        <div class="footer-info">
+          <address>(07291)서울시 영등포구 영등포로 96 교보생명빌딩 5층​</address>
+          <p class="copyright">COPYRIGHT©KCA서비스(주).Co., LTD. ALL RIGHTS RESERVED.</p>
+        </div>
       </div>
     </footer>
     <!-- // footer -->
@@ -233,20 +269,15 @@
   <script type="text/javascript" src="../../inc/js/jquery-3.7.1.slim.min.js"></script>
   <script type="text/javascript" src="../../inc/js/swiper.min.js"></script>
   <!-- <script type="text/javascript" src="../../inc/js/plugins.js"></script> -->
-  <!-- <script type="text/javascript" src="../../inc/js/com-ui.js"></script> -->
+  <script type="text/javascript" src="../../inc/js/com-ui.js"></script>
   <script>
     $(function () {
-      $(".nav-wrap").mouseenter(function () {
-        $(this).parents("header").addClass("on");
-
-      })
-      $(".header-wrap").mouseleave(function () {
-        $(this).removeClass("on");
-      })
 
       $(".select-js").click(function () {
         $(this).parent().toggleClass("on");
       })
+
+
     })
   </script>
 </body>

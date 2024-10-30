@@ -158,23 +158,26 @@ body.fix {
   height: 100%;
   padding: 1.31rem 0 1.42rem;
 }
+.sitemap-wrap {
+  flex: 1;
+  max-width: 55rem;
+  transition: max-width 0.3s;
+}
 .nav-wrap {
   padding: 0 6rem;
 }
 .nav-wrap .gnb__tab-btn-wrap {
   height: 5.75rem;
   display: flex;
-  gap: 6.25rem;
   justify-content: space-between;
-  transition: gap 0.3s;
 }
-.header-wrap.on .nav-wrap .gnb__tab-btn-wrap {
-  gap: 7.5rem;
+.header-wrap.on .sitemap-wrap {
+  flex: 1;
+  max-width: 60rem;
 }
 .nav-wrap .gnb__tab-btn-wrap button {
   padding: 1.5rem 0 2.25rem;
   color: #1a1a1a;
-  mix-blend-mode: difference;
   text-align: center;
   font-size: 1.25rem;
   font-weight: 600;
@@ -213,7 +216,6 @@ body.fix {
 
 .nav-wrap .gnb__tab-btn-wrap ul li {
   white-space: nowrap;
-  font-size: min-content;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
@@ -285,9 +287,15 @@ body.fix {
   right: 0;
 }
 
+.footer-item01 {
+  width: 100%;
+  padding-right: 12rem;
+}
 .footer-item01 .footer-site_map {
   display: flex;
-  gap: 7.5rem;
+  max-width: 61.875rem;
+  width: 100%;
+  justify-content: space-between;
 }
 
 .footer-item01 .footer-site_map .footer-site_map-tit {
@@ -367,10 +375,49 @@ body.fix {
   font-weight: 400;
   line-height: 110%;
   display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+  justify-content: space-between;
 }
-
+.footer-util {
+  display: flex;
+  gap: 1.25rem;
+}
+.footer-util li {
+  color: #ccc;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 100%;
+  display: flex;
+}
+.footer-util li a {
+  color: #fff;
+  display: flex;
+}
+.footer-util li::before {
+  content: "";
+  display: block;
+  width: 0.0625rem;
+  height: 0.875rem;
+  background-color: #fff;
+  opacity: 0.4;
+  margin-right: 1.25rem;
+}
+.footer-util li:nth-child(2) a {
+  color: #ccc;
+}
+.footer-util li:first-child a {
+  font-weight: 600;
+}
+.footer-util li:last-child a {
+  margin-left: 0.75rem;
+}
+.footer-util li:first-child::before {
+  display: none;
+}
+.footer-info {
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+}
 /* 공통 */
 .select-wrap {
   position: relative;
@@ -412,4 +459,103 @@ body.fix {
 
 .select-wrap.on .select-btn::after {
   transform: rotateX(-180deg);
+}
+
+/* sub page 서브페이지 */
+.content-header {
+  position: relative;
+  height: calc(100vh - 8.5rem);
+}
+.content-header .content-header-cont {
+  position: absolute;
+  padding: 0 10rem;
+  width: 100%;
+  top: 7.5rem;
+  z-index: 1;
+}
+.content-header .subp-tit-area {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.content-header .subp-txt {
+  color: #000;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 160%;
+}
+.content-header .subp-tit {
+  color: #000;
+  font-size: 3.75rem;
+  font-weight: 800;
+  line-height: 130%;
+}
+.content-header .page-map-wrap {
+  position: absolute;
+  right: 10rem;
+  bottom: 0;
+  display: flex;
+  gap: 1.75rem;
+}
+.content-header .page-map-wrap > li {
+  display: flex;
+  align-items: center;
+}
+.content-header .page-map-wrap > li::after {
+  content: "";
+  display: block;
+  width: 0.0625rem;
+  height: 1rem;
+  background: rgba(0, 0, 0, 0.2);
+  margin-left: 1.75rem;
+}
+.content-header .page-map-wrap > li:last-child:after {
+  display: none;
+}
+.content-header .page-map-wrap a {
+  color: #000;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 160%;
+}
+.content-header .page-map-wrap button {
+  color: #000;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 160%;
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+.content-header .page-map-wrap button:after {
+  content: "";
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: url(../images/icon/sub-header_arrow.svg) no-repeat;
+  background-size: cover;
+}
+.content-header .content-header_bg {
+  position: relative;
+  height: calc(100vh - 8.5rem);
+  overflow: hidden;
+}
+/* .content-header .content-header_bg .white_bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: #fff;
+} */
+.content-header .content-header_bg img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 50%;
+  object-fit: cover;
+}
+
+.content-header + .content-area {
+  padding-top: 100vh;
 }
