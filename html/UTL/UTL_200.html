@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name=" format-detection" content="telephone=no">
+  <title>KCA서비스 - 문의하기</title>
+  <link type="text/css" rel="stylesheet" href="../../inc/css/swiper.min.css" />
+  <link type="text/css" rel="stylesheet" href="../../inc/css/common.css" />
+</head>
+
+<body>
+  <div class="skip-navigation">
+    <a href="#container">본문 바로가기</a>
+  </div>
+  <div class="wrap">
+    <!-- section -->
+    <section id="container" class="content-wrap UTL">
+      <div class="content-area">
+        <!-- content-item01 -->
+        <div class="content-item01 UTL-padding">
+          <div  class="utl-form-wrap">
+            <div class="utl-head-area">
+              <h2 class="head-tit">문의하기</h2>
+            </div>
+            <div class="utl-form-area">
+              <div class="form-list">
+                <div class="form-list-title">문의 내용</div>
+                <div class="form-list-item">
+                  <div class="form-group ty02">
+                    <div class="wrap-form label-tit">
+                      <label for="queType" class="required"><span>문의유형</span></label>
+                    </div>
+                    <div class="selectbox-wrap select-type01" id="queType">
+                        <div>
+                            <button class="selectbox-trigger selectbox-js txt-type03 fw-type03" aria-haspopup="listbox"
+                            aria-expanded="false" aria-labelledby="countrySelect">전체</button>
+                            <ul class="selectbox-options" role="listbox" id="countrySelect" aria-hidden="true"
+                            style="display: none;">
+                            <li class="moclose-btn" style="display: none;">
+                                <button type="button" class="btn btn-only-icon" title="close">
+                                <span class="visually-hidden">close</span>
+                                <span class="btn-icon24 icon-close" aria-hidden="true"></span>
+                                </button>
+                            </li>
+                            <li class="option option-click txt-type03 fw-type03 active" role="option" aria-selected="true">전체</li>
+                            <li class="option option-click txt-type03 fw-type03" role="option">사업분야</li>
+                            <li class="option option-click txt-type03 fw-type03" role="option">퇴직연금 콜센터</li>
+                            <li class="option option-click txt-type03 fw-type03" role="option">컨설팅 상담</li>
+                            <li class="option option-click txt-type03 fw-type03" role="option">리서치 요청</li>
+                            <li class="option option-click txt-type03 fw-type03" role="option">비용 문의</li>
+                            <li class="option option-click txt-type03 fw-type03" role="option">기타</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="selectbox-overlay" style="display: none;"></div>
+                  </div>
+                  <div class="form-group ty02">
+                    <div class="wrap-form label-tit">
+                      <label for="queText"><span>문의내용</span></label>
+                    </div>
+                    <div class="wrap-form textarea" id="queText">
+                      <textarea placeholder="문의하실 내용을 남겨주세요"></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="form-list">
+                <div class="form-list-title">기업 및 담당자 정보</div>
+                <div class="form-list-item">
+                  <div class="form-group ty02">
+                    <div class="wrap-form label-tit">
+                      <label for="company"><span>회사 및 부서</span></label>
+                    </div>
+                    <div class="wrap-form-input">
+                      <input type="text" value="" id="company" placeholder="소속 회사 및 담당 부서명을 입력해 주세요."/>
+                    </div>
+                  </div>
+                  <div class="form-group ty02">
+                    <div class="wrap-form label-tit">
+                      <label for="username" class="required"><span>이름</span></label>
+                    </div>
+                    <div class="wrap-form-input">
+                      <input type="text" value="" id="username" placeholder="담당자 성함을 입력해 주세요."/>
+                    </div>
+                  </div>
+                  <div class="form-group ty02">
+                    <div class="wrap-form label-tit">
+                      <label for="phone" class="required"><span>연락처</span></label>
+                    </div>
+                    <div class="wrap-form-group" id="phone">
+                      <div class="wrap-form-input tel">
+                        <input type="number" placeholder="" name="number1" />
+                      </div>
+                      <div class="wrap-form-input tel">
+                        <input type="number" placeholder="" name="number2" />
+                      </div>
+                      <div class="wrap-form-input tel">
+                        <input type="number" placeholder="" name="number3" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group ty02">
+                    <div class="wrap-form label-tit">
+                      <label for="email"><span>이메일</span></label>
+                    </div>
+                    <div class="wrap-form-input">
+                      <input type="email" placeholder="회신 받으실 이메일 주소를 입력해 주세요." />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-list">
+                <div class="form-list-title">개인정보 수집 및 이용동의</div>
+                <div class="form-list-item">
+                  <div class="box-info-wrap terms">
+                    <p class="info">
+                      문의 내용 수집과 답변을 위해 아래와 같이 귀하의 개인정보를 수집 및 이용 내용을 개인정보보호법 15조(개인정보의 수•이용) 및 통계법 33조(비밀의 보호 등)에 의거하여 안내 드리니 확인하여 주시기 바랍니다.
+                    </p>
+                    <ul class="info-list">
+                      <li>수집하는 자: (주)회사명</li>
+                      <li>개인정보 수집 및 이용 목적: 문의 답변</li>
+                      <li>수집하는 개인정보 항목: 회사 및 부서, 이름, 연락처</li>
+                      <li>개인정보 보유 및 이용 기간: 수집 일로부터 12개월</li>
+                    </ul>
+
+                    <div class="desc">※ 개인정보보호법에 의거하여 개인정보 수집 및 이용에 따른 동의를 거부할 수 있으나, 동의를 거부할 경우 문의가 접수되지 않습니다.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            
+          </div>
+          <div class="utl-btn-area">
+            <div class="btn-wrap">
+              <button type="button" class="btn btn-md-primary01"> 
+                문의접수
+              </button>
+              <!-- <button type="button" class="btn btn-md-primary01" disabled> 
+                변경하기
+              </button> -->
+              <button type="button" class="btn btn-md-outline01">
+                취소
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- //content-item01 -->
+      </div>
+    </section>
+    <!-- // section -->
+  </div>
+
+  <script type="text/javascript" src="../../inc/js/jquery-3.7.1.slim.min.js"></script>
+  <script type="text/javascript" src="../../inc/js/swiper.min.js"></script>
+  <!-- <script type="text/javascript" src="../../inc/js/plugins.js"></script> -->
+  <!-- <script type="text/javascript" src="../../inc/js/com-ui.js"></script> -->
+  <script>
+    $(function () {
+      $(".nav-wrap").mouseenter(function () {
+        $(this).parents("header").addClass("on");
+
+      })
+      $(".header-wrap").mouseleave(function () {
+        $(this).removeClass("on");
+      })
+
+      $(".select-js").click(function () {
+        $(this).parent().toggleClass("on");
+      })
+    })
+
+    
+    $(document).ready(function () {
+      $(".selectbox-js").on("click", function () {
+        $this = $(this);
+        handleSelectboxClick(event);
+      });
+      $(".option-click").on("click", function () {
+        handleOptionClick(event);
+      });
+    });
+
+    // [Start] : selectbox 컴포넌트
+    function handleSelectboxClick(event) {
+      // event.stopPropagation();
+      var $trigger = $(event.target).closest(".selectbox-trigger");
+      var $options = $trigger.siblings(".selectbox-options");
+      if ($this.parents(".dropdown-menu").length) {
+        $(".dropdown-menu").addClass("non-sticky");
+      }
+      $(".selectbox-options").not($options).hide().attr("aria-hidden", "true");
+      $(".selectbox-trigger")
+        .not($trigger)
+        .removeClass("active")
+        .attr("aria-expanded", "false");
+
+      $options.toggle().attr("aria-hidden", function (i, attr) {
+        return attr === "true" ? "false" : "true";
+      });
+
+      $trigger
+        .toggleClass("active")
+        .focus()
+        .attr("aria-expanded", function () {
+          return $(this).hasClass("active") ? "true" : "false";
+        });
+
+      if ($trigger[0].classList.contains("selectbox-left")) {
+        $options.css({ left: "0" });
+      } else {
+        $options.css({ right: "0" });
+      }
+
+      function moSelectSize() {
+        if (window.innerWidth <= 1023) {
+          if ($options.is(":visible")) {
+            $(".selectbox-options").each(function () {
+              dataBtn = $(this).find(".moclose-btn");
+              $(this).find(".moclose-btn").remove();
+              $(this).append(dataBtn);
+            });
+            $(".selectbox-options .moclose-btn").show();
+            $(".selectbox-overlay").show();
+            targetFocus = $options;
+            Nbrand.uiFocusTab({
+              selector: targetFocus,
+              type: "hold",
+            });
+            NbrandUI.focusNonout(targetFocus);
+          } else {
+            $(".selectbox-overlay").hide();
+            $(".selectbox-options .moclose-btn").hide();
+          }
+          $(".selectbox-options .moclose-btn button").click(function (event) {
+            event.stopPropagation();
+
+            if ($this.parents(".dropdown-menu").length) {
+              $(".dropdown-menu").removeClass("non-sticky");
+            }
+            $(this)
+              .closest(".selectbox-wrap>div")
+              .find(".selectbox-trigger")
+              .removeClass("active")
+              .focus(); // close 버튼 클릭 시 모든 trigger의 active가 제거
+            $(this)
+              .closest(".selectbox-wrap>div")
+              .find(".selectbox-options")
+              .attr("aria-hidden", "true");
+            $(this).closest(".selectbox-options").hide();
+            $(".selectbox-overlay").hide();
+
+            // targetFocus = $options;
+            NbrandUI.focusNonoutReset(targetFocus);
+            targetFocus.find(".ui-fctab-s").remove();
+            targetFocus.find(".ui-fctab-e").remove();
+          });
+        } else {
+          $(".selectbox-options .moclose-btn").hide();
+          $(".selectbox-overlay").hide();
+        }
+      }
+      moSelectSize();
+      $(window).resize(function () {
+        moSelectSize();
+      });
+      // .resize();
+    }
+
+    function handleOptionClick(event) {
+      event.stopPropagation();
+      if ($this.parents(".dropdown-menu").length) {
+        $(".dropdown-menu").removeClass("non-sticky");
+      }
+      var $selectboxWrap = $(event.target).closest(".selectbox-wrap");
+      var selectedText = $(event.target).text();
+      // select-type04 클래스(아이콘만 존재하는 경우의 타입)가 없는 경우에만 버튼 텍스트 변경
+      if (!$selectboxWrap.hasClass("select-type04")) {
+        $(event.target)
+          .closest(".selectbox-options")
+          .hide()
+          .attr("aria-hidden", "true")
+          .siblings(".selectbox-trigger")
+          .text(selectedText);
+      } else {
+        $(event.target)
+          .closest(".selectbox-options")
+          .hide()
+          .attr("aria-hidden", "true");
+      }
+      function moOptionSize() {
+        if (window.innerWidth <= 1023) {
+          // alert("d")
+          $(".selectbox-overlay").hide();
+          $(".selectbox-options li.moclose-btn").hide();
+          targetFocus = $(event.target);
+          NbrandUI.focusNonoutReset(targetFocus);
+          targetFocus.closest(".selectbox-options").find(".ui-fctab-s").remove();
+          targetFocus.closest(".selectbox-options").find(".ui-fctab-e").remove();
+        }
+      }
+      moOptionSize();
+      $(window).resize(function () {
+        moOptionSize();
+      });
+      $(event.target)
+        .closest(".selectbox-options")
+        .find(".option")
+        .not(event.target)
+        .removeClass("active")
+        .attr("aria-selected", "false");
+      $(event.target).addClass("active").attr("aria-selected", "true");
+      $(event.target)
+        .closest(".selectbox-wrap>div")
+        .find(".selectbox-trigger")
+        .removeClass("active")
+        .attr("aria-expanded", "false")
+    }
+    // [End] : selectbox 컴포넌트
+
+  </script>
+</body>
+
+</html>

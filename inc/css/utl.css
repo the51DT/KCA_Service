@@ -72,6 +72,9 @@
 .form-list {
   padding-bottom: 2.5rem;
 }
+.form-list .wrap-form.textarea {
+  width: 100%;
+}
 
 .form-list-title {
   font-size: 1.5rem;
@@ -86,7 +89,7 @@
   border-top: 2px solid #1a1a1a;
 }
 .form-list-item > .form-group {
-  padding: 1.25rem 1rem;
+  padding: 1.25rem 0 1.25rem 1rem;
   border-bottom: 1px solid #e5e5e5;
 }
 .form-list-item > .form-group .label-tit {
@@ -110,6 +113,13 @@
   background: #FAFAFA;
   border:1px solid #e5e5e5;
   padding: 1.875rem 2.5rem;
+}
+.box-info-wrap.terms {
+  margin: 1.25rem 0 0 0;
+  padding-left: 0;
+  padding-right: 0;
+  border: 0;
+  background: #fff;
 }
 .info-list {
   font-size: 1rem;
