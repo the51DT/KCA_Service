@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name=" format-detection" content="telephone=no">
+  <title>KCA서비스 - 로그인</title>
+  <link type="text/css" rel="stylesheet" href="../../inc/css/swiper.min.css" />
+  <link type="text/css" rel="stylesheet" href="../../inc/css/common.css" />
+</head>
+
+<body>
+  <div class="skip-navigation">
+    <a href="#container">본문 바로가기</a>
+  </div>
+  <div class="wrap">
+    <!-- section -->
+    <section id="container" class="content-wrap UTL">
+      <div class="content-area">
+        <!-- content-item01 -->
+        <div class="content-item01 UTL-padding">
+          <div class="login-wrap">
+            <div class="utl-head-area">
+              <h2 class="head-tit">로그인</h2>
+              <p class="head-desc">KCA서비스 가족을 위한 공간입니다.</p>
+            </div> <!-- //login-head-area -->
+            <div class="login-box-area">
+              <form action="#" method="post">
+                <div class="form-group ty01">
+                  <div class="wrap-form label-tit">
+                    <label for="usernum">
+                      <span>사원번호</span>
+                    </label>
+                  </div>
+                  <div class="wrap-form-input">
+                    <input type="text" placeholder="사원번호" id="usernum"/>
+                  </div>
+                </div>
+                <div class="form-group ty01">
+                  <div class="wrap-form label-tit">
+                    <label for="userpswd">
+                      <span>비밀번호</span>
+                    </label>
+                  </div>
+                  <div class="wrap-form-input password">
+                    <input type="password" placeholder="비밀번호" id="userpswd" />
+                    <button type="button" class="password-hidden" title="비밀번호 표시"><span class="visually-hidden">비밀번호 표시</span></button> <!-- paswword-hidden on 클래스 추가시, 비밀번호 숨김 아이콘 노출 -->
+                  </div>
+                </div>
+                <div class="wrap-form">
+                  <div class="wrap-check">
+                    <div class="checkbox">
+                      <input type="checkbox" id="checkbox-1" name="checkbox-1" checked>
+                      <label for="checkbox-1" class="checkbox-label"><span class="txt">사원번호 저장하기</span></label>
+                    </div>
+                  </div>
+                </div>
+                <div class="login-btn-wrap">
+                  <div class="btn-wrap">
+                    <button type="submit" class="btn btn-lg-primary01">
+                      로그인
+                    </button>
+                  </div>
+                </div>
+              </form>
+              <div class="sub-btn-wrap">
+                <div class="btn-wrap">
+                  <a href="#" class="txt-btn md-txt-btn01">비밀번호 변경</a>
+                </div>
+              </div>
+            </div> <!-- //login-box-area -->
+          </div>
+        </div>
+        <!-- //content-item01 -->
+      </div>
+    </section>
+    <!-- // section -->
+  </div>
+
+  <script type="text/javascript" src="../../inc/js/jquery-3.7.1.slim.min.js"></script>
+  <script type="text/javascript" src="../../inc/js/swiper.min.js"></script>
+  <!-- <script type="text/javascript" src="../../inc/js/plugins.js"></script> -->
+  <!-- <script type="text/javascript" src="../../inc/js/com-ui.js"></script> -->
+  <script>
+    $(function () {
+      $(".nav-wrap").mouseenter(function () {
+        $(this).parents("header").addClass("on");
+
+      })
+      $(".header-wrap").mouseleave(function () {
+        $(this).removeClass("on");
+      })
+
+      $(".select-js").click(function () {
+        $(this).parent().toggleClass("on");
+      })
+    })
+  </script>
+</body>
+
+</html>

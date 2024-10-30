@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name=" format-detection" content="telephone=no">
+  <title>KCA서비스 - 비밀번호 변경</title>
+  <link type="text/css" rel="stylesheet" href="../../inc/css/swiper.min.css" />
+  <link type="text/css" rel="stylesheet" href="../../inc/css/common.css" />
+</head>
+
+<body>
+  <div class="skip-navigation">
+    <a href="#container">본문 바로가기</a>
+  </div>
+  <div class="wrap">
+    <!-- section -->
+    <section id="container" class="content-wrap UTL">
+      <div class="content-area">
+        <!-- content-item01 -->
+        <div class="content-item01 UTL-padding">
+          <div  class="utl-form-wrap">
+            <div class="utl-head-area">
+              <h2 class="head-tit">비밀번호 변경</h2>
+            </div>
+            <div class="utl-form-area">
+              <div class="form-list">
+                <div class="form-list-title">사원 정보</div>
+                <div class="form-list-item">
+                  <div class="form-group ty02">
+                    <div class="wrap-form label-tit">
+                      <label for="usernum"><span>사원번호</span></label>
+                    </div>
+                    <div class="wrap-form-input">
+                      <input type="text" value="9000012" id="usernum" disabled/>
+                    </div>
+                  </div>
+                  <div class="form-group ty02">
+                    <div class="wrap-form label-tit">
+                      <label for="username"><span>이름</span></label>
+                    </div>
+                    <div class="wrap-form-input">
+                      <input type="text" value="이온유" id="username" disabled/>
+                    </div>
+                  </div>
+                  <div class="form-group ty02">
+                    <div class="wrap-form label-tit">
+                      <label for="userbirth"><span>생년월일8자리</span></label>
+                    </div>
+                    <div class="wrap-form-input">
+                      <input type="text" value="19800120" id="userbirth" disabled/>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="form-list">
+                <div class="form-list-title">비밀번호 변경</div>
+                <div class="form-list-item">
+                  <div class="form-group ty02">
+                    <div class="wrap-form label-tit">
+                      <label for="userpswd01"><span>현재 비밀번호 입력</span></label>
+                    </div>
+                    <div class="wrap-form-input password">
+                      <input type="password" placeholder="현재 비밀번호 입력" id="userpswd01" />
+                    </div>
+                  </div>
+                  <div class="form-group ty02">
+                    <div class="wrap-form label-tit">
+                      <label for="userpswd02"><span>새 비밀번호 입력</span></label>
+                    </div>
+                    <div class="form-group ty01">
+                      <div class="wrap-form-input password">
+                        <input type="password" placeholder="새 비밀번호 입력" id="userpswd02" />
+                      </div>
+                      <p class="form-desc">숫자, 영문, 특수문자 조합으로 10~16자리로 구성할 수 있습니다.</p>
+                    </div>
+                  </div>
+                  <div class="form-group ty02">
+                    <div class="wrap-form label-tit">
+                      <label for="userpswd03"><span>비밀번호 확인</span></label>
+                    </div>
+                    <div class="wrap-form-input password">
+                      <input type="password" placeholder="비밀번호 확인" id="userpswd03" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="box-info-wrap">
+              <ul class="info-list">
+                <li>* 비밀번호를 변경하시면 그룹웨어와 MIS 모두 변경됩니다.</li>
+                <li>* 비밀번호변경 후 그룹웨어 신규 사용자는 1시간 이후부터 사용이 가능하며, MIS는 바로 사용가능합니다.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="utl-btn-area">
+            <div class="btn-wrap">
+              <button type="button" class="btn btn-md-primary01" disabled> <!-- disabled 상태일 경우 disabled 추가 -->
+                변경하기
+              </button>
+              <button type="button" class="btn btn-md-outline01">
+                취소
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- //content-item01 -->
+      </div>
+    </section>
+    <!-- // section -->
+  </div>
+
+  <script type="text/javascript" src="../../inc/js/jquery-3.7.1.slim.min.js"></script>
+  <script type="text/javascript" src="../../inc/js/swiper.min.js"></script>
+  <!-- <script type="text/javascript" src="../../inc/js/plugins.js"></script> -->
+  <!-- <script type="text/javascript" src="../../inc/js/com-ui.js"></script> -->
+  <script>
+    $(function () {
+      $(".nav-wrap").mouseenter(function () {
+        $(this).parents("header").addClass("on");
+
+      })
+      $(".header-wrap").mouseleave(function () {
+        $(this).removeClass("on");
+      })
+
+      $(".select-js").click(function () {
+        $(this).parent().toggleClass("on");
+      })
+    })
+  </script>
+</body>
+
+</html>

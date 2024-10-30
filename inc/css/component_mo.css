@@ -79,9 +79,9 @@ min-width : 1024 css
     btn 
   *********/
   [class*="btn-lg"] {
-    padding: 17px 20px;
-    font-size: 16px;
-    line-height: 16px;
+    padding: 1.125rem 1.25rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
   [class*="lg-txt-btn"] {
     font-size: 16px;
@@ -92,7 +92,7 @@ min-width : 1024 css
     line-height: 28px;
   }
   [class*="btn-md"] {
-    padding: 12px 16px;
+    padding: 1rem 1rem;
     font-size: 14px;
     line-height: 14px;
   }
@@ -1410,13 +1410,27 @@ min-width : 1024 css
     background-color: #000;
   }
 
+  /* textarea */
+.wrap-form textarea {
+  padding: 1rem 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.4rem;
+  height: 15rem;
+}
+.wrap-form textarea::placeholder {
+  font-size: 0.875rem;
+  line-height: 1.4rem;
+  height: 15rem;
+}
+
   /* form elements */
   .wrap-form label {
-    font-size: 1.125rem;
+    font-size: 0.875rem;
+    font-weight: 700;
   }
-  .wrap-form.label-tit-type01 label,
-  .wrap-form.label-tit-type02 label {
-    font-size: 1.125rem;
+  .wrap-form.label-tit label {
+    font-size: 0.875rem;
+    font-weight: 700;
   }
   .wrap-form .wrap-form-bottom.comment-type02 {
     display: grid;
@@ -1431,6 +1445,22 @@ min-width : 1024 css
   }
 
   .wrap-form-input > input {
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.4rem;
+    padding: 1rem 0.5rem;
+  }
+
+  .wrap-form-input > input::placeholder {
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.4rem;
+  }
+
+
+  /* radio checkbox */
+  .checkbox label.checkbox-label span.txt, 
+  .radio label.radio-label span.txt {
     font-size: 0.875rem;
     line-height: 1.4rem;
   }
@@ -1640,6 +1670,7 @@ min-width : 1024 css
   }
   .selectbox-trigger {
     width: 100%;
+    min-width: revert;
   }
   .selectbox-options {
     position: fixed;
