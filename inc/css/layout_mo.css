@@ -137,6 +137,7 @@
   }
   /* 푸터 footer */
   .footer-wrap {
+    margin-top: 7.5rem;
     padding: 2.5rem 1.88rem 7.5rem;
     position: relative;
   }
@@ -392,5 +393,9 @@
     position: relative;
     top: 50%;
     object-fit: cover;
+  }
+
+  .content-header + .content-area {
+    padding-top: calc(100vh + 3.75rem);
   }
 }
