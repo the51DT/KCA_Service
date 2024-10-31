@@ -1,5 +1,8 @@
 @charset "utf-8";
 
+.mb-0 {
+  margin-bottom: 0 !important;
+}
 .pb-0 {
   padding-bottom: 0 !important;
 }
@@ -30,6 +33,7 @@
   line-height: 3.25rem;
   margin-bottom: 0.75rem;
   letter-spacing: -0.5px;
+  text-align: center;
 }
 .utl-head-area .head-desc {
   color: #333;
@@ -181,7 +185,131 @@
   gap: 0.625rem;
 }
 
+/* sign 폼 */
+.sign-form-list-wrap {
+  margin-bottom: 2.5rem;
+}
+.sign-form-area .sign-form-list:not(:last-child) {
+  padding-bottom: 3.25rem;
+}
+.sign-form-area .sign-form-list.ty02:not(:last-child) {
+  padding-bottom: 2.5rem; 
+}
+.sign-form-area .box-info-wrap {
+  padding: 1.5rem;
+  margin-bottom: 2.5rem;
+  border: 0;
+}
+.sign-form-list .sign-desc {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 2.4rem;
+  padding-bottom: 1.5rem;
+}
+.sign-form-list .sign-desc strong {
+  font-weight: 700;
+}
+.sign-form-list .sign-desc .name {
+  position: relative;
+  padding: 0 1.25rem;
+}
+.sign-form-list .sign-desc .name::after {
+  content: '';
+  display: inline-block;
+  width: 102px;
+  height: 2px;
+  background: #1a1a1a;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.sign-form-list .sign-check-wrap .wrap-form {
+  justify-content: flex-end;
+  flex-direction: row;
+}
+.sign-form-info-wrap {
+  font-size: 1.5rem;
+  line-height: 2.4rem;
+}
+.sign-form-info-wrap .date {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+  font-weight: 700;  
+}
+.sign-form-info-wrap .date em {
+  padding: 0 4px 0 16px;
+}
+.sign-form-info-wrap .info {
+  font-weight: 400;
+}
+.sign-form-info-wrap .info [class^="info-txt"]:not(:last-child) {
+  padding-bottom: 2.5rem;
+}
+.sign-form-info-wrap [class^="info-txt"] {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.sign-form-info-wrap [class^="info-txt"] .form-group:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+.sign-form-info-wrap [class^="info-txt"] p:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+.sign-form-info-wrap [class^="info-txt"][class*="right"] {
+  align-items: flex-end;
+}
+.sign-form-info-wrap [class^="info-txt"][class*="center"] {
+  align-items: center;
+}
+.terms-contents {
+  font-size: 1.5rem;
+  line-height: 2.4rem;
+  letter-spacing: -0.5px;
+}
+.terms-contents .terms-title {
+  font-weight: 700;  
+  margin-bottom: 0.5rem;
+}
+.terms-contents .terms-desc {
+  font-weight: 400;
+}
+.terms-group .terms-list:not(:last-child) {
+  margin-bottom: 1rem;
+}
+.terms-group.ty02 .terms-list:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+.terms-group .terms-list .terms-list-sub {
+  padding: 0.5rem 0 0 2.25rem;
+}
+.terms-agree-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.terms-agree-wrap .desc {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 2.4rem;
+  letter-spacing: -0.5px;
+}
 
+/* 임시 레이아웃 깨짐 방지 미디어쿼리 적용 */ 
+@media screen and (min-width: 769px) and (max-width: 1360px) {
+  .UTL-padding {
+    padding: 6.25rem 5rem;
+  } 
+  .terms-agree-wrap {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  .terms-agree-wrap .terms-check-wrap {
+    align-self: flex-end;
+  }
+}
 
 @media screen and (max-width: 768px) {
   .UTL-padding {
@@ -221,7 +349,8 @@
   .utl-form-wrap .utl-head-area {
     margin-bottom: 2.5rem;
   }
-  .utl-form-wrap .utl-form-area {
+  .utl-form-wrap .utl-form-area,
+  .utl-form-wrap .sign-form-area {
     padding: 0 0.5rem;
   }
   .utl-form-wrap .box-info-wrap {
@@ -292,5 +421,77 @@
   }
   .utl-btn-area .btn-wrap .btn {
     width: 100%;
+  }
+
+  /* sign 폼 */
+  .sign-form-area .sign-form-list:not(:last-child) {
+    padding-bottom: 2.5rem;
+  }
+  .sign-form-area .sign-form-list.ty02:not(:last-child) {
+    padding-bottom: 1.5rem;
+  }
+  .sign-form-area .box-info-wrap {
+    margin: 0 0 2.5rem;
+  }
+  .sign-form-list .sign-desc {
+    font-size: 1rem;
+    line-height: 1.6rem;
+    padding-bottom: 0.75rem;
+  }
+  .sign-form-list .sign-desc .name {
+    padding: 0 0.625rem;
+  }
+  .sign-form-list .sign-desc .name::after {
+    width: 62px;
+  }
+  .sign-form-list .sign-check-wrap .wrap-form {
+    justify-content: flex-end;
+    flex-direction: row;
+  }
+  .sign-form-info-wrap {
+    font-size: 1rem;
+    line-height: 1.6rem;
+  }
+  .sign-form-info-wrap .date em {
+    padding: 0 2px 0 10px;
+  }
+  .sign-form-info-wrap [class^="info-txt"] p:not(:last-child) {
+    margin-bottom: 0.25rem;
+  }
+
+  .sign-form-info-wrap .info.ty02 [class^="info-txt"] {
+    display: block;
+  }
+  .sign-form-info-wrap .info.ty02 [class^="info-txt"] .form-group {
+    display: block;
+  }
+  .sign-form-info-wrap .info.ty02 [class^="info-txt"] .form-group .label-tit{
+    margin-bottom: 0.5rem;
+  }
+  .sign-form-info-wrap .info.ty02 [class^="info-txt"] .form-group:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+  .sign-form-info-wrap .info.ty02 [class^="info-txt"][class*="center"] {
+    text-align: center;
+  }
+
+  .terms-contents {
+    font-size: 1rem;
+    line-height: 1.6rem;
+  }
+  .terms-group .terms-list .terms-list-sub {
+    padding: 0.25rem 0 0 1.125rem;
+  }
+  .terms-agree-wrap {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  .terms-agree-wrap .desc {
+    font-size: 1rem;
+    line-height: 1.6rem;
+  }
+  .terms-agree-wrap .terms-check-wrap {
+    align-self: flex-end;
   }
 }
