@@ -52,7 +52,7 @@ var KcaUI = {
   },
 
   windowSize: function () {
-    return $win_W >= 1440 ? false : true;
+    return $win_W >= 1360 ? false : true;
   },
   windowSize02: function () {
     return $win_W >= 1024 ? false : true;
