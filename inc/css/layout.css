@@ -102,7 +102,9 @@ body.fix {
 
 .header-cont {
   width: 100%;
-  padding: 0 10rem 0 10rem;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 2.5rem 0 2.5rem;
   display: flex;
   position: relative;
   z-index: 1;
@@ -268,14 +270,16 @@ body.fix {
 /* 푸터 footer */
 .footer-wrap {
   width: 100%;
-  margin-top: 6.25rem;
-  padding: 5rem 10rem 3.75rem 10rem;
+  margin: 6.25rem auto 0;
+  padding: 5rem 2.5rem 3.75rem 2.5rem;
   background: #000;
 }
 .footer-area {
   position: relative;
+  margin: 0 auto;
   display: flex;
   width: 100%;
+  max-width: 1600px;
   flex-direction: column;
   align-items: flex-start;
   gap: 2.5rem;
@@ -367,8 +371,10 @@ body.fix {
 }
 
 .footer-bottom {
-  padding-top: 2.5rem;
-  margin-top: 2.5rem;
+  width: 100%;
+  max-width: 1600px;
+  padding: 2.5rem 0 0;
+  margin: 2.5rem auto 0;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   text-align: right;
   color: #ccc;
@@ -469,9 +475,12 @@ body.fix {
 }
 .content-header .content-header-cont {
   position: absolute;
-  padding: 0 10rem;
+  padding: 0 2.5rem;
   width: 100%;
-  top: 7.5rem;
+  max-width: 1600px;
+  left: 50%;
+  top: 25%;
+  transform: translate(-50%, -50%);
   z-index: 1;
 }
 .content-header .subp-tit-area {
@@ -484,16 +493,24 @@ body.fix {
   font-size: 1.25rem;
   font-weight: 700;
   line-height: 160%;
+  transition: color 0.3s;
+}
+.content-header .subp-txt.on {
+  color: #fff;
 }
 .content-header .subp-tit {
   color: #000;
   font-size: 3.75rem;
   font-weight: 800;
   line-height: 130%;
+  transition: color 0.3s;
+}
+.content-header .subp-tit.on {
+  color: #fff;
 }
 .content-header .page-map-wrap {
   position: absolute;
-  right: 10rem;
+  right: 2.5rem;
   bottom: 0;
   display: flex;
   gap: 1.75rem;
@@ -509,6 +526,10 @@ body.fix {
   height: 1rem;
   background: rgba(0, 0, 0, 0.2);
   margin-left: 1.75rem;
+  transition: background 0.3s;
+}
+.content-header .page-map-wrap.on > li::after {
+  background: rgba(255, 255, 255, 0.6);
 }
 .content-header .page-map-wrap > li:last-child:after {
   display: none;
@@ -518,6 +539,7 @@ body.fix {
   font-size: 1.25rem;
   font-weight: 400;
   line-height: 160%;
+  transition: color 0.3s;
 }
 .content-header .page-map-wrap button {
   color: #000;
@@ -527,6 +549,13 @@ body.fix {
   display: flex;
   gap: 0.75rem;
   align-items: center;
+  transition: color 0.3s;
+}
+.content-header .page-map-wrap.on a {
+  color: rgba(255, 255, 255, 0.6);
+}
+.content-header .page-map-wrap.on button {
+  color: #fff;
 }
 .content-header .page-map-wrap button:after {
   content: "";
@@ -536,10 +565,13 @@ body.fix {
   background: url(../images/icon/sub-header_arrow.svg) no-repeat;
   background-size: cover;
 }
+.content-header .page-map-wrap.on button:after {
+  background: url(../images/icon/sub-header_arrow-w.svg) no-repeat;
+}
 .content-header .content-header_bg {
   position: relative;
   height: calc(100vh - 8.5rem);
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 /* .content-header .content-header_bg .white_bg {
   position: absolute;
