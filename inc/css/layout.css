@@ -268,6 +268,7 @@ body.fix {
 /* 푸터 footer */
 .footer-wrap {
   width: 100%;
+  margin-top: 6.25rem;
   padding: 5rem 10rem 3.75rem 10rem;
   background: #000;
 }
@@ -557,5 +558,5 @@ body.fix {
 }
 
 .content-header + .content-area {
-  padding-top: 100vh;
+  padding-top: calc(100vh + 6.25rem);
 }

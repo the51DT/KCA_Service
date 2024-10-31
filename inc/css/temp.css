@@ -6,6 +6,15 @@
   padding-bottom: 6.25rem;
   color: #1A1A1A;
 }
+.INT.content-item01 {
+  padding-top: 0;
+}
+.INT.content-area {
+  padding-bottom: 0;
+}
+[class*="content-item"]:last-child.INT {
+  padding-bottom: 0;
+}
 .INT-padding {
   padding-left: 10rem;
   padding-right: 10rem;

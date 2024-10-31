@@ -122,8 +122,34 @@
 
     <!-- //header -->
     <!-- section -->
-    <section id="container" class="content-wrap INT">
-      <div class="content-area">
+    <section id="container" class="content-wrap">
+      <div class="content-header">
+        <div class="content-header-cont">
+          <div class="subp-tit-area">
+            <p class="subp-txt">Greetings from the CEO</p>
+            <h3 class="subp-tit">대표이사 인사말​</h3>
+          </div>
+          <ul class="page-map-wrap">
+            <li><a href="/">홈</a></li>
+            <li><a href="#">회사소개</a></li>
+            <li>
+              <button>대표이사 인사말​</button>
+              <ul class="page-map">
+                <li><a herf="#"></a></li>
+                <li><a herf="#"></a></li>
+                <li><a herf="#"></a></li>
+                <li><a herf="#"></a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="content-header_bg">
+          <!-- <div class="white_bg"></div> -->
+          <img src="../../inc/images/img/INT_003_img_submain.png" alt="">
+        </div>
+      </div>
+
+      <div class="content-area INT">
         <!-- content-item01 -->
         <div class="content-item01 INT-padding">
           <div class="split ty2">
@@ -280,21 +306,9 @@
   <script type="text/javascript" src="../../inc/js/jquery-3.7.1.slim.min.js"></script>
   <script type="text/javascript" src="../../inc/js/swiper.min.js"></script>
   <!-- <script type="text/javascript" src="../../inc/js/plugins.js"></script> -->
-  <!-- <script type="text/javascript" src="../../inc/js/com-ui.js"></script> -->
+  <script type="text/javascript" src="../../inc/js/com-ui.js"></script>
   <script>
-    $(function () {
-      $(".nav-wrap").mouseenter(function () {
-        $(this).parents("header").addClass("on");
 
-      })
-      $(".header-wrap").mouseleave(function () {
-        $(this).removeClass("on");
-      })
-
-      $(".select-js").click(function () {
-        $(this).parent().toggleClass("on");
-      })
-    })
   </script>
 </body>
 
