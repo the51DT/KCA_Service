@@ -118,6 +118,20 @@
   letter-spacing: -0.28px;
   margin-top: 0.25rem;
 }
+.form-list-item > .form-group > .form-group {
+  width: 100%;
+}
+.form-list-item > .form-group > .wrap-form-group {
+  max-width: 520px;
+}
+.form-list-item > .form-group > .selectbox-wrap {
+  width: 100%;
+  max-width: 520px;
+}
+.form-list-item > .form-group > .selectbox-wrap div,
+.form-list-item > .form-group > .selectbox-wrap button {
+  width: 100%;
+}
 .form-list-item > .terms-check-wrap {
   display: flex;
   justify-content: flex-end;
@@ -297,9 +311,9 @@
 }
 
 /* 임시 레이아웃 깨짐 방지 미디어쿼리 적용 */ 
-@media screen and (min-width: 769px) and (max-width: 1360px) {
+@media screen and (max-width: 1360px) {
   .UTL-padding {
-    padding: 6.25rem 5rem;
+    padding: 6.25rem 2.5rem;
   } 
   .terms-agree-wrap {
     flex-direction: column;
@@ -311,9 +325,9 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .UTL-padding {
-    padding: 3.75rem 1.375rem 1.25rem;
+    padding: 3.75rem 1.88rem 1.25rem;
   }
   .login-wrap {
     padding: 0;
@@ -373,6 +387,12 @@
   }
   .form-list-item > .form-group .wrap-form-input {
     max-width: revert;
+  }
+  .form-list-item > .form-group > .wrap-form-group {
+    max-width: 100%;
+  }
+  .form-list-item > .form-group > .selectbox-wrap {
+    max-width: 100%;
   }
   .form-list-item > .form-group .form-desc {
     font-size: 0.75rem;

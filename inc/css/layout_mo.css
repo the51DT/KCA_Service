@@ -401,6 +401,10 @@
   .content-header + .content-area {
     padding-top: calc(100vh + 3.75rem);
   }
+
+  .footer-wrap.footer-no-mt-mo {
+    margin-top: 0;
+  }
 }
 @media screen and (max-width: 768px) {
 }

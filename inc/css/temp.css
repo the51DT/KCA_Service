@@ -17,10 +17,13 @@
 }
 .item-horiz {
   width: 100%;
-  max-width: 104rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  max-width: 105rem;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
   margin: 0 auto;
+}
+.mt-2-5 {
+  margin-top: 2.5rem;
 }
 .mt-10 {
   margin-top: 10rem;
@@ -31,6 +34,11 @@
 .quotation {
   font-size: 2.25rem;
   font-weight: 800;
+  line-height: 130%;
+}
+.cont-tit {
+  font-size: 3.75rem;
+  font-weight: 700;
   line-height: 130%;
 }
 .split {
@@ -192,6 +200,193 @@
 .greetings-ceo span {
   font-size: 1.75rem;
   font-weight: 800;
+}
+
+/* 004 */
+.org-wrap {
+  position: relative;
+  background-color: #FAFAFA;
+  padding: 6.25rem 1.25rem;
+}
+.org-caption {
+  position: absolute;
+  top: 3.75rem;
+  right: 3.75rem;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 160%;
+  color: #666666;
+}
+.org-area {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 77.5rem;
+}
+.org-council {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 5rem;
+  background-color: #fff;
+  box-shadow: 4px 4px 12px 0px rgba(0, 0, 0, 0.10);
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 160%;
+  color: #121C72;
+}
+.org-ceo {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3.13rem;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 5rem;
+  background-color: #121C72;
+  box-shadow: 4px 4px 12px 0px rgba(0, 0, 0, 0.10);
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 160%;
+  color: #fff;
+}
+.org-ceo::before {
+  content: '';
+  position: absolute;
+  top: -0.62rem;
+  left: 50%;
+  transform: translateY(-100%);
+  height: 1.875rem;
+  border-left: 2px solid #EBEBEB;
+}
+.org-etc {
+  position: absolute;
+  top: 21.69rem;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.88rem;
+  margin-left: 16.87rem;
+  width: 21.25rem;
+  padding: 1.5rem 1.75rem;
+  background-color: #fff;
+  box-shadow: 4px 4px 12px 0px rgba(0, 0, 0, 0.10);
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 160%;
+  color: #333;
+}
+.org-etc::before {
+  content: '';
+  position: absolute;
+  left: -1.25rem;
+  top: 50%;
+  transform: translateX(-100%);
+  width: 15.625rem;
+  border-bottom: 2px solid #EBEBEB;
+}
+.org-team-area {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-top: 15rem;
+  width: 100%;
+}
+.org-team-area::before {
+  content: '';
+  position: absolute;
+  top: -1.25rem;
+  left: 50%;
+  transform: translateY(-100%);
+  height: 12.5rem;
+  border-left: 2px solid #EBEBEB;
+}
+.org-team-area::after {
+  content: '';
+  position: absolute;
+  top: -1.25rem;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  width: 55rem;
+  height: 2.5rem;
+  border: 2px solid #EBEBEB;
+  border-bottom: 0;
+}
+.org-team {
+  position: relative;
+  width: 100%;
+  max-width: 22.5rem;
+}
+.org-major {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.5rem 1.75rem;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 4px 4px 12px 0px rgba(0, 0, 0, 0.15);
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 160%;
+  color: #121C72;
+}
+.org-major img {
+  width: 3.75rem;
+}
+.org-sub {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+  margin-top: 9.5rem;
+  padding: 1.5rem 0;
+  width: 100%;
+  border: 2px solid #EBEBEB;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 160%;
+  color: #333;
+}
+.org-sub::before {
+  content: '';
+  position: absolute;
+  top: -1.25rem;
+  left: 50%;
+  transform: translateY(-100%);
+  height: 7rem;
+  border-left: 2px solid #EBEBEB;
+}
+.org-part {
+  position: absolute;
+  top: 12rem;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.88rem;
+  margin-left: 4.94rem;
+  width: 100%;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 160%;
+  color: #333;
+}
+.org-part::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -1.25rem;
+  transform: translate(-100%, -50%);
+  width: 3.6875rem;
+  border-bottom: 2px solid #EBEBEB;
 }
 
 /* 006 */
@@ -369,6 +564,7 @@ img.ci-box {
   background-size: cover;
 }
 .transport-method {
+  flex-shrink: 0;
   display: flex;
   align-items: center;
   gap: 0.25rem;
@@ -431,8 +627,76 @@ img.ci-box {
 .bus-wrap .transport-text + .transport-text{
   margin-top: 0.63rem;
 }
+@media screen and (max-width: 1360px) {
+  .split {
+    gap: 3.5rem;
+  }
+  .split.ty2 .split-left {
+    flex-shrink: 0;
+    padding-right: 5rem;
+    width: calc(50% - 0.625rem);
+  }
+  .split.ty2 .split-right {
+    flex-shrink: 0;
+    width: calc(50% - 0.625rem);
+  }
+  .tab {
+    padding: 0.88rem 1.25rem;
+  }
 
-@media screen and (max-width: 768px) {
+  /* 001 */
+  .int-bg-wrap {
+    padding: 8.75rem;
+  }
+
+  /* 003 */
+  .greetings-box {
+    padding: 8rem 2.5rem;
+  }
+  .greetings-img {
+    right: 0;
+  }
+
+  /* 004 */
+  .org-wrap {
+    padding: 6.25rem 3.19rem;
+  }
+  .org-caption {
+    right: 3.25rem;
+  }
+  .org-etc {
+    margin-left: 5rem;
+  }
+  .org-etc::before {
+    width: 3.75rem;
+  }
+  .org-team-area {
+    justify-content: center;
+    gap: 3.75rem;
+  }
+  .org-team-area::after {
+    width: 37.75rem;
+  }
+  .org-team {
+    max-width: 15rem;
+  }
+  .org-sub {
+    flex-direction: column;
+  }
+
+  /* 007 */
+  .transport-area {
+    width: calc(50% - 1.25rem);
+  }
+  .subway-wrap {
+    gap: 0.625rem;
+  }
+  .bus-wrap .transport-text {
+    gap: 0.625rem;
+  }
+}
+
+@media screen and (max-width: 1023px) {
   .item-verti {
     padding-top: 3.75rem;
     padding-bottom: 3.75rem;
@@ -454,6 +718,10 @@ img.ci-box {
     font-size: 1rem;
     font-weight: 900;
     line-height: 160%;
+  }
+  .cont-tit {
+    font-size: 1.75rem;
+    line-height: 125%;
   }
   .split {
     flex-direction: column;
@@ -573,6 +841,124 @@ img.ci-box {
   .greetings-ceo span {
     font-size: 1rem;
     font-weight: 700;
+  }
+
+  /* 004 */
+  .org-wrap {
+    padding: 5rem 1.25rem 7.5rem;
+  }
+  .org-caption {
+    top: 1.88rem;
+    right: 1.38rem;
+    font-size: 0.875rem;
+    font-weight: 300;
+    line-height: 125%;
+  }
+  .org-council {
+    width: 8.125rem;
+    height: 8.125rem;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 125%;
+    letter-spacing: -0.02rem;
+  }
+  .org-ceo {
+    margin-top: 3.38rem;
+    width: 8.125rem;
+    height: 8.125rem;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 125%;
+    letter-spacing: -0.02rem;
+  }
+  .org-ceo::before {
+    top: -0.75rem;
+  }
+  .org-etc {
+    position: relative;
+    top: auto;
+    left: auto;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 3.37rem;
+    margin-left: 0;
+    width: 100%;
+    max-width: 32.5rem;
+    font-size: 0.875rem;
+    line-height: 125%;
+  }
+  .org-etc::before {
+    left: 50%;
+    top: -0.75rem;
+    transform: translateY(-100%);
+    width: 0;
+    height: 1.875rem;
+    border-bottom: none;
+    border-left: 2px solid #EBEBEB;
+  }
+  .org-team-area {
+    flex-direction: column;
+    gap: 3rem;
+    margin-top: 3.37rem;
+    width: 100%;
+  }
+  .org-team-area::before {
+    top: -0.75rem;
+    height: 1.875rem;
+  }
+  .org-team-area::after {
+    display: none;
+  }
+  .org-team {
+    position: relative;
+    width: 100%;
+    max-width: 32.5rem;
+    margin: 0 auto;
+  }
+  .org-major {
+    box-shadow: 4px 4px 12px 0px rgba(0, 0, 0, 0.10);
+    font-size: 1rem;
+    line-height: 125%;
+  }
+  .org-major img {
+    width: 1.5rem;
+  }
+  .org-sub {
+    flex-direction: row;
+    margin-top: 1rem;
+    padding: 1.25rem 0;
+    font-size: 0.875rem;
+    line-height: 125%;
+  }
+  .org-sub::before {
+    display: none;
+  }
+  .org-part {
+    position: relative;
+    top: auto;
+    left: auto;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.25rem;
+    margin-top: 1rem;
+    margin-left: 0;
+    font-size: 0.875rem;
+    line-height: 125%;
+  }
+  .org-part::before {
+    display: none;
+  }
+  .org-part li {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+  }
+  .org-part li::before {
+    content: '';
+    width: 0.25rem;
+    height: 0.25rem;
+    background-color: #262626;
+    border-radius: 100%;
   }
 
   /* 006 */

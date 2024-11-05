@@ -276,6 +276,9 @@ body.fix {
   padding: 5rem 2.5rem 2.5rem 2.5rem;
   background: #000;
 }
+.footer-wrap.footer-no-mt {
+  margin-top: 0;
+}
 .footer-area {
   position: relative;
   margin: 0 auto;
