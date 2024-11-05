@@ -135,6 +135,10 @@
     font-weight: 600;
     border-bottom: 0;
   }
+  /*  */
+  .content-wrap {
+    padding-top: 3.8125rem;
+  }
   /* 푸터 footer */
   .footer-wrap {
     margin-top: 7.5rem;
