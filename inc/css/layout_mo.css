@@ -165,6 +165,7 @@
     right: 1.88rem;
     left: 1.88rem;
     bottom: 2.5rem;
+    min-width: auto;
   }
   .footer-item02 .select-wrap .select-cont {
     right: auto;
@@ -223,6 +224,7 @@
     order: 1;
     width: 100vw;
     flex-direction: column;
+    align-items: flex-start;
     margin-bottom: 1rem;
   }
   .footer-util li a {
@@ -262,14 +264,11 @@
   }
 
   .select-btn {
-    width: 100%;
     display: flex;
     color: #fff;
     border: 1px solid #666;
     display: flex;
     padding: 0.75rem 1rem 0.75rem 1.5rem;
-    align-items: center;
-    justify-content: space-between;
     gap: 1.25rem;
   }
 
