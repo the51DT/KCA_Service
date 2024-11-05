@@ -629,7 +629,11 @@ img.ci-box {
 }
 @media screen and (max-width: 1360px) {
   .split {
-    gap: 3.5rem;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+  .split .split-right {
+    width: 100%;
   }
   .split.ty2 .split-left {
     flex-shrink: 0;
@@ -642,11 +646,6 @@ img.ci-box {
   }
   .tab {
     padding: 0.88rem 1.25rem;
-  }
-
-  /* 001 */
-  .int-bg-wrap {
-    padding: 8.75rem;
   }
 
   /* 003 */
@@ -683,17 +682,6 @@ img.ci-box {
   .org-sub {
     flex-direction: column;
   }
-
-  /* 007 */
-  .transport-area {
-    width: calc(50% - 1.25rem);
-  }
-  .subway-wrap {
-    gap: 0.625rem;
-  }
-  .bus-wrap .transport-text {
-    gap: 0.625rem;
-  }
 }
 
 @media screen and (max-width: 1023px) {
@@ -702,8 +690,8 @@ img.ci-box {
     padding-bottom: 3.75rem;
   }
   .item-horiz {
-    padding-left: 1.87rem;
-    padding-right: 1.87rem;
+    padding-left: 1.88rem;
+    padding-right: 1.88rem;
   }
   .item-horiz.p-pc {
     padding: 0;
@@ -723,19 +711,14 @@ img.ci-box {
     font-size: 1.75rem;
     line-height: 125%;
   }
-  .split {
-    flex-direction: column;
-    gap: 2.5rem;
-  }
   .split.ty2 {
     justify-content: flex-start;
     gap: 2.5rem;
   }
   .split.ty2 .split-left {
     width: 100%;
-    flex-shrink: 0;
   }
-  .split .split-right {
+  .split.ty2 .split-right {
     width: 100%;
   }
   .split .split-tit {
@@ -804,7 +787,7 @@ img.ci-box {
   }
   .int-bg-wrap {
     height: 50.75rem;
-    padding: 6.25rem 1.87rem;
+    padding: 6.25rem 1.88rem;
   }
   .int-bg-wrap.bg1 {
     justify-content: flex-start;
@@ -812,6 +795,7 @@ img.ci-box {
   }
   .int-bg-wrap.bg2 {
     background-image: url(../images/img/INT_001_bg_02_mo.png);
+    background-position: center;
   }
   .int-bg-text {
     gap: 1.25rem;
@@ -822,7 +806,7 @@ img.ci-box {
   .greetings-box {
     width: 100%;
     height: 23.75rem;
-    padding: 3.75rem 1.87rem;
+    padding: 3.75rem 1.88rem;
   }
   .greetings-img {
     position: absolute;
