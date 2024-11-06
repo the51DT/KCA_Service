@@ -7,6 +7,8 @@ $(document).ready(function () {
   KcaUI.headerNav(".nav-btn", ".nav-wrap", ".header-wrap");
   KcaUI.subMotion(".content-header");
   KcaUI.subPageMap(".page-map-wrap");
+  KcaUI.selectEvent(".select-js");
+  KcaUI.tabEvent(".tab-wrap", ".tab-cont");
 });
 
 let $win_W = $(window).width();
@@ -212,6 +214,45 @@ var KcaUI = {
           pageMapEventBtn.removeClass("on");
           pageMapEventBtn.siblings(".page-map").slideUp(200);
         }
+      });
+    }
+    event();
+  },
+  selectEvent: function (obj) {
+    if (!KcaUI.checkObj(obj)) {
+      return;
+    }
+    selectButton = $(obj);
+    function event() {
+      selectButton.on("click", function () {
+        $(this).parent().toggleClass("on");
+      });
+
+      $("html, body").click(function (e) {
+        if (
+          $(e.target).parents(obj).length < 1 &&
+          $(e.target).attr("class") !== selectButton.attr("class")
+        ) {
+          selectButton.parent().removeClass("on");
+        }
+      });
+    }
+    event();
+  },
+
+  tabEvent: function (obj, com) {
+    if (!KcaUI.checkObj(obj)) {
+      return;
+    }
+    tabButton = $(obj).find(".tab");
+    tabCont = $(com);
+    function event() {
+      tabButton.on("click", function () {
+        tabData = $(this).index();
+        tabButton.removeClass("on");
+        $(this).addClass("on");
+        tabCont.removeClass("on");
+        tabCont.eq(tabData).addClass("on");
       });
     }
     event();
