@@ -9,6 +9,7 @@ $(document).ready(function () {
   KcaUI.subPageMap(".page-map-wrap");
   KcaUI.selectEvent(".select-js");
   KcaUI.tabEvent(".tab-wrap", ".tab-cont");
+  KcaUI.passwordHide(".password");
 });
 
 let $win_W = $(window).width();
@@ -253,6 +254,23 @@ var KcaUI = {
         $(this).addClass("on");
         tabCont.removeClass("on");
         tabCont.eq(tabData).addClass("on");
+      });
+    }
+    event();
+  },
+  passwordHide: function (obj) {
+    if (!KcaUI.checkObj(obj)) {
+      return;
+    }
+    passwordButton = $(obj).find("button");
+    function event() {
+      passwordButton.on("click", function () {
+        $(this).prev("input").toggleClass("active");
+        if ($(this).prev("input").hasClass("active")) {
+          $(this).addClass("on").prev("input").attr("type", "text");
+        } else {
+          $(this).removeClass("on").prev("input").attr("type", "password");
+        }
       });
     }
     event();
