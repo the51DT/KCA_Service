@@ -275,6 +275,98 @@
   justify-content: center;
 }
 
+/* INT_002 */
+.int-text.md {
+  font-size: 2.25rem;
+}
+.vision-bg-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+.vision-bg-wrap.bg1 {
+  padding: 21.06rem 0;
+  background-image: url(../images/img/INT_002_bg_01_pc.png);
+}
+.vision-bg-wrap.bg2 {
+  padding: 7.25rem 0;
+  background-image: url(../images/img/INT_002_bg_02_pc.png);
+}
+.vision-bg-text {
+  width: 100%;
+  max-width: 105rem;
+  padding: 2.5rem;
+}
+.vision-bg-wrap.bg1 .int-tit {
+  font-size: 3.75rem;
+}
+.vision-bg-wrap.bg1 .int-text {
+  margin-top: 2.5rem;
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 160%;
+}
+.vision-bg-wrap.bg2 .int-tit {
+  font-size: 2.5rem;
+}
+.vision-bg-wrap.bg2 .int-text {
+  margin-top: 2.5rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 160%;
+}
+.vision-bg-wrap.bg2 .int-text + .int-text {
+  margin-top: 1.5rem;
+}
+.vision-tit {
+  font-size: 3.75rem;
+  font-weight: 700;
+  line-height: 130%;
+  color: #1a1a1a;
+}
+.vision-detail {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 160%;
+  color: #333;
+}
+.vision-tit + .vision-detail {
+  margin-top: 2.5rem;
+}
+.vision-flex {
+  display: flex;
+  justify-content: center;
+  gap: 7.5rem;
+  margin-top: 8.75rem;
+}
+.vision-list {
+  width: 100%;
+  max-width: 21.7rem;
+}
+.vision-list-tit {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 130%;
+  color: #1a1a1a;
+}
+.vision-list-sub {
+  margin-top: 0.75rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 160%;
+  color: #666;
+}
+.vision-list-detail {
+  margin-top: 2.25rem;
+  font-size: 1.75rem;
+  font-weight: 400;
+  line-height: 160%;
+  color: #333;
+}
+
 /* INT_003 */
 .greetings-box {
   position: relative;
@@ -1229,6 +1321,70 @@ button.cal-acco {
   .int-bg-text {
     gap: 1.25rem;
     justify-content: flex-start;
+  }
+
+  /* INT_002 */
+  .int-text.md {
+    font-size: 1.375rem;
+  }
+  .vision-bg-wrap.bg1 {
+    padding: 11.25rem 0;
+    background-image: url(../images/img/INT_002_bg_01_mo.png);
+  }
+  .vision-bg-wrap.bg2 {
+    padding: 5rem 0;
+    background-image: url(../images/img/INT_002_bg_02_mo.png);
+  }
+  .vision-bg-text {
+    padding: 1.88rem;
+  }
+  .vision-bg-wrap.bg1 .int-tit {
+    font-size: 1.75rem;
+    letter-spacing: -0.03125rem;
+  }
+  .vision-bg-wrap.bg1 .int-text {
+    margin-top: 1.25rem;
+    font-size: 0.875rem;
+    font-weight: 400;
+    letter-spacing: -0.0175rem;
+  }
+  .vision-bg-wrap.bg2 .int-tit {
+    font-size: 1.5rem;
+  }
+  .vision-bg-wrap.bg2 .int-text {
+    margin-top: 1.25rem;
+    font-size: 1rem;
+  }
+  .vision-bg-wrap.bg2 .int-text + .int-text {
+    margin-top: 0.75rem;
+  }
+  .vision-tit {
+    font-size: 1.75rem;
+  }
+  .vision-detail {
+    font-size: 1.375rem;
+  }
+  .vision-tit + .vision-detail {
+    margin-top: 1.25rem;
+  }
+  .vision-flex {
+    flex-direction: column;
+    gap: 3.75rem;
+    margin-top: 3.75rem;
+  }
+  .vision-list {
+    max-width: none;
+  }
+  .vision-list-tit {
+    font-size: 1.625rem;
+  }
+  .vision-list-sub {
+    margin-top: 0.37rem;
+    font-size: 1rem;
+  }
+  .vision-list-detail {
+    margin-top: 1.13rem;
+    font-size: 1.25rem;
   }
 
   /* INT_003 */
