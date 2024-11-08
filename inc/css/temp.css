@@ -911,7 +911,7 @@ img.ci-box {
 .cal-card-text:has(button.cal-acco) {
   max-height: 5.8125rem;
 }
-.cal-card-text.on {
+.cal-card-text:has(button.cal-acco).on {
   max-height: 100%;
 }
 .cal-acco {
