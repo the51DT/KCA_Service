@@ -12,7 +12,7 @@ min-width : 1024 css
 모바일 css
 *********************************/
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .pc-only {
     display: none !important;
   }

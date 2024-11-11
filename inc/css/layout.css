@@ -86,7 +86,7 @@ body.fix {
 }
 /* header */
 .header-wrap {
-  height: 8.5rem;
+  height: 8.6rem;
   padding: 1.88rem 0 0;
   position: fixed;
   top: 0;
@@ -99,23 +99,24 @@ body.fix {
   overflow: hidden;
   transition: height 0.3s;
   background-color: #fff;
+  /* border-bottom: 1px solid #ebebeb; */
 }
 
 .header-wrap.on {
   height: 500px;
+  border-bottom: 0;
 }
 
 .header-cont {
   width: 100%;
-  max-width: 1600px;
-  margin: 0 auto;
   padding: 0 2.5rem 0 2.5rem;
   display: flex;
   position: relative;
   z-index: 1;
+  border-bottom: 1px solid #ebebeb;
 }
 .header-wrap.on .header-cont {
-  border-bottom: 1px solid #ebebeb;
+  width: 100%;
 }
 .utile-wrap {
   position: absolute;
@@ -172,10 +173,12 @@ body.fix {
   position: relative;
   z-index: 1;
   padding-top: 2.75rem;
-  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 .header-cont .logo a {
   height: 100%;

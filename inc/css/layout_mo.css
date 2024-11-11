@@ -144,7 +144,7 @@
     margin-top: 7.5rem;
     padding: 2.5rem 1.88rem 7.5rem;
     position: relative;
-    background-color: #0f0f0f;
+    background-color: #000;
   }
   .footer-area {
     position: static;
@@ -153,7 +153,7 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 2.5rem;
-    background-color: #0f0f0f;
+    background-color: #000;
   }
 
   .footer-logo {
@@ -243,7 +243,8 @@
     font-weight: 600;
   }
 
-  .footer-util li:last-child a {
+  .footer-util li:last-child a,
+  .footer-util li:last-child span {
     margin-left: 0;
     font-size: 1.5rem;
     font-weight: 700;
@@ -411,13 +412,14 @@
 
   a.footer-inquiry_btn {
     display: flex !important;
-    width: 9.25rem;
+    width: 100%;
     padding: 0.75rem 1rem 0.75rem 1.5rem;
     align-items: center;
+    justify-content: space-between;
     gap: 1.25rem;
-    border: 1px solid #666;
+    border: 1px solid #1a1a1a;
     color: #fff;
-    background: #0f0f0f;
+    background: #1a1a1a;
   }
 
   .footer-inquiry_btn:after {

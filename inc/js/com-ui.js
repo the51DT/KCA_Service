@@ -103,7 +103,9 @@ var KcaUI = {
       });
       eventParent.mouseleave(function () {
         if (!KcaUI.windowSize()) {
-          $(this).removeClass("on").css("height", header_h);
+          $(this)
+            .removeClass("on")
+            .css("height", header_h + 1);
         } else {
           return;
         }
