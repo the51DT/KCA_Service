@@ -115,7 +115,17 @@
   border-top: 1px solid #d9d9d9;
 }
 .grid-img {
+  position: relative;
   width: 100%;
+  padding-top: 57.7%;
+}
+.grid-img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .grid-text {
   padding: 2.5rem;
@@ -219,6 +229,9 @@
 }
 .swiper-btn-wrap .swiper-button-prev::after,
 .swiper-btn-wrap .swiper-button-next::after {
+  display: none;
+}
+.sub-swiper .swiper-pagination {
   display: none;
 }
 
@@ -959,7 +972,17 @@ img.ci-box {
   margin-top: 0.5rem;
 }
 .line-con-img {
+  position: relative;
   width: 100%;
+  padding-top: 55.7%;
+}
+.line-con-img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .cal-card {
   width: 100%;
@@ -1100,6 +1123,24 @@ button.cal-acco {
   }
   .tab {
     padding: 0.88rem 1.25rem;
+  }
+  .sub-swiper .swiper-pagination {
+    position: static;
+    /* display: flex; */
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2.5rem;
+    display: none;
+  }
+  .sub-swiper .swiper-pagination .swiper-pagination-bullet {
+    margin: 0;
+    width: 0.75rem;
+    height: 0.75rem;
+    background-color: #e5e5e5;
+    opacity: 1;
+  }
+  .sub-swiper .swiper-pagination .swiper-pagination-bullet-active {
+    background-color: #000;
   }
 
   /* INT_003 */
@@ -1282,12 +1323,16 @@ button.cal-acco {
     font-size: 1.5rem;
   }
   .swiper-btn-wrap {
-    gap: 0.5rem;
+    display: none;
   }
-  .swiper-btn-wrap .swiper-button-prev,
-  .swiper-btn-wrap .swiper-button-next {
-    width: 1.5rem;
-    height: 1.5rem;
+  .sub-swiper .swiper-pagination {
+    display: flex;
+    gap: 0.69rem;
+    margin-top: 1.25rem;
+  }
+  .sub-swiper .swiper-pagination .swiper-pagination-bullet {
+    width: 0.5rem;
+    height: 0.5rem;
   }
 
   /* INT_001 */
@@ -1737,6 +1782,9 @@ button.cal-acco {
   }
   .line-con-tit + .line-con-detail {
     margin-top: 0.25rem;
+  }
+  .line-con-img {
+    padding-top: 57.14%;
   }
   .cal-card-text {
     padding: 1.25rem 1.5rem;
