@@ -1040,6 +1040,7 @@ img.ci-box {
   text-align: left;
 }
 button.cal-acco {
+  padding-right: 2rem;
   background-image: url(../images/icon/icon_plus_w.svg);
   background-position: right center;
   background-repeat: no-repeat;
@@ -1797,6 +1798,7 @@ button.cal-acco {
     font-size: 1rem;
   }
   button.cal-acco {
+    padding-right: 1.5rem;
     background-size: 1.5rem 1.5rem;
   }
   .cal-acco span {
