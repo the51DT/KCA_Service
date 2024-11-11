@@ -120,19 +120,35 @@ body.fix {
 .utile-wrap {
   position: absolute;
   top: 1.88rem;
-  right: 0;
+  right: 2.5rem;
   z-index: 1;
 }
 .utile-wrap .utile-cont {
   display: flex;
 }
+.utile-wrap .utile-cont .utile-item {
+  margin-right: 1.25rem;
+}
+.utile-wrap .account-name {
+  color: #333;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 160%;
+}
 .utile-wrap .utile-cont .utile-list {
   display: flex;
   gap: 0.75rem;
+  align-items: center;
 }
 .utile-wrap .utile-cont .utile-list li {
   position: relative;
   padding-right: 0.8125rem;
+  display: flex;
+  align-items: center;
+  color: #333;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 160%;
 }
 .utile-wrap .utile-cont .utile-list li:after {
   content: "";
@@ -293,25 +309,7 @@ body.fix {
   align-items: flex-start;
   background: #000;
 }
-a.footer-inquiry_btn {
-  display: flex !important;
-  width: 9.25rem;
-  padding: 0.75rem 1rem 0.75rem 1.5rem;
-  align-items: center;
-  gap: 1.25rem;
-  border: 1px solid #666;
-  color: #fff;
-  background: #0f0f0f;
-}
 
-.footer-inquiry_btn:after {
-  content: "";
-  display: block;
-  margin-left: 0.5rem;
-  background-image: url(../images/icon/footer_next_icon.svg);
-  width: 1.5rem;
-  height: 1.5rem;
-}
 .footer-logo {
   position: absolute;
   top: 0;
