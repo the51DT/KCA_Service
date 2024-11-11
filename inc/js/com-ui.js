@@ -10,7 +10,7 @@ $(document).ready(function () {
   KcaUI.selectEvent(".select-js");
   KcaUI.tabEvent(".tab-wrap", ".tab-cont");
   KcaUI.passwordHide(".password");
-  KcaUI.calAcco("button.cal-acco");
+  KcaUI.closestAcco(".accoTrigger");
   KcaSwiper.swiperResponsiveSub01(".sub-swiper");
 });
 
@@ -278,14 +278,14 @@ var KcaUI = {
     event();
   },
 
-  calAcco: function (obj) {
+  closestAcco: function (obj) {
     if (!KcaUI.checkObj(obj)) {
       return;
     }
     accoBtn = $(obj);
     function event() {
       accoBtn.on("click", (el) => {
-        el.target.closest(".cal-card-text").classList.toggle("on");
+        el.target.closest(".accoWrap").classList.toggle("on");
       });
     }
     event();

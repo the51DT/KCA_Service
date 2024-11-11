@@ -1085,6 +1085,82 @@ button.cal-acco {
   opacity: 1;
 }
 
+/* rct 공통 */
+.rct-tit {
+  font-size: 3.75rem;
+  font-weight: 700;
+  line-height: 130%;
+  color: #1a1a1a;
+}
+
+/* RCT_008 */
+.rct-faq {
+  border-bottom: 1px solid #ccc;
+}
+.rct-faq + .rct-faq {
+  margin-top: 3.75rem;
+}
+.rct-faq-q {
+  display: flex;
+  gap: 1.25rem;
+  width: 100%;
+  padding-bottom: 2.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 160%;
+  text-align: left;
+  color: #1a1a1a;
+}
+.rct-faq-q::before {
+  content: 'Q.';
+  flex-shrink: 0;
+  font-weight: 700;
+  color: #121c72;
+}
+.rct-faq-q::after {
+  content: '';
+  display: block;
+  margin-left: auto;
+  width: 2.25rem;
+  height: 2.25rem;
+  background-image: url(../images/icon/arrow_down_icon.svg);
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s ease-in-out;
+}
+.rct-faq.on .rct-faq-q::after {
+  transform: rotate(-180deg);
+}
+.rct-faq-a {
+  display: flex;
+  gap: 0.75rem;
+  height: 0;
+  padding: 0;
+  border-top: 4px solid #1a1a1a;
+  background-color: #fafafa;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 160%;
+  color: #1a1a1a;
+  opacity: 0;
+  clip-path: polygon(0 0, 0 0, 0 0);
+  transition-property: padding-top, padding-bottom, opacity;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+.rct-faq.on .rct-faq-a {
+  height: auto;
+  padding: 2.5rem;
+  opacity: 1;
+  clip-path: none;
+}
+.rct-faq-a::before {
+  content: 'A.';
+  flex-shrink: 0;
+  font-weight: 700;
+  color: #666;
+}
+
 @media screen and (max-width: 1360px) {
   .split {
     flex-direction: column;
@@ -1813,5 +1889,38 @@ button.cal-acco {
   }
   .cal-acco-detail p {
     padding-left: 0.5rem;
+  }
+
+  /* rct 공통 */
+  .rct-tit {
+    font-size: 1.75rem;
+    letter-spacing: -0.035rem;
+  }
+
+  /* RCT_008 */
+  .rct-faq + .rct-faq {
+    margin-top: 0;
+  }
+  .rct-faq-q {
+    gap: 0.5rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    font-size: 1rem;
+    letter-spacing: -0.02rem;
+  }
+  .rct-faq-q::after {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  .rct-faq-a {
+    flex-direction: column;
+    gap: 0.5rem;
+    border-top: 2px solid #1a1a1a;
+    font-size: 0.875rem;
+    line-height: 140%;
+    letter-spacing: -0.0175rem;
+  }
+  .rct-faq.on .rct-faq-a {
+    padding: 1rem 1.25rem;
   }
 }
