@@ -10,6 +10,8 @@ $(document).ready(function () {
   KcaUI.selectEvent(".select-js");
   KcaUI.tabEvent(".tab-wrap", ".tab-cont");
   KcaUI.passwordHide(".password");
+  KcaUI.calAcco("button.cal-acco");
+  KcaSwiper.swiperResponsiveSub01(".sub-swiper");
 });
 
 let $win_W = $(window).width();
@@ -275,11 +277,54 @@ var KcaUI = {
     }
     event();
   },
+
+  calAcco: function (obj) {
+    if (!KcaUI.checkObj(obj)) {
+      return;
+    }
+    accoBtn = $(obj);
+    function event() {
+      accoBtn.on("click", (el) => {
+        el.target.closest(".cal-card-text").classList.toggle("on");
+      });
+    }
+    event();
+  },
+
   /* Dimmed */
   dimdOn: function () {
     $("body").append("<div class='dimmed' aria-hidden='true'></div>");
   },
   dimdOff: function () {
     $("body").find(".dimmed").remove();
+  },
+};
+
+var KcaSwiper = {
+  swiperResponsiveSub01: function (obj) {
+    if (!KcaUI.checkObj(obj)) {
+      return;
+    }
+    responsiveSwiper01 = new Swiper(obj, {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      breakpoints: {
+        1024: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        1361: {
+          slidesPerView: 2,
+          spaceBetween: 40,
+        },
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    });
   },
 };

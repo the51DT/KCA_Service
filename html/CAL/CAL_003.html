@@ -397,42 +397,7 @@
   <!-- <script type="text/javascript" src="../../inc/js/plugins.js"></script> -->
   <script type="text/javascript" src="../../inc/js/com-ui.js"></script>
   <script>
-    // [start] CAL 공통 스와이퍼
-    var swiper = new Swiper(".sub-swiper", {
-      slidesPerView: 1,
-      spaceBetween: 20,
-      breakpoints: {
-        1024: {
-          slidesPerView: 2,
-          spaceBetween: 20,
-        },
-        1361: {
-          slidesPerView: 2,
-          spaceBetween: 40,
-        }
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      pagination: {
-        el: ".swiper-pagination",
-      },
-    });
-    // [end] CAL 공통 스와이퍼
 
-    // [start] CAL 공통 스와이퍼 안에 아코디언
-    function calAcco() {
-      $("button.cal-acco").on("click", (el) => {
-        console.log(el.target)
-        el.target.closest(".cal-card-text").classList.toggle("on")
-      })
-    }
-
-    $(document).ready(function () {
-      calAcco()
-    })
-    // [end] CAL 공통 스와이퍼 안에 아코디언
   </script>
 </body>
 

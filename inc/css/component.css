@@ -570,9 +570,6 @@ input[type="radio"]:focus + label {
   background: #f5f5f5;
   color: #666;
 }
-.wrap-form-input > input[type="password"] {
-  letter-spacing: 0.1rem;
-}
 
 .wrap-form-input.password {
   position: relative;
