@@ -406,7 +406,7 @@
     padding-top: calc(100vh + 3.75rem);
   }
 
-  .footer-wrap.footer-no-mt-mo {
+  .footer-no-mt-mo + .footer-wrap {
     margin-top: 0;
   }
 
