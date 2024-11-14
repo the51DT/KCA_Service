@@ -244,6 +244,22 @@
   display: none;
 }
 
+.com-board {
+
+}
+.com-board .board-tit {
+  font-size: 3.75rem;
+  font-weight: 700;
+  line-height: 130%;
+  text-align: center;
+  color: #1a1a1a;
+}
+.com-board .board-sort-wrap {
+  display: flex;
+  gap: 1.25rem;
+  margin-top: 3.75rem;
+}
+
 /* INT_001 */
 .int-text {
   font-size: 2.5rem;
