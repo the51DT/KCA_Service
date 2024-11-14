@@ -653,18 +653,29 @@
   z-index: 1;
 }
 .histroy-line {
+  display: block;
   position: absolute;
-  top: -2.5rem;
+  top: -1.8865rem;
   left: 50%;
   transform: translateX(-50%);
   height: 0;
-  max-height: calc(100% + 1.25rem);
-  border-left: 1px solid #1a1a1a;
+  width:0.625rem;
+  max-height: calc(100% + 1rem);
+}
+.histroy-line::before {
+  content: '';
+  position: absolute;
+  left:50%;
+  top:0;
+  background:#1a1a1a;
+  transform: translateX(-50%);
+  height:100%;
+  width:1px;
 }
 .histroy-line::after {
   content: '';
   position: absolute;
-  bottom: -0.625rem;
+  bottom: 0;
   left: 50%;
   transform: translateX(-50%);
   width: 0.625rem;

@@ -11,6 +11,7 @@ $(document).ready(function () {
   KcaUI.tabEvent(".tab-wrap", ".tab-cont");
   KcaUI.passwordHide(".password");
   KcaUI.closestAcco(".accoTrigger");
+  KcaUI.historyLine(".histroy-wrap");
   KcaSwiper.swiperResponsiveSub01(".sub-swiper");
 });
 
@@ -289,6 +290,40 @@ var KcaUI = {
       accoBtn.on("click", (el) => {
         el.target.closest(".accoWrap").classList.toggle("on");
       });
+    }
+    event();
+  },
+
+  historyLine: function (obj) {
+    if (!KcaUI.checkObj(obj)) {
+      return;
+    }
+    
+    let historyWrap = $(obj).height();
+    const historyLine = $(obj).find(".histroy-line");
+    const lineTopPos = historyLine.offset().top;
+
+    function event() {
+      $(window).resize(function(){
+        historyWrap = $(obj).height();
+        if (!KcaUI.windowSize02()) {
+          historyLine.show();
+        }
+        
+      })
+      $("body").scroll(() => {
+        let scrollVaule = $("body").scrollTop()
+        let lineTop = historyLine.offset().top
+        let screenHeight = screen.height
+        let triggerY = (screenHeight * 60 / 100)
+        let heightValue = (scrollVaule - lineTopPos + triggerY) / historyWrap * 100
+        if(triggerY >= lineTop) {
+          historyLine.stop().animate({'height': heightValue + "%"},300)
+        } else {
+          historyLine.stop().animate({'height': "0%"},300)
+          
+        }
+      })
     }
     event();
   },

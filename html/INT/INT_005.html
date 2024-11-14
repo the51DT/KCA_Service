@@ -484,39 +484,6 @@
   <script type="text/javascript" src="../../inc/js/swiper.min.js"></script>
   <!-- <script type="text/javascript" src="../../inc/js/plugins.js"></script> -->
   <script type="text/javascript" src="../../inc/js/com-ui.js"></script>
-  <script>
-    // [start] INT_005 연혁 라인
-    function historyLine() {
-      const historyWrap = $(".histroy-wrap").height()
-      const historyLine = $(".histroy-line")
-      const lineTopPos = historyLine.offset().top
-
-      $("body").scroll(() => {
-        let scrollVaule = $("body").scrollTop()
-        let lineTop = historyLine.offset().top
-        let screenHeight = screen.height
-        let triggerY = (screenHeight * 60 / 100)
-          console.log(triggerY + " : " + lineTopPos) 
-        let heightValue = (scrollVaule - lineTopPos + triggerY) / historyWrap * 100
-        if(triggerY >= lineTop) {
-          console.log(heightValue) 
-          historyLine.css('height', heightValue + "%")
-        } else {
-          historyLine.css('height', "0%")
-          
-        }
-      })
-        
-    }
-
-    $(document).ready(function () {
-      historyLine()
-    })
-    $(window).resize(function () {
-      historyLine()
-    })
-    // [end] INT_005 연혁 라인
-  </script>
 </body>
 
 </html>
