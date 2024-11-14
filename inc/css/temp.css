@@ -108,6 +108,15 @@
   row-gap: 2.5rem;
   column-gap: 1.25rem;
 }
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 2.5rem;
+  row-gap: 1.25rem;
+}
+.swiper-top-wrap + .grid-2 {
+  margin-top: 2.5rem;
+}
 .grid-item-border {
   border: 1px solid #d9d9d9;
 }
@@ -1020,6 +1029,7 @@ img.ci-box {
   object-fit: cover;
 }
 .cal-card {
+  position: relative;
   width: 100%;
   padding-top: 70%;
 }
@@ -1383,6 +1393,16 @@ button.cal-acco {
   .grid-3 {
     display: flex;
     flex-direction: column;
+  }
+  .grid-2 {
+    display: flex;
+    flex-direction: column; 
+  }
+  .grid-2 .cal-card {
+    padding-top: 127%;
+  }
+  .swiper-top-wrap + .grid-2 {
+    margin-top: 1.25rem;
   }
   .grid-text {
     padding: 1.25rem 1.5rem;
