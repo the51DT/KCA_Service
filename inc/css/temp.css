@@ -885,7 +885,19 @@ img.ci-box {
 .map-wrap {
   position: relative;
   width: 100%;
-  height: auto;
+  overflow-x: hidden;
+}
+.map-wrap .map-area{
+  width:100%;
+  height: 37.5rem;
+}
+.map-wrap .map-area > *{
+  width:auto;
+  height:100%;
+  position: absolute;
+  left:50%;
+  top:50%;
+  transform: translate(-50% , -50%);
 }
 .map-btn_wrap {
   position: absolute;
@@ -1864,6 +1876,9 @@ button.cal-acco {
   .split .split-location::before {
     width: 1.25rem;
     height: 1.25rem;
+  }
+  .map-wrap .map-area{
+    height: 13.1875rem;
   }
   .map-wrap + .transport-wrap {
     margin-top: 2.5rem;
