@@ -248,6 +248,10 @@
   max-width: 66.25rem;
   margin:0 auto;
 }
+[class*=com-board] + .btn-wrap{
+  margin-top:3.75rem;;
+  text-align: center;
+}
 .com-board .board-tit {
   font-size: 3.75rem;
   font-weight: 700;
@@ -1500,7 +1504,7 @@ button.cal-acco {
     width: 0.5rem;
     height: 0.5rem;
   }
-
+  
   /* INT_001 */
   .int-text {
     font-size: 1.5rem;
@@ -2015,5 +2019,18 @@ button.cal-acco {
   }
   .rct-faq.on .rct-faq-a {
     padding: 1rem 1.25rem;
+  }
+
+
+  /* nws table 게시판 */
+  [class*=com-board] .board-tit{
+    font-size: 1.75rem;
+    line-height: 130%;
+  }
+  [class*=com-board] + .btn-wrap{
+    margin-top:2.5rem;
+  }
+  [class*=com-board] .board-sort-wrap{
+    margin-top:2.5rem;
   }
 }

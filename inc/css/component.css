@@ -655,7 +655,9 @@ table.list-table tbody td{
   line-height: 160%;
   padding:1.69rem 1.25rem;
 }
-
+table.list-table col + col{
+  width:9rem;
+}
 table.list-table tbody td a{
   width:100%;
   display: block;
@@ -663,6 +665,8 @@ table.list-table tbody td a{
   white-space: nowrap;
   word-wrap: normal;
   overflow: hidden;
+  font-weight: 600;
+  line-height: 160%;
 }
 
 table.list-table thead th,
@@ -735,7 +739,6 @@ table.list-table tbody td{
 .page_wrap .page_list button:hover,
 .page_wrap .page_list li.on button {
   color: #1A1A1A;
-  font-size: 1.125rem;
   font-weight: 700;
 }
 
@@ -753,6 +756,31 @@ table.list-table tbody td{
   padding:2.5rem 0;
   border-bottom:1px solid #ccc;
   border-top:4px solid #000;
+}
+.detail-table th p{
+  display: flex;
+  gap: 1.25rem;;
+}
+.detail-table th p [class*=division]{
+  padding: 0.5rem 1.25rem;
+  display:flex;
+  height:max-content;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 160%;
+  margin-top: 0.44rem;
+}
+.detail-table th p .division01{
+  color: #121C72;
+  border: 1px solid #121C72;
+}
+
+.detail-table th p .division02{
+  color: #4DAC26;
+  border: 1px solid #4DAC26;
 }
 .detail-table th span{
   color: #1A1A1A;
