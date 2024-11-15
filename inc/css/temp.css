@@ -244,8 +244,9 @@
   display: none;
 }
 
-.com-board {
-
+[class*=com-board] {
+  max-width: 66.25rem;
+  margin:0 auto;
 }
 .com-board .board-tit {
   font-size: 3.75rem;

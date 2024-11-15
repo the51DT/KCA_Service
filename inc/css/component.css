@@ -745,6 +745,11 @@ table.list-table tbody td{
 }
 
 
+/* 상세페이지 */
+.detail-table{
+  margin-top:0;
+}
+
 .form-group.ty01 .label-tit {
   margin-bottom: 0.5rem;
 }
