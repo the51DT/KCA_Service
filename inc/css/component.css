@@ -821,6 +821,7 @@ table.list-table tbody td{
   background: url(../images/icon/link_arrow-icon.svg)no-repeat left center;
   gap:1.25rem;
   width:calc(100% - 20px);
+  color:#1A1A1A;
 }
 
 .link-table td a.link-next{
@@ -833,6 +834,7 @@ table.list-table tbody td{
   position: relative;
   padding-left:1.25rem;
   max-width:100%;
+  color:#666;
   text-overflow: ellipsis;
   white-space: nowrap;
   word-wrap: normal;

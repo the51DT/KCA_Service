@@ -84,37 +84,107 @@ min-width : 1024 css
   }
 
   /* 게시판 리스트*/
-table.list-table thead th{
-  font-size: 0.8125rem;
-  font-weight: 700;
-  padding:0.78rem 0.75rem ;
-}
-table.list-table tbody td{
-  width:100%;
-  font-size: 0.875rem;
-  padding:1.56rem 0.75rem ;
-}
-  /* 데이터 없는경우 */
-  .non_data{
-    padding:5rem 0;
+  table.list-table thead th{
+    font-size: 0.8125rem;
+    font-weight: 700;
+    padding:0.78rem 0.75rem ;
   }
-  
-  /* 게시판 페이지 버튼 */
-  
-  .page_wrap .page_prev_btn,
-  .page_wrap .page_next_btn {
-    width: 2rem;
-    height: 2rem;
-    margin: 0;
+  table.list-table tbody td{
+    width:100%;
+    font-size: 0.875rem;
+    padding:1.56rem 0.75rem ;
+  }
+    /* 데이터 없는경우 */
+    .non_data{
+      padding:5rem 0;
+    }
+    
+    /* 게시판 페이지 버튼 */
+    
+    .page_wrap .page_prev_btn,
+    .page_wrap .page_next_btn {
+      width: 2rem;
+      height: 2rem;
+      margin: 0;
+    }
+
+    .page_wrap .page_list {
+      display: flex;
+      overflow: hidden;
+      justify-content: center;
+    }
+    .page_wrap .page_list button {
+      padding: 0;
+    }
+
+
+    /* 상세페이지 */
+  .detail-table th{
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 125%;
+    padding:1.25rem 0;
+    gap:1.25rem;
+    border-top:0.125rem solid #1A1A1A;
+  }
+  .detail-table th span{
+    font-size: 0.8125rem;
+  }
+  .detail-table th span em{
+    font-weight: 400;
+  }
+  .detail-table td{
+    text-align: left;
+    border-bottom:1px solid #CCC;
+    padding:1.25rem 0;
+  }
+  .detail-table td.table_text-area{
+    padding:1.25rem 0;
+    font-size: 0.875rem;
   }
 
-  .page_wrap .page_list {
+  .detail-table td.file{
     display: flex;
-    overflow: hidden;
-    justify-content: center;
+    border-top:0.125rem solid #1a1a1a;
   }
-  .page_wrap .page_list button {
-    padding: 0;
+
+  .detail-table td.file > span{
+    flex:0 0 12.5rem;
+    color: #000;
+    font-size:1rem;
+    font-weight: 700;
+    line-height: 160%;
   }
+
+  .detail-table td.file div{
+    gap:1rem;
+  }
+
+  .detail-table td.file div .item-file{
+    padding-left:1.75rem;
+    background:url(../images/icon/download_icon.svg)no-repeat left center;
+  }
+
+  .link-table{
+    border-top:1px solid #CCC;
+    margin-top:2.5rem;
+  }
+  .link-table td a[class*="link"]{
+    padding-left:1.75rem;
+    display:flex; 
+    background: url(../images/icon/link_arrow-icon.svg)no-repeat left center;
+    background-size: 1.25rem;
+    gap:1rem;
+  }
+
+  .link-table td a.link-next{
+    background: url(../images/icon/link_arrow02-icon.svg)no-repeat left center;
+    background-size: 1.25rem;
+  }
+
+  .link-table td a[class*="link"] span{
+    padding-left:1rem;
+  }
+
 
 }
