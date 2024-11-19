@@ -123,6 +123,9 @@
   row-gap: 2.5rem;
   column-gap: 1.25rem;
 }
+.swiper-top-wrap + .grid-3 {
+  margin-top: 2.5rem;
+}
 .grid-2 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -1168,6 +1171,9 @@ button.cal-acco {
   opacity: 0;
   transition: opacity 0.2s ease-in-out;
 }
+.cal-acco-detail.ty2 {
+  column-count: unset;
+}
 .cal-acco-detail p {
   position: relative;
   padding-left: 0.75rem;
@@ -1240,6 +1246,22 @@ button.cal-acco {
   height: 52.9rem;
 }
 .bsn-002-img img {
+  width: auto;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* BSN_005 */
+.bsn-005-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 100rem;
+  height: 20.625rem;
+}
+.bsn-005-img img {
   width: auto;
   height: 100%;
   object-fit: cover;
@@ -2107,6 +2129,11 @@ button.cal-acco {
   /* BSN_002 */
   .bsn-002-img {
     height: 18.9375rem;
+  }
+
+  /* BSN_005 */
+  .bsn-005-img {
+    height: 15.125rem;
   }
 
   /* rct 공통 */
