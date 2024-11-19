@@ -252,4 +252,24 @@ min-width : 1024 css
     color: #1A1A1A;
     font-size: 1rem;
   }
+
+  /* 서비스 양성교육 테이블 */
+  .counselor-wrap{
+    background-color: #FAFAFA;
+    padding:3.75rem 1.88rem;
+  }
+
+  .counselor-wrap table thead th{
+    font-size: 0.875rem;
+  }
+  .counselor-wrap table thead th div span{
+    font-size: 0.75rem;
+  }
+  .counselor-wrap table tbody th{
+    font-size: 0.875rem;
+  }
+  .counselor-wrap table tbody td div{
+    font-size: 0.875rem;
+  }
+
 }

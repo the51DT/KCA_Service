@@ -1401,3 +1401,93 @@ input:checked + .slider:before {
   font-weight: 600;
   line-height: 160%;
 }
+
+
+/* 서비스 양성교육 테이블 */
+.counselor-wrap{
+  background-color: #FAFAFA;
+  padding:6.25rem 5.12rem;
+  width:100%;
+  overflow-x: auto;
+}
+.counselor-table-wrap{
+  width:100%;
+  min-width:66.625rem;
+}
+.counselor-wrap table{
+  border-spacing: 0 1.25rem;
+}
+
+.counselor-wrap table thead th{
+  color:#FFF;
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 160%;
+  padding: 0 0.315rem;
+}
+.counselor-wrap table thead th div{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 6.25rem;
+  height: 3.75rem;
+  padding: 0rem 1rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: .5rem;
+}
+.counselor-wrap table thead th div span{
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 400;
+}
+.counselor-wrap table thead th .bg01{
+  background-color: #121C72;
+}
+.counselor-wrap table thead th .bg02{
+  background-color: #648AE2;
+}
+.counselor-wrap table td,
+.counselor-wrap table th{
+  text-align: center;
+}
+.counselor-wrap table tbody td,
+.counselor-wrap table tbody th{
+  background-color: #F5F5F5;
+}
+.counselor-wrap table tbody td{
+  padding:1.5rem 0.31rem;
+}
+.counselor-wrap table tbody th{
+  padding:1.5rem;
+  color: #121C72;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 160%;
+}
+.counselor-wrap table thead th:last-of-type,
+.counselor-wrap table tbody td:last-of-type{
+  padding-right:1.5rem;
+}
+.counselor-wrap table tbody td div{
+  height:7.63rem;
+  padding:1.25rem;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap:0.5rem;
+  background:#fff;
+  border-radius: 0.5rem;
+  box-shadow: 4px 4px 12px 0px rgba(0, 0, 0, 0.08);
+  color: #1A1A1A;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 160%;
+}
+.counselor-wrap table tbody td ul{
+  display:flex;
+  gap:0.5rem;
+  justify-content: space-around;
+}
