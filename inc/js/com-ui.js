@@ -150,7 +150,7 @@ var KcaUI = {
         imgSet = (scrollTop / ($win_H - $height_h)) * 50;
         txtSet = (scrollTop / ($win_H - $height_h)) * 25;
 
-        if ($win_H > scrollTop) {
+        if (($win_H - $height_h + 11) > scrollTop) {
           scrollEventItem.css("top", scrollTop);
           scrollEventItem
             .find(".content-header_bg img")

@@ -86,7 +86,7 @@ iframe {
   vertical-align: top;
 }
 img {
-  width: 100%;
+  max-width: 100%;
   height: auto;
 }
 textarea {

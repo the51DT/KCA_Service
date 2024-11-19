@@ -84,7 +84,7 @@ min-width : 1024 css
   }
 
   .search-area > * {
-    flex:0 0 calc(50% - 0.65rem);
+    /* flex:0 0 calc(50% - 0.65rem); */
     border:0;
     border-bottom: 1px solid #CCC;
   }
@@ -228,5 +228,28 @@ min-width : 1024 css
     padding-left:1rem;
   }
 
+  /* 이미지 게시판 */
+  .poto_board-wrap{
+    padding-top:3.75rem;
+    padding-left: 1.88rem;
+    padding-right: 1.88rem;
+    padding-bottom:7.5rem;
+  }
 
+  .poto_board-list li{
+    flex: 0 0 100%;
+  }
+  .poto_board-list li .img-area{
+    height:auto;
+  }
+  .poto_board-list li .img-area img{
+    height:auto;
+  }
+  .poto_board-list li .text-area{
+    padding:1.5rem 1.25rem;
+  }
+  .poto_board-list li .text-area p{
+    color: #1A1A1A;
+    font-size: 1rem;
+  }
 }

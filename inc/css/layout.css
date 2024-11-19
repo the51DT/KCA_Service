@@ -286,7 +286,7 @@ body.fix {
 .content-wrap {
   /* background-color: #000; */
   width: 100%;
-  padding-top: 8.5625rem;
+  padding-top: 8.6rem;
   /* height: 100vh; */
   /* position: absolute;
   top: 0; */
@@ -507,7 +507,7 @@ body.fix {
 /* sub page 서브페이지 */
 .content-header {
   position: relative;
-  height: calc(100vh - 8.5rem);
+  height: calc(100vh - 8.6rem);
 }
 .content-header .content-header-cont {
   position: absolute;
@@ -658,5 +658,5 @@ body.fix {
 }
 
 .content-header + .content-area {
-  padding-top: calc(100vh + 6.25rem);
+  padding-top: calc(100vh - 8.6rem + 3.75rem);
 }
