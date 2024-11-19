@@ -17,7 +17,7 @@ $(document).ready(function () {
 
 let $win_W = $(window).width();
 let $win_H = $(window).height();
-let $height_h = $(".header-wrap").height();
+let $header_h = $(".header-wrap").height();
 const delta = 100;
 let timer = null;
 let $popDate = 0;
@@ -26,7 +26,7 @@ let swiperConfigurator;
 $(window).resize(function () {
   $win_W = $(window).width();
   $win_H = $(window).height();
-  $height_h = $(".header-wrap").height();
+  $header_h = $(".header-wrap").height();
   clearTimeout(timer);
   timer = setTimeout(resizeDone, delta);
 });
@@ -143,14 +143,14 @@ var KcaUI = {
       scrollEventTxt = $(obj).find(".content-header-cont"),
       scrollTop = scrollWrap.scrollTop(),
       imgSet = 0;
-
+    
     function event() {
       scrollWrap.scroll(function () {
         scrollTop = scrollWrap.scrollTop();
-        imgSet = (scrollTop / ($win_H - $height_h)) * 50;
-        txtSet = (scrollTop / ($win_H - $height_h)) * 25;
-
-        if (($win_H - $height_h + 11) > scrollTop) {
+        imgSet = (scrollTop / ($win_H - $header_h)) * 50;
+        txtSet = (scrollTop / ($win_H - $header_h)) * 25;
+        
+        if (($win_H - $header_h) >= scrollTop) {
           scrollEventItem.css("top", scrollTop);
           scrollEventItem
             .find(".content-header_bg img")
@@ -195,6 +195,13 @@ var KcaUI = {
               scrollEventTxt.find(".subp-txt").removeClass("on");
             }
           }
+        }else{
+          if (!KcaUI.windowSize02()) {
+            scrollEventItem.css("top", $win_H - $header_h - 100);
+          }else{
+            scrollEventItem.css("top", $win_H - $header_h - 60);
+          }
+          
         }
       });
     }

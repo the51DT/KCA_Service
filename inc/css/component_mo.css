@@ -272,4 +272,11 @@ min-width : 1024 css
     font-size: 0.875rem;
   }
 
+  /* 우리의 고객사 */
+  .customer-list{
+    flex-wrap: wrap;
+  }
+  .customer-list li{
+    flex: 0 0 calc(50% - 0.625rem);
+  } 
 }
