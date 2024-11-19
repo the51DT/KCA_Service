@@ -255,6 +255,7 @@ min-width : 1024 css
 
   /* 서비스 양성교육 테이블 */
   .counselor-wrap{
+    margin-top:2.5rem;
     background-color: #FAFAFA;
     padding:3.75rem 1.88rem;
   }
@@ -279,4 +280,64 @@ min-width : 1024 css
   .customer-list li{
     flex: 0 0 calc(50% - 0.625rem);
   } 
+
+  /* 콜센터 운영 컨설팅 프로세스 */
+.sensulting_process-wrap{
+  margin-top:3.75rem;
+  padding:1.25rem 1.88rem;
+}
+.sensulting_process-wrap .cal-text{
+  padding-left: 0;
+  padding-right: 0;
+}
+.sensulting_process-wrap:after{
+  display:none;
+}
+.sensulting_process{
+  padding:  2.5rem 0 0;
+  max-width:none;
+  overflow-x: unset;
+}
+
+.sensulting_process ul{
+  min-width: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap:3.75rem;
+}
+.sensulting_process ul li{
+  flex-direction:row;
+  max-width:100%;
+  gap:1.25rem;
+}
+.sensulting_process ul li .icon-area{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sensulting_process ul li .tit{
+  margin-top:0;
+  font-size: 0.875rem;
+  text-align: left;
+}
+.sensulting_process ul li .text-area{
+  display:flex;
+  position:relative;
+  flex-direction: column;
+  gap:0;
+}
+.sensulting_process ul li .text-area::after{
+  display: none;
+}
+.sensulting_process ul li .txt{
+  text-align: left;
+  font-size: .75rem;
+  padding: 0.5rem 0 0;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background: none;
+  height:auto;
+}
+
 }
