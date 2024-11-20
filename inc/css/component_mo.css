@@ -7,12 +7,34 @@ min-width : 1024 css
     padding-right: 80px;
   }
 }
+@media screen and (max-width: 1360px) {
+  /*********************************
+  중간 css
+  *********************************/
+  .product-progress-wrap ul li:not(.arrow-next) .icon-area{
+    width: 10rem;
+    height: 10rem;
+  }
+  .product-progress-wrap ul li.arrow-next{
+    padding-top:8rem;
+  }
 
-/*********************************
-모바일 css
-*********************************/
-
+  .employment-progress-wrap ul li:not(.arrow-next) .icon-area{
+    width: 8rem;
+    height: 8rem;
+  }
+  .employment-progress-wrap ul li:not(.arrow-next) .icon-area img{
+    width: 3rem;
+    height: 3rem;
+  }
+  .employment-progress-wrap ul li.arrow-next{
+    padding-top:3rem;
+  }
+}
 @media screen and (max-width: 1024px) {
+  /*********************************
+  모바일 css
+  *********************************/
   .pc-only {
     display: none !important;
   }
@@ -282,62 +304,92 @@ min-width : 1024 css
   } 
 
   /* 콜센터 운영 컨설팅 프로세스 */
-.sensulting_process-wrap{
-  margin-top:3.75rem;
-  padding:1.25rem 1.88rem;
-}
-.sensulting_process-wrap .cal-text{
-  padding-left: 0;
-  padding-right: 0;
-}
-.sensulting_process-wrap:after{
-  display:none;
-}
-.sensulting_process{
-  padding:  2.5rem 0 0;
-  max-width:none;
-  overflow-x: unset;
-}
+  .sensulting_process-wrap{
+    margin-top:3.75rem;
+    padding:1.25rem 1.88rem;
+  }
+  .sensulting_process-wrap .cal-text{
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .sensulting_process-wrap:after{
+    display:none;
+  }
+  .sensulting_process{
+    padding:  2.5rem 0 0;
+    max-width:none;
+    overflow-x: unset;
+  }
 
-.sensulting_process ul{
-  min-width: none;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap:3.75rem;
-}
-.sensulting_process ul li{
-  flex-direction:row;
-  max-width:100%;
-  gap:1.25rem;
-}
-.sensulting_process ul li .icon-area{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.sensulting_process ul li .tit{
-  margin-top:0;
-  font-size: 0.875rem;
-  text-align: left;
-}
-.sensulting_process ul li .text-area{
-  display:flex;
-  position:relative;
-  flex-direction: column;
-  gap:0;
-}
-.sensulting_process ul li .text-area::after{
-  display: none;
-}
-.sensulting_process ul li .txt{
-  text-align: left;
-  font-size: .75rem;
-  padding: 0.5rem 0 0;
-  justify-content: flex-start;
-  align-items: flex-start;
-  background: none;
-  height:auto;
-}
+  .sensulting_process ul{
+    min-width: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:3.75rem;
+  }
+  .sensulting_process ul li{
+    flex-direction:row;
+    max-width:100%;
+    gap:1.25rem;
+  }
+  .sensulting_process ul li .icon-area{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .sensulting_process ul li .tit{
+    margin-top:0;
+    font-size: 0.875rem;
+    text-align: left;
+  }
+  .sensulting_process ul li .text-area{
+    display:flex;
+    position:relative;
+    flex-direction: column;
+    gap:0;
+  }
+  .sensulting_process ul li .text-area::after{
+    display: none;
+  }
+  .sensulting_process ul li .txt{
+    text-align: left;
+    font-size: .75rem;
+    padding: 0.5rem 0 0;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background: none;
+    height:auto;
+  }
+
+  /* 진행순서 */
+  .product-progress-wrap{
+    margin-top:3.75rem;
+  }
+  .stap-wrap ul{
+    flex-direction: column;
+  }
+  .stap-wrap ul li.arrow-next{
+    padding:2.5rem 0;
+  }
+  .stap-wrap ul li.arrow-next img{
+    margin-top:0;
+    transform: rotateZ(90deg);
+  }
+  .stap-wrap ul li:not(.arrow-next) .icon-area{
+    width: 10rem;
+    height: 10rem;
+  }
+  .stap-wrap ul li:not(.arrow-next) .icon-area img{
+    width: 3.75rem;
+    height: 3.75rem;
+  }
+  .stap-wrap ul li:not(.arrow-next) .text-area{
+    font-size: 1rem;
+    margin-top:1.25rem;
+  }
+  .addition-txt{
+    font-size: 0.875rem;
+  }
 
 }

@@ -1562,6 +1562,7 @@ input:checked + .slider:before {
   position:relative;
   flex-direction: column;
   gap:3.75rem;
+  margin-top:1.5rem;
 }
 .sensulting_process ul li .text-area::after{
   content: "";
@@ -1589,3 +1590,105 @@ input:checked + .slider:before {
   background: #F5F5F5;
   height:8.5rem;
 }
+
+/* 진행순서 */
+.product-progress-wrap{
+  margin-top:3.75rem;
+}
+.stap-wrap ul{
+  display:flex;
+  justify-content: space-between;
+}
+.stap-wrap ul li{
+  position:relative;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+}
+.product-progress-wrap ul li.arrow-next{
+  padding-top:10.5rem;
+}
+.stap-wrap ul li [class*="step"]{
+  position: absolute;
+  top:0;
+  left:50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  width: 2.5rem;
+  height: 2.5rem;
+  justify-content: center;
+  align-items: center;
+  color: #FFF;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 160%;
+  border-radius: 100%;
+  background: #000;
+}
+.stap-wrap ul li:not(.arrow-next) .icon-area{
+  width: 16.25rem;
+  height: 16.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  background:  #F5F5F5;
+}
+.stap-wrap ul li:not(.arrow-next) .text-area{
+  color: #1A1A1A;
+  text-align: center;
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 160%;
+  margin-top:1.5rem;
+}
+
+.addition-txt{
+  color:  #666;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 160%;
+}
+
+.stap-wrap ul + .addition-txt{
+margin-top:2.5rem;
+}
+
+/* 채용 프로세스 */
+.employment-progress-wrap{
+  margin-top:3.75rem;
+}
+.employment-progress-wrap ul li.arrow-next{
+  padding-top:4.5rem;
+}
+.employment-progress-wrap ul li:not(.arrow-next) .icon-area{
+  width: 11.375rem;
+  height: 11.375rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  background:  #F5F5F5;
+}
+.stap-wrap ul li:not(.arrow-next) .text-area{
+  color: #1A1A1A;
+  text-align: center;
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 160%;
+  margin-top:1.5rem;
+}
+
+.addition-txt{
+  color:  #666;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 160%;
+}
+
+.stap-wrap ul + .addition-txt{
+margin-top:2.5rem;
+}
+

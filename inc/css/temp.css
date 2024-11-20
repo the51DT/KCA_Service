@@ -77,6 +77,10 @@
 .split .split-left {
   flex-shrink: 0;
 }
+.split-left .stiky-area{
+  position: sticky;
+  top:12rem;
+}
 .split .split-right {
   width: calc(100% - 40.9375rem);
 }
@@ -1276,6 +1280,20 @@ button.cal-acco {
 }
 
 /* RCT_008 */
+.rct-faq-wrap .btn-wrap{
+  padding:2.5rem 0;
+  text-align: right;
+}
+.rct-faq-wrap .btn-wrap .all-acco-btn{
+  height: 3rem;
+  padding: 0 3rem 0 1.25rem;
+  background:#000 url(../images/icon/arrow-down-white_icon.svg)no-repeat right 1rem center;
+  color: #FFF;
+  font-size: 1.1875rem;
+  font-weight: 700;
+  line-height: 160%;
+}
+
 .rct-faq {
   border-bottom: 1px solid #ccc;
 }

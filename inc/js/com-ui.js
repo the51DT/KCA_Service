@@ -297,6 +297,20 @@ var KcaUI = {
       accoBtn.on("click", (el) => {
         el.target.closest(".accoWrap").classList.toggle("on");
       });
+      $(".all-acco-btn").on("click", function() {
+        $(this).toggleClass("on")
+        if($(this).hasClass("on")){
+          $(".accoWrap").each(function(){
+            if(!$(this).hasClass("on")){
+              $(this).addClass("on")
+            }
+          })
+        }else{
+          $(".accoWrap").each(function(){
+              $(this).removeClass("on")
+          })
+        }
+      });
     }
     event();
   },
