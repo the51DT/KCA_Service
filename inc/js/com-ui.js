@@ -91,13 +91,13 @@ var KcaUI = {
       // pc
       eventCont.mouseenter(function () {
         if (!KcaUI.windowSize()) {
-          header_h = eventParent.find(".header-cont").height();
+          headerCont_h = eventParent.find(".header-cont").height();
           eventCont.find(".gnb__tab-btn-wrap ul").each(function (e) {
             max_h[e] = parseInt($(this).height());
           });
           $(".header-wrap")
             .addClass("on")
-            .css("height", header_h + Math.max.apply(null, max_h) + 32);
+            .css("height", headerCont_h + Math.max.apply(null, max_h) + 32);
         } else {
           return;
         }
@@ -106,7 +106,7 @@ var KcaUI = {
         if (!KcaUI.windowSize()) {
           $(this)
             .removeClass("on")
-            .css("height", header_h + 1);
+            .css("height", headerCont_h + 1);
         } else {
           return;
         }

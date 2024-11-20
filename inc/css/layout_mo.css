@@ -141,7 +141,6 @@
   }
   /* 푸터 footer */
   .footer-wrap {
-    margin-top: 7.5rem;
     padding: 2.5rem 1.88rem 7.5rem;
     position: relative;
     background-color: #000;
@@ -406,8 +405,8 @@
     padding-top: calc(100vh - 3.875rem + + 3.75rem);
   }
 
-  .footer-no-mt-mo + .footer-wrap {
-    margin-top: 0;
+  .content-wrap.footer-no-mt-mo{
+    padding-bottom: 0;
   }
 
   a.footer-inquiry_btn {
