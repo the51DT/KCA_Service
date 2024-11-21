@@ -1562,7 +1562,6 @@ input:checked + .slider:before {
   position:relative;
   flex-direction: column;
   gap:3.75rem;
-  margin-top:1.5rem;
 }
 .sensulting_process ul li .text-area::after{
   content: "";

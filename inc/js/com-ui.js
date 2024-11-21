@@ -198,8 +198,10 @@ var KcaUI = {
         }else{
           if (!KcaUI.windowSize02()) {
             scrollEventItem.css("top", $win_H - $header_h - 100);
+            scrollEventItem.find(".content-header_bg img").css("top", 0 + "%");
           }else{
             scrollEventItem.css("top", $win_H - $header_h - 60);
+            scrollEventItem.find(".content-header_bg img").css("top", 0 + "%");
           }
           
         }
