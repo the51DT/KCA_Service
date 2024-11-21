@@ -1494,7 +1494,29 @@ input:checked + .slider:before {
   justify-content: space-around;
 }
 
-
+/* 상담사 양성 교육 변경 */
+.split-bu{
+  color: #1A1A1A;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 160%;
+  padding-left:2rem;
+  position: relative;
+}
+.retire-item + .split-bu{
+  margin-top:.5rem;
+}
+.split-bu::before{
+  content: '';
+  display: inline-block;
+  width: 0.3rem;
+  height: 0.3rem;
+  background: #1a1a1a;
+  border-radius: 100%;
+  position: absolute;
+  top:1rem;
+  left: 12px;
+}
 /* 우리의 고객사 */
 .customer-list-wrap{
   margin-top:2.5rem;
