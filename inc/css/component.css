@@ -1394,6 +1394,7 @@ input:checked + .slider:before {
 .poto_board-list li .text-area{
   background-color: #fff;
   padding:3rem 2.5rem;
+  width:100%;
 }
 .poto_board-list li .text-area p{
   color: #1A1A1A;

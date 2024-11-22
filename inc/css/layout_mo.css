@@ -340,7 +340,7 @@
     left: 1.87rem;
     bottom: -3.1rem;
     display: flex;
-    gap: 1rem;
+    gap: .75rem;
   }
   .content-header .page-map-wrap > li {
     display: flex;
@@ -351,7 +351,7 @@
     display: block;
     width: 0.0625rem;
     height: 1rem;
-    margin-left: 1rem;
+    margin-left: .75rem;
   }
   .content-header .page-map-wrap > li:last-child:after {
     display: none;
