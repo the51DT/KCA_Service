@@ -12,6 +12,7 @@ $(document).ready(function () {
   KcaUI.passwordHide(".password");
   KcaUI.closestAcco(".accoTrigger");
   KcaUI.historyLine(".histroy-wrap");
+  KcaUI.moveCon(".move-con");
   KcaSwiper.swiperResponsiveSub01(".sub-swiper");
 });
 
@@ -143,14 +144,14 @@ var KcaUI = {
       scrollEventTxt = $(obj).find(".content-header-cont"),
       scrollTop = scrollWrap.scrollTop(),
       imgSet = 0;
-    
+
     function event() {
       scrollWrap.scroll(function () {
         scrollTop = scrollWrap.scrollTop();
         imgSet = (scrollTop / ($win_H - $header_h)) * 50;
         txtSet = (scrollTop / ($win_H - $header_h)) * 25;
-        
-        if (($win_H - $header_h) >= scrollTop) {
+
+        if ($win_H - $header_h >= scrollTop) {
           scrollEventItem.css("top", scrollTop);
           scrollEventItem
             .find(".content-header_bg img")
@@ -195,15 +196,14 @@ var KcaUI = {
               scrollEventTxt.find(".subp-txt").removeClass("on");
             }
           }
-        }else{
+        } else {
           if (!KcaUI.windowSize02()) {
             scrollEventItem.css("top", $win_H - $header_h - 100);
             scrollEventItem.find(".content-header_bg img").css("top", 0 + "%");
-          }else{
+          } else {
             scrollEventItem.css("top", $win_H - $header_h - 60);
             scrollEventItem.find(".content-header_bg img").css("top", 0 + "%");
           }
-          
         }
       });
     }
@@ -299,18 +299,18 @@ var KcaUI = {
       accoBtn.on("click", (el) => {
         el.target.closest(".accoWrap").classList.toggle("on");
       });
-      $(".all-acco-btn").on("click", function() {
-        $(this).toggleClass("on")
-        if($(this).hasClass("on")){
-          $(".accoWrap").each(function(){
-            if(!$(this).hasClass("on")){
-              $(this).addClass("on")
+      $(".all-acco-btn").on("click", function () {
+        $(this).toggleClass("on");
+        if ($(this).hasClass("on")) {
+          $(".accoWrap").each(function () {
+            if (!$(this).hasClass("on")) {
+              $(this).addClass("on");
             }
-          })
-        }else{
-          $(".accoWrap").each(function(){
-              $(this).removeClass("on")
-          })
+          });
+        } else {
+          $(".accoWrap").each(function () {
+            $(this).removeClass("on");
+          });
         }
       });
     }
@@ -321,34 +321,51 @@ var KcaUI = {
     if (!KcaUI.checkObj(obj)) {
       return;
     }
-    
+
     let historyWrap = $(obj).height();
     const historyLine = $(obj).find(".histroy-line");
     const lineTopPos = historyLine.offset().top;
 
     function event() {
-      $(window).resize(function(){
+      $(window).resize(function () {
         historyWrap = $(obj).height();
         if (!KcaUI.windowSize02()) {
           historyLine.show();
         }
-        
-      })
+      });
       $("body").scroll(() => {
-        let scrollVaule = $("body").scrollTop()
-        let lineTop = historyLine.offset().top
-        let screenHeight = screen.height
-        let triggerY = (screenHeight * 60 / 100)
-        let heightValue = (scrollVaule - lineTopPos + triggerY) / historyWrap * 100
-        if(triggerY >= lineTop) {
-          historyLine.stop().animate({'height': heightValue + "%"},300)
+        let scrollVaule = $("body").scrollTop();
+        let lineTop = historyLine.offset().top;
+        let screenHeight = screen.height;
+        let triggerY = (screenHeight * 60) / 100;
+        let heightValue =
+          ((scrollVaule - lineTopPos + triggerY) / historyWrap) * 100;
+        if (triggerY >= lineTop) {
+          historyLine.stop().animate({ height: heightValue + "%" }, 300);
         } else {
-          historyLine.stop().animate({'height': "0%"},300)
-          
+          historyLine.stop().animate({ height: "0%" }, 300);
         }
-      })
+      });
     }
     event();
+  },
+
+  // RCT_004 섹션 이동
+  moveCon: function (obj) {
+    if (!KcaUI.checkObj(obj)) {
+      return;
+    }
+
+    const moveTop = $(".move-con").offset().top - 150;
+    console.log(moveTop);
+    $(".move-btn").on("click", () => {
+      $("body").animate(
+        {
+          scrollTop: moveTop,
+        },
+        300
+      );
+    });
   },
 
   /* Dimmed */

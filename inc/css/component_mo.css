@@ -30,6 +30,9 @@ min-width : 1024 css
   .employment-progress-wrap ul li.arrow-next{
     padding-top:3rem;
   }
+  .none-1360 {
+    display: none !important;
+  }
 }
 @media screen and (max-width: 1024px) {
   /*********************************
