@@ -1473,6 +1473,58 @@ button.cal-acco {
   margin-top: auto;
 }
 
+/* RCT_003 */
+.border-split-wrap {
+  border-top: 4px solid #1a1a1a;
+}
+.border-split-wrap .split {
+  padding: 2.5rem 0;
+}
+.border-split-wrap .split + .split {
+  margin-top: 3.75rem;
+  border-top: 1px solid #d9d9d9;
+}
+.border-split-tit {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 130%;
+  color: #1a1a1a;
+}
+.border-split-subtit {
+  margin-top: 0.25rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 160%;
+  color: #666;
+}
+.border-split-text {
+  margin-top: 2rem;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 160%;
+  color: #1a1a1a;
+}
+.split-img {
+  width: 100%;
+}
+.split-img-item {
+  margin-top: 2.5rem;
+  column-count: 2;
+}
+.split-img-tit {
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 160%;
+  color: #1a1a1a;
+}
+.split-img-tit span {
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 160%;
+  color: #666;
+}
+
 /* RCT_004 */
 .job-tit {
   font-size: 2.5rem;
@@ -1833,6 +1885,24 @@ button.cal-acco {
   }
   .retire-item {
     font-size: 1.25rem;
+  }
+
+  /* RCT_003 */
+  .border-split-wrap {
+    border-top: 2px solid #1a1a1a;
+  }
+  .border-split-wrap .split {
+    padding: 1.25rem 0;
+    gap: 1.25rem;
+  }
+  .border-split-wrap .split + .split {
+    margin-top: 2.5rem;
+  }
+  .border-split-text {
+    margin-top: 1rem;
+  }
+  .split-img-item {
+    margin-top: 1.25rem;
   }
 
   /* RCT_004 */
@@ -2602,6 +2672,27 @@ button.cal-acco {
   .talent-box-icon {
     width: 3rem;
     height: 3rem;
+  }
+
+  /* RCT_003 */
+  .border-split-tit {
+    font-size: 1.5rem;
+  }
+  .border-split-subtit {
+    font-size: 1rem;
+  }
+  .border-split-text {
+    font-size: 0.875rem;
+  }
+  .split-img-item {
+    column-count: 1;
+  }
+  .split-img-tit {
+    font-size: 0.875rem;
+    letter-spacing: -0.03125rem;
+  }
+  .split-img-tit span {
+    font-size: 0.875rem;
   }
 
   /* RCT_004 */
