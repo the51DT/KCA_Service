@@ -1,5 +1,15 @@
 @charset "utf-8";
 
+.watching-con {
+  position: relative;
+  top: 10rem;
+  opacity: 0;
+  transition: opacity .3s ease-in-out, top .3s ease-in-out;
+}
+.watching-con.on {
+  top: 0;
+  opacity: 1;
+}
 .item-verti {
   height: auto;
   padding-top: 6.25rem;
