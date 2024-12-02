@@ -1266,6 +1266,11 @@
     height:auto;
     flex-shrink: 0;
     order: 2;
+    display: none;
+  }
+
+  .main_content03 .cont03-area li.on .img-area{
+    display: block;
   }
   .main_content03 .cont03-area li .img-area img{
     width:100%;

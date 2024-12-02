@@ -83,26 +83,164 @@ var KcaUI = {
     }
 
     var mainWrap = $(obj),
-      timeNum = 0;
-    mainCont01 = mainWrap.find(".main_content01");
-    mainCont01_1 = mainCont01.find(".content-item01");
-    mainCont01_2 = mainCont01.find(".content-item02");
-    mainCont01_3 = mainCont01.find(".content-item03");
-    mainCont02 = mainWrap.find(".main_content02");
-    mainCont02_1 = mainCont02.find(".content-item01");
-    mainCont02_2 = mainCont02.find(".content-item02");
-    mainCont03 = mainWrap.find(".main_content03");
-    mainCont03_1 = mainCont03.find(".content-item01");
-    mainCont04 = mainWrap.find(".main_content04");
-    mainCont04_1 = mainCont04.find(".content-item01");
+      timeNum = 0,
+      mainCont01 = mainWrap.find(".main_content01"),
+      mainCont01_1 = mainCont01.find(".content-item01"),
+      mainCont01_2 = mainCont01.find(".content-item02"),
+      mainCont01_3 = mainCont01.find(".content-item03"),
+      mainCont02 = mainWrap.find(".main_content02"),
+      mainCont02_1 = mainCont02.find(".content-item01"),
+      mainCont02_2 = mainCont02.find(".content-item02"),
+      mainCont03 = mainWrap.find(".main_content03"),
+      mainCont03_1 = mainCont03.find(".content-item01"),
+      mainCont04 = mainWrap.find(".main_content04"),
+      mainCont04_1 = mainCont04.find(".content-item01"),
+      clickItem = $(".main_content-footer button");
+      leaveTime = null;
+    function clear() {
+      mainWrap.removeClass("action-l01 action-l02 action-l03 action-l04 action-l05");
+      mainCont01_1.removeClass("on");
+      mainCont01_2.removeClass("on");
+      mainCont01_3.removeClass("on");
+      mainCont02_1.removeClass("on");
+      // mainCont02_2.removeClass("on");
+      mainCont02_2.find(".swipe-motion-area").removeClass("on motion01 motion02 motion03 motion04 motion05");
+      // mainCont03_1.removeClass("on");
+      mainCont03_1.find(".text-area").removeClass("on");
+      mainCont03_1.find(".cont03-area").removeClass("on");
+      mainCont03_1.find(".cont03-item01").removeClass("on");
+      mainCont03_1.find(".cont03-item02").removeClass("on");
+      mainCont03_1.find(".cont03-item03").removeClass("on");
+      // mainCont04_1.removeClass("on");
+      mainCont04_1.find("> .text-area").removeClass("on");
+      mainCont04_1.find(".cont04-area").removeClass("on");
+      $(".footer-wrap").removeClass("on");
+    }
 
-    // cont00Time = 0,
-    // cont01Time = 1800,
-    // cont02Time = 2800,
-    // cont03Time = 2520,
-    // cont04Time = 3120,
-    // cont05Time = 5600,
-
+    function hoverEvnet(){
+      $(".stop-cont").mouseenter(function(){
+        // e.preventDefault();
+        clearInterval(motionTime);
+        clearTimeout(leaveTime);
+      });
+      mainCont03_1.find("li").mouseenter(function(){
+        $(this).siblings().removeClass("on")
+        $(this).addClass("on")
+      });
+      $(".stop-cont").mouseleave(function(){
+        clearInterval(motionTime);
+        clearTimeout(leaveTime);
+        leaveTime = setTimeout(function(){
+          if (timeNum <= 600 && wheelDaea < 0) {
+            timeNum = 600;
+          } else if (timeNum > 600 && timeNum <= 1200) {
+            timeNum = 1200;
+          } else if (timeNum > 1200 && timeNum <= 1800) {
+            timeNum = 1800;
+          } else if (timeNum > 1800 && timeNum <= 2100) {
+            timeNum = 2100;
+          } else if (timeNum > 2100 && timeNum <= 2300) {
+            timeNum = 2300;
+          } else if (timeNum > 2300 && timeNum <= 2500) {
+            timeNum = 2500;
+          } else if (timeNum > 2500 && timeNum <= 2700) {
+            timeNum = 2700;
+          } else if (timeNum > 2700 && timeNum <= 3000) {
+            timeNum = 3000;
+          } else if (timeNum > 3000 && timeNum <= 3300) {
+            timeNum = 3300;
+          } else if (timeNum > 3300 && timeNum <= 3600) {
+            timeNum = 3600;
+          } else if (timeNum > 3600 && timeNum <= 3900) {
+            timeNum = 3900;
+          } else if (timeNum > 3900 && timeNum <= 4500) {
+            timeNum = 4500;
+          } else if (timeNum > 3900) {
+            timeNum = 3600;
+          }else if (timeNum > 3600 && timeNum <= 3900) {
+            timeNum = 3300;
+          }else if (timeNum > 3300 && timeNum <= 3600) {
+            timeNum = 3000;
+          }else if (timeNum > 3000 && timeNum <= 3300) {
+            timeNum = 2700;
+          }else if (timeNum > 2700 && timeNum <= 3000) {
+            timeNum = 2500;
+          }else if (timeNum > 2500 && timeNum <= 2700) {
+            timeNum = 2300;
+          }else if (timeNum > 2300 && timeNum <= 2500) {
+            timeNum = 2100;
+          }else if (timeNum > 2100 && timeNum <= 2300) {
+            timeNum = 1800;
+          }else if (timeNum > 1800 && timeNum <= 2100) {
+            timeNum = 1200;
+          }else if (timeNum > 1200 && timeNum <= 1800) {
+            timeNum = 600;
+          }else if (timeNum > 600 && timeNum <= 1200) {
+            timeNum = 0;
+          }else if (timeNum > 0) {
+            timeNum = 0;
+          }
+          event();
+        },100)
+      })
+    }
+    function setData () {
+      clear();
+      clearInterval(motionTime)
+      clearTimeout(timeData);
+      timeData = setTimeout(function(){
+        if (timeNum <= 600 && wheelDaea < 0) {
+          timeNum = 600;
+        } else if (timeNum > 600 && timeNum <= 1200 && wheelDaea < 0) {
+          timeNum = 1200;
+        } else if (timeNum > 1200 && timeNum <= 1800 && wheelDaea < 0) {
+          timeNum = 1800;
+        } else if (timeNum > 1800 && timeNum <= 2100 && wheelDaea < 0) {
+          timeNum = 2100;
+        } else if (timeNum > 2100 && timeNum <= 2300 && wheelDaea < 0) {
+          timeNum = 2300;
+        } else if (timeNum > 2300 && timeNum <= 2500 && wheelDaea < 0) {
+          timeNum = 2500;
+        } else if (timeNum > 2500 && timeNum <= 2700 && wheelDaea < 0) {
+          timeNum = 2700;
+        } else if (timeNum > 2700 && timeNum <= 3000 && wheelDaea < 0) {
+          timeNum = 3000;
+        } else if (timeNum > 3000 && timeNum <= 3300 && wheelDaea < 0) {
+          timeNum = 3300;
+        } else if (timeNum > 3300 && timeNum <= 3600 && wheelDaea < 0) {
+          timeNum = 3600;
+        } else if (timeNum > 3600 && timeNum <= 3900 && wheelDaea < 0) {
+          timeNum = 3900;
+        } else if (timeNum > 3900 && timeNum <= 4500 && wheelDaea < 0) {
+          timeNum = 4500;
+        } else if (timeNum > 3900 && wheelDaea > 0) {
+          timeNum = 3600;
+        }else if (timeNum > 3600 && timeNum <= 3900 && wheelDaea > 0) {
+          timeNum = 3300;
+        }else if (timeNum > 3300 && timeNum <= 3600 && wheelDaea > 0) {
+          timeNum = 3000;
+        }else if (timeNum > 3000 && timeNum <= 3300 && wheelDaea > 0) {
+          timeNum = 2700;
+        }else if (timeNum > 2700 && timeNum <= 3000 && wheelDaea > 0) {
+          timeNum = 2500;
+        }else if (timeNum > 2500 && timeNum <= 2700 && wheelDaea > 0) {
+          timeNum = 2300;
+        }else if (timeNum > 2300 && timeNum <= 2500 && wheelDaea > 0) {
+          timeNum = 2100;
+        }else if (timeNum > 2100 && timeNum <= 2300 && wheelDaea > 0) {
+          timeNum = 1800;
+        }else if (timeNum > 1800 && timeNum <= 2100 && wheelDaea > 0) {
+          timeNum = 1200;
+        }else if (timeNum > 1200 && timeNum <= 1800 && wheelDaea > 0) {
+          timeNum = 600;
+        }else if (timeNum > 600 && timeNum <= 1200 && wheelDaea > 0) {
+          timeNum = 0;
+        }else if (timeNum > 0 && wheelDaea > 0) {
+          timeNum = 0;
+        }
+        event();
+      }, 100)
+    }
     function event() {
       motionTime = setInterval(function () {
         timeNum++;
@@ -110,29 +248,51 @@ var KcaUI = {
           if (!mainWrap.hasClass("action-l01")) {
             mainWrap.addClass("action-l01");
             mainCont01_1.addClass("on");
+            mainCont02_2.removeClass("on");
+            $(".main_content-footer .bar").stop().css("width", "0")
             $(".main_content-footer .main-item01 .bar")
               .stop()
               .animate({ width: 33 + "%" }, 6000);
           }
         } else if (timeNum > 600 && timeNum <= 1200) {
-          if (mainCont01_1.hasClass("on")) {
+          if (!mainCont01_2.hasClass("on")) {
             mainCont01_2.addClass("on");
             mainCont01_1.removeClass("on");
+            mainCont02_2.removeClass("on");
+            $(".main_content-footer .main-item02 .bar").stop().css("width", "0");
+            $(".main_content-footer .main-item03 .bar").stop().css("width", "0");
+            $(".main_content-footer .main-item04 .bar").stop().css("width", "0");
+            $(".main_content-footer .main-item01 .bar").stop().css("width", "33%");
             $(".main_content-footer .main-item01 .bar")
               .stop()
               .animate({ width: 66 + "%" }, 6000);
           }
+          if (!mainWrap.hasClass("action-l01")) {
+            mainWrap.addClass("action-l01");
+          }
         } else if (timeNum > 1200 && timeNum <= 1800) {
-          if (mainCont01_2.hasClass("on")) {
+          if (!mainCont01_3.hasClass("on")) {
             mainCont01_3.addClass("on");
             mainCont01_2.removeClass("on");
+            mainCont02_2.removeClass("on");
+            $(".main_content-footer .main-item02 .bar").stop().css("width", "0");
+            $(".main_content-footer .main-item03 .bar").stop().css("width", "0");
+            $(".main_content-footer .main-item04 .bar").stop().css("width", "0");
+            $(".main_content-footer .main-item01 .bar").css("width", "66%");
             $(".main_content-footer .main-item01 .bar")
               .stop()
               .animate({ width: 100 + "%" }, 6000);
           }
+          if (!mainWrap.hasClass("action-l01")) {
+            mainWrap.addClass("action-l01");
+          }
         } else if (timeNum > 1800 && timeNum <= 2100) {
-          if (mainWrap.hasClass("action-l01")) {
+          if (!mainWrap.hasClass("action-l02")) {
             mainWrap.addClass("action-l02").removeClass("action-l01");
+            $(".main_content-footer .main-item01 .bar").stop().css("width", "100%")
+            $(".main_content-footer .main-item02 .bar").stop().css("width", "0")
+            $(".main_content-footer .main-item03 .bar").stop().css("width", "0")
+            $(".main_content-footer .main-item04 .bar").stop().css("width", "0")
             $(".main_content-footer .main-item02 .bar")
               .stop()
               .animate({ width: 33 + "%" }, 3000);
@@ -147,79 +307,146 @@ var KcaUI = {
             }, 200);
           }
         } else if (timeNum > 2100 && timeNum <= 2300) {
-          if (mainCont02_1.hasClass("on")) {
+          if (!mainWrap.hasClass("action-l02")) {
+            mainWrap.addClass("action-l02");
+            mainCont02_2.addClass("on");
+            mainCont02_2.find(".swipe-motion-area").addClass("show");
+          }
+          if (!mainCont02_2
+            .find(".swipe-motion-area").hasClass("motion02")) {
             mainCont02_1.removeClass("on");
             mainCont02_2
               .find(".swipe-motion-area")
               .addClass("motion02")
               .removeClass("on motion01");
+              $(".main_content-footer .main-item01 .bar").stop().css("width", "100%")
+              $(".main_content-footer .main-item02 .bar").stop().css("width", "33%")
+              $(".main_content-footer .main-item03 .bar").stop().css("width", "0")
+              $(".main_content-footer .main-item04 .bar").stop().css("width", "0")
             $(".main_content-footer .main-item02 .bar")
               .stop()
               .animate({ width: 54 + "%" }, 2000);
           }
         } else if (timeNum > 2300 && timeNum <= 2500) {
-          if (mainCont02_2.find(".swipe-motion-area").hasClass("motion02")) {
+          if (!mainWrap.hasClass("action-l02")) {
+            mainWrap.addClass("action-l02");
+            mainCont02_2.addClass("on");
+            mainCont02_2.find(".swipe-motion-area").addClass("show");
+          }
+          if (!mainCont02_2.find(".swipe-motion-area").hasClass("motion03")) {
             mainCont02_2
               .find(".swipe-motion-area")
               .addClass("on motion03")
               .removeClass("motion02");
+              $(".main_content-footer .main-item01 .bar").stop().css("width", "100%")
+              $(".main_content-footer .main-item02 .bar").stop().css("width", "54%");
+              $(".main_content-footer .main-item03 .bar").stop().css("width", "0")
+              $(".main_content-footer .main-item04 .bar").stop().css("width", "0")
             $(".main_content-footer .main-item02 .bar")
               .stop()
               .animate({ width: 76 + "%" }, 2000);
           }
         } else if (timeNum > 2500 && timeNum <= 2700) {
-          if (mainCont02_2.find(".swipe-motion-area").hasClass("motion03")) {
+          if (!mainWrap.hasClass("action-l02")) {
+            mainWrap.addClass("action-l02");
+            mainCont02_2.addClass("on");
+            mainCont02_2.find(".swipe-motion-area").addClass("show");
+          }
+          if (!mainCont02_2.find(".swipe-motion-area").hasClass("motion04")) {
             mainCont02_2
               .find(".swipe-motion-area")
               .addClass("motion04")
               .removeClass("on motion03");
+              $(".main_content-footer .main-item01 .bar").stop().css("width", "100%")
+            $(".main_content-footer .main-item02 .bar").stop().css("width", "76%")
+            $(".main_content-footer .main-item03 .bar").stop().css("width", "0")
+            $(".main_content-footer .main-item04 .bar").stop().css("width", "0")
             $(".main_content-footer .main-item02 .bar")
               .stop()
               .animate({ width: 88 + "%" }, 2000);
           }
-        } else if (timeNum > 2700 && timeNum <= 2800) {
-          if (mainCont02_2.find(".swipe-motion-area").hasClass("motion04")) {
+        } else if (timeNum > 2700 && timeNum <= 3000) {
+          if (!mainWrap.hasClass("action-l02")) {
+            mainWrap.addClass("action-l02");
+            mainCont02_2.addClass("on");
+            mainCont02_2.find(".swipe-motion-area").addClass("show");
+          }
+          if (!mainCont02_2.find(".swipe-motion-area").hasClass("motion05")) {
             mainCont02_2
               .find(".swipe-motion-area")
               .addClass("on motion05")
-              .removeClass("motion04 show");
+              .removeClass("motion04");
+              $(".main_content-footer .main-item01 .bar").stop().css("width", "100%")
+            $(".main_content-footer .main-item02 .bar").stop().css("width", "88%")
+            $(".main_content-footer .main-item03 .bar").stop().css("width", "0")
+            $(".main_content-footer .main-item04 .bar").stop().css("width", "0")
             $(".main_content-footer .main-item02 .bar")
               .stop()
               .animate({ width: 100 + "%" }, 1000);
           }
-        } else if (timeNum > 2800 && timeNum <= 3100) {
-          if (mainWrap.hasClass("action-l02")) {
+        } else if (timeNum > 3000 && timeNum <= 3300) {
+          if (!mainWrap.hasClass("action-l03")) {
             mainWrap.addClass("action-l03").removeClass("action-l02");
+            mainCont02_2
+              .find(".swipe-motion-area").addClass("motion05")
+              .removeClass("show")
             mainCont03_1.addClass("on");
+            $(".main_content-footer .main-item01 .bar").stop().css("width", "100%")
+            $(".main_content-footer .main-item02 .bar").stop().css("width", "100%")
+            $(".main_content-footer .main-item03 .bar").stop().css("width", "0")
+            $(".main_content-footer .main-item04 .bar").stop().css("width", "0")
             $(".main_content-footer .main-item03 .bar")
               .stop()
               .animate({ width: 33 + "%" }, 3000);
             setTimeout(function () {
               mainCont03_1.find(".text-area").addClass("on");
               mainCont03_1.find(".cont03-area").addClass("on");
+              mainCont03_1.find("li").removeClass("on");
               mainCont03_1.find(".cont03-item01").addClass("on");
             }, 200);
           }
-        } else if (timeNum > 3100 && timeNum <= 3400) {
-          if (mainCont03_1.find(".cont03-item01").hasClass("on")) {
+        } else if (timeNum > 3300 && timeNum <= 3600) {
+          if (!mainWrap.hasClass("action-l03")) {
+            mainWrap.addClass("action-l03");
+            mainCont03_1.addClass("on");
+            mainCont03_1.find(".text-area").addClass("on");
+            mainCont03_1.find(".cont03-area").addClass("on");
+          }
+          if (!mainCont03_1.find(".cont03-item02").hasClass("on")) {
+            mainCont03_1.find("li").removeClass("on");
             mainCont03_1.find(".cont03-item02").addClass("on");
-            mainCont03_1.find(".cont03-item01").removeClass("on");
+            $(".main_content-footer .main-item01 .bar").stop().css("width", "100%")
+            $(".main_content-footer .main-item02 .bar").stop().css("width", "100%")
+            $(".main_content-footer .main-item03 .bar").stop().css("width", "33%")
+            $(".main_content-footer .main-item04 .bar").stop().css("width", "0")
             $(".main_content-footer .main-item03 .bar")
               .stop()
               .animate({ width: 66 + "%" }, 3000);
           }
-        } else if (timeNum > 3400 && timeNum <= 3700) {
-          if (mainCont03_1.find(".cont03-item02").hasClass("on")) {
+        } else if (timeNum > 3600 && timeNum <= 3900) {
+          if (!mainWrap.hasClass("action-l03")) {
+            mainWrap.addClass("action-l03");
+            mainCont03_1.addClass("on");
+            mainCont03_1.find(".text-area").addClass("on");
+            mainCont03_1.find(".cont03-area").addClass("on");
+          }
+          if (!mainCont03_1.find(".cont03-item03").hasClass("on")) {
+            mainCont03_1.find("li").removeClass("on");
             mainCont03_1.find(".cont03-item03").addClass("on");
-            mainCont03_1.find(".cont03-item02").removeClass("on");
+            $(".main_content-footer .main-item01 .bar").stop().css("width", "100%")
+            $(".main_content-footer .main-item02 .bar").stop().css("width", "100%")
+            $(".main_content-footer .main-item03 .bar").stop().css("width", "66%")
+            $(".main_content-footer .main-item04 .bar").stop().css("width", "0")
             $(".main_content-footer .main-item03 .bar")
               .stop()
               .animate({ width: 100 + "%" }, 3000);
           }
-        } else if (timeNum > 3700 && timeNum <= 4300) {
-          if (mainWrap.hasClass("action-l03")) {
+        } else if (timeNum > 3900 && timeNum <= 4500) {
+          if (!mainWrap.hasClass("action-l04")) {
             mainWrap.addClass("action-l04").removeClass("action-l03");
             mainCont04_1.addClass("on");
+            $(".main_content-footer .bar").stop().css("width", "100%")
+            $(".main_content-footer .main-item04 .bar").stop().css("width", "0")
             $(".main_content-footer .main-item04 .bar")
               .stop()
               .animate({ width: 100 + "%" }, 6000);
@@ -227,22 +454,84 @@ var KcaUI = {
               mainCont04_1.find("> .text-area").addClass("on");
               mainCont04_1.find(".cont04-area").addClass("on");
             }, 200);
+            clearInterval(motionTime);
           }
-        } else if (timeNum > 4300) {
-          if (mainWrap.hasClass("action-l04")) {
-            mainWrap.addClass("action-l05").removeClass("action-l04");
-            $(".footer-wrap").addClass("on");
+        } else if (timeNum >= 4500) {
+          if (!mainWrap.hasClass("action-l04")) {
+            mainWrap.addClass("action-l04").removeClass("action-l03");
+            mainCont04_1.addClass("on");
+            $(".main_content-footer .bar").stop().css("width", "100%")
+            $(".main_content-footer .main-item04 .bar").stop().css("width", "100%")
+            setTimeout(function () {
+              mainCont04_1.find("> .text-area").addClass("on");
+              mainCont04_1.find(".cont04-area").addClass("on");
+            }, 200);
             clearInterval(motionTime);
           }
         }
       }, 10);
-    }
+    };
 
+    function clickEvent() {
+      clickItem.on("click", function(){
+        var btnStop = $(this).parent().index();
+        if(btnStop == 0){
+          clearInterval(motionTime);
+          timeNum = 0;
+          clear();
+          event();
+        }else if(btnStop == 1){
+          clearInterval(motionTime);
+          timeNum = 1800;
+          clear();
+          event();
+        }else if(btnStop == 2){
+          clearInterval(motionTime);
+          timeNum = 3000;
+          clear();
+          event();
+        }else if(btnStop == 3){
+          clearInterval(motionTime);
+          timeNum = 3900;
+          clear();
+          event();
+        }
+      });
+    };
+
+    function scrollEvent(){
+      let initialY = null;
+          wheelDaea = 0;
+          timeData= null;
+      mainWrap.on("mousewheel", function(e){
+        wheelDaea = e.originalEvent.wheelDelta
+        setData ();
+      })
+      mainWrap.on("touchstart", function(e){
+        initialY = `${e.touches ? e.touches[0].clientY : e.clientY}`;
+      })
+      mainWrap.on("touchmove", function(e){
+        if (initialY !== null) {
+          const currentY = `${e.touches ? e.touches[0].clientY : e.clientY}`;
+          let diffY = initialY - currentY;
+          wheelDaea = diffY.toFixed(0)
+          initialY = null;
+          setData ();
+        }
+        
+        
+      })
+    };
+
+    
+    hoverEvnet();
     event();
+    clickEvent();
+    scrollEvent();
   },
   headerNav: function (obj, com, par) {
     if (!KcaUI.checkObj(com)) {
-      return;
+      return; 
     }
 
     var eventbtn = $(obj),
