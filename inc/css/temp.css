@@ -755,6 +755,7 @@
   align-items: center;
   gap: 1.25rem;
   margin-top: 3.75rem;
+  margin-left:-0.8rem;
   padding: 2rem;
   width: fit-content;
   border-radius: 0.5rem;
@@ -2170,6 +2171,9 @@ button.cal-acco {
   .org-team:nth-child(1) .org-sub::before {
     left: 7.5rem;
   }
+  .org-sub{
+    margin-left:0;
+  }
   .org-part::after {
     top: -1.25rem;
     left: 50%;
@@ -2732,6 +2736,7 @@ button.cal-acco {
   .org-sub {
     gap: 0.75rem;
     margin-top: 1rem;
+    margin-left:0;
     padding: 1.25rem 0;
     font-size: 0.875rem;
     width: 100%;
