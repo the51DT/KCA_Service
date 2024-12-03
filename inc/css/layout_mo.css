@@ -160,6 +160,14 @@
     width: 2.5rem;
     background: url(../../inc/images/icon/leng-en-on_icon.svg) no-repeat center;
   }
+  .depth2-menu a{
+    margin-top:.9rem;
+    display: flex;
+    width: 100%;
+    padding: 0.75rem 1rem 0.75rem 1.5rem;
+    align-items: center;
+    background: #F0F0F0 url(../images/icon/header_next_icon.svg) no-repeat right 1rem center;
+  }
   .header-cont .mo-only.mo-utile-wrap{
     display: flex !important;
     height: 5rem;
