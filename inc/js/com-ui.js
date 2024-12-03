@@ -427,7 +427,7 @@ var KcaUI = {
               .stop()
               .animate({ width: 100 + "%" }, 6000);
             setTimeout(function () {
-              mainCont04_1.find("> .text-area").addClass("on");
+              mainCont04_1.find(".cont-center > .text-area").addClass("on");
               mainCont04_1.find(".cont04-area").addClass("on");
             }, 200);
             clearInterval(motionTime);
@@ -439,7 +439,7 @@ var KcaUI = {
             $(".main_content-footer .bar").stop().css("width", "100%")
             $(".main_content-footer .main-item04 .bar").stop().css("width", "100%")
             setTimeout(function () {
-              mainCont04_1.find("> .text-area").addClass("on");
+              mainCont04_1.find(".cont-center > .text-area").addClass("on");
               mainCont04_1.find(".cont04-area").addClass("on");
             }, 200);
             clearInterval(motionTime);
@@ -475,36 +475,35 @@ var KcaUI = {
       });
     };
 
-    function scrollEvent(){
-      let initialY = null;
-          wheelDaea = 0;
-          timeData= null;
-      mainWrap.on("mousewheel", function(e){
-        wheelDaea = e.originalEvent.wheelDelta
-        setData ();
-      })
-      mainWrap.on("touchstart", function(e){
-        initialY = `${e.touches ? e.touches[0].clientY : e.clientY}`;
-      })
-      mainWrap.on("touchmove", function(e){
-        if (initialY !== null) {
-          const currentY = `${e.touches ? e.touches[0].clientY : e.clientY}`;
-          let diffY = initialY - currentY;
-          wheelDaea = diffY.toFixed(0)
-          initialY = null;
-          setData ();
-        }
-        
-        
-      })
-    };
+    // function scrollEvent(){
+    //   let initialY = null;
+    //       wheelDaea = 0;
+    //       timeData= null;
+    //   mainWrap.on("mousewheel", function(e){
+    //     wheelDaea = e.originalEvent.wheelDelta
+    //     setData ();
+    //   })
+    //   mainWrap.on("touchstart", function(e){
+    //     initialY = `${e.touches ? e.touches[0].clientY : e.clientY}`;
+    //   })
+    //   mainWrap.on("touchmove", function(e){
+    //     if (initialY !== null) {
+    //       const currentY = `${e.touches ? e.touches[0].clientY : e.clientY}`;
+    //       let diffY = initialY - currentY;
+    //       wheelDaea = diffY.toFixed(0)
+    //       initialY = null;
+    //       setData ();
+    //     }
+    //   })
+    // };
 
     
     hoverEvnet();
     event();
     clickEvent();
-    scrollEvent();
+    // scrollEvent();
   },
+
   headerNav: function (obj, com, par) {
     if (!KcaUI.checkObj(com)) {
       return; 
@@ -516,10 +515,11 @@ var KcaUI = {
       headerCont_h = 0,
       header_h = eventParent.height(),
       max_h = [];
-
-    // Math.max.apply(null, max_h);
-
+      
     function event() {
+      $(window).resize(function () {
+        header_h = eventParent.height()
+      });
       // pc
       eventCont.mouseenter(function () {
         if (!KcaUI.windowSize()) {
