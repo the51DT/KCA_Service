@@ -41,6 +41,7 @@ function resizeDone() {
     $(".sitemap-wrap").removeClass("on");
     $(".sitemap-wrap .nav-wrap .gnb__tab-btn-wrap li button").removeClass("on");
     $(".header-wrap").removeAttr("style");
+    $(".header-cont").removeClass("on");
     bodyControll(false);
   } else {
     //mo
@@ -421,6 +422,9 @@ var KcaUI = {
           if (!mainWrap.hasClass("action-l04")) {
             mainWrap.addClass("action-l04").removeClass("action-l03");
             mainCont04_1.addClass("on");
+            mainCont02_2
+              .find(".swipe-motion-area").addClass("motion05")
+              .removeClass("show")
             $(".main_content-footer .bar").stop().css("width", "100%")
             $(".main_content-footer .main-item04 .bar").stop().css("width", "0")
             $(".main_content-footer .main-item04 .bar")

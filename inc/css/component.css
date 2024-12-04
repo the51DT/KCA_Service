@@ -1389,6 +1389,7 @@ input:checked + .slider:before {
 .poto_board-list li{
   flex: 0 0 calc(33.3% - 1.667rem);
 }
+.poto_board-list li a{width:100%;}
 .poto_board-list li .img-area{max-width:100%;height:15rem;}
 .poto_board-list li .img-area img{width:100%;height:100%;}
 .poto_board-list li .text-area{
