@@ -690,7 +690,6 @@ body.fix {
   width:100%;
   height: 36.3rem;
   flex-shrink: 0;
-  margin:0 1.88rem;
   box-shadow: 4px 4px 12px 0px rgba(0, 0, 0, 0.08);
   background-color: #fff;
 }

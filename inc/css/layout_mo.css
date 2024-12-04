@@ -526,6 +526,43 @@
     width: 1.5rem;
     height: 1.5rem;
   }
+  .pop-wrap{
+    max-width: 19.6875rem;
+    height: 23.1rem;
+  }
+  .pop-wrap .swiper-slide{
+    width: 19.6875rem;
+    height: 19.6875rem;
+  }
+  .pop-foot{
+    height:3.38rem;
+    gap: .5rem;
+  }
+  .pop-foot .swiper_stop-btn{
+    height: 1.25rem;  
+    width: 1.25rem;
+    margin-top:-1px;
+    background: url(../images/icon/start_icon.svg) no-repeat center;
+    background-size:cover;
+  }
+  .pop-foot .swiper_stop-btn.on{
+    background: url(../images/icon/pause_icon.svg) no-repeat center;
+    background-size:cover;
+  }
+  .pop-foot .checkbox label.checkbox-label span.txt{
+    font-size: 0.875rem;
+  }
+  .pop-wrap .pop_close-btn{
+    width: 2.125rem;
+    height: 2.125rem;
+    background: url(../images/icon/pop_close_icon.svg) no-repeat;
+    background-size: cover;
+  }
+  .pop-foot .swiper-pagination{
+    width:2.5rem;
+    font-size: .875rem;
+  }
+  
 }
 @media screen and (max-width: 768px) {
 }
