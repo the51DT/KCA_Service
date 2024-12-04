@@ -16,6 +16,8 @@ $(document).ready(function () {
   KcaUI.animSec(".watching-con");
   KcaUI.mainAnimation(".main-wrap");
   KcaSwiper.swiperResponsiveSub01(".sub-swiper");
+  KcaSwiper.swiperPop01(".pop-swiper");
+  
 });
 
 let $win_W = $(window).width();
@@ -787,6 +789,26 @@ var KcaUI = {
     event();
   },
 
+  popOpen: function (obj) {
+    if (!KcaUI.checkObj(obj)) {
+      return;
+    }
+
+    function event(){
+      $(obj).fadeIn(500);
+    };  
+    event();
+  },
+  popClose: function (obj) {
+    if (!KcaUI.checkObj(obj)) {
+      return;
+    }
+
+    function event(){
+      $(obj).parents(".pop-wrap").fadeOut();
+    };
+    event();
+  },
   // RCT_004 섹션 이동
   moveCon: function (obj) {
     if (!KcaUI.checkObj(obj)) {
@@ -843,20 +865,31 @@ var KcaUI = {
 
 var KcaSwiper = {
   swiperPop01: function (obj) {
-
     if (!KcaUI.checkObj(obj)) {
       return;
     }
-    var popSwiper = new Swiper(obj, {
+
+    popSwiper = new Swiper(obj, {
+      loop:true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
       pagination: {
-        el: ".swiper-pagination",
+        el: ".pop-foot .swiper-pagination",
         type: "fraction",
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
+      }
     });
+    
+    $(".swiper_stop-btn").on("click", function(){
+      if ($(".swiper_stop-btn").hasClass("on")) {
+        $(".swiper_stop-btn").removeClass("on")
+        $(obj)[0].swiper.autoplay.stop();
+      } else {
+        $(".swiper_stop-btn").addClass("on")
+        $(obj)[0].swiper.autoplay.start();
+      }
+    })
   },
   
   swiperResponsiveSub01: function (obj) {

@@ -677,3 +677,66 @@ body.fix {
 .content-header + .content-area {
   padding-top: calc(100vh - 8.6rem + 3.75rem);
 }
+
+
+.pop-wrap{
+  display: none;
+  position: fixed;
+  z-index: 1001;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  max-width: 32.5rem;
+  width:100%;
+  height: 36.3rem;
+  flex-shrink: 0;
+  margin:0 1.88rem;
+  box-shadow: 4px 4px 12px 0px rgba(0, 0, 0, 0.08);
+  background-color: #fff;
+}
+.pop-wrap .swiper-slide{
+  width: 32.5rem;
+  height: 32.5rem;
+  overflow-y: auto;
+}
+.pop-foot{
+  height:3.81rem;
+  display:flex; 
+  align-items: center;
+  padding:0 1.25rem;
+  gap: 1rem;
+}
+.pop-foot .swiper_stop-btn{
+  height: 1.75rem;  
+  width: 1.75rem;
+  margin-top:-2px;
+  background: url(../images/icon/start_icon.svg) no-repeat center;
+}
+.pop-foot .swiper_stop-btn.on{
+  background: url(../images/icon/pause_icon.svg) no-repeat center;
+}
+.pop-foot .wrap-check{
+  flex:1;
+}
+
+.pop-wrap .pop_close-btn{
+  position: absolute;
+  top:0;
+  right:0;
+  width: 3.125rem;
+  height: 3.125rem;
+  z-index: 10;
+  background: url(../images/icon/pop_close_icon.svg) no-repeat;
+}
+.pop-foot .swiper-pagination{
+  position: unset;
+  width:3.75rem;
+  color: #1A1A1A;
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 160%;
+}
+
+.pop-foot .swiper-pagination .swiper-pagination-total{
+  color:#666;
+}

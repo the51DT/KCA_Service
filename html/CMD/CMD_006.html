@@ -285,15 +285,63 @@
     </footer>
     <!-- // footer -->
     <!-- article - pop-wrap -->
+     <!-- KcaUI.popOpen(".pop-wrap"); 함수 실행 -->
     <article class="pop-wrap">
       <div class="pop-cont-wrap">
         <div class="pop-cont">
-          s
-          <img src="../../inc/images/img/pop_img.png" alt="">
+          <div class="swiper pop-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="../../inc/images/img/pop_img.png" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="../../inc/images/img/pop_img.png" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="../../inc/images/img/pop_img.png" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="../../inc/images/img/pop_img.png" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="../../inc/images/img/pop_img.png" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="../../inc/images/img/pop_img.png" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="../../inc/images/img/pop_img.png" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="../../inc/images/img/pop_img.png" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="../../inc/images/img/pop_img.png" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="../../inc/images/img/pop_img.png" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="../../inc/images/img/pop_img.png" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="../../inc/images/img/pop_img.png" alt="">
+              </div>
+            </div>
+            <div class="pop-foot">
+              <div class="wrap-check">
+                <div class="checkbox">
+                  <input type="checkbox" id="checkbox-1" name="checkbox-1">
+                  <label for="checkbox-1" class="checkbox-label"><span class="txt">오늘 하루 보지 않기</span></label>
+                </div>
+              </div>
+              <button class="swiper_stop-btn on" title="일시정지"></button>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
         </div>
-        <div class="pop-foot">
-          
-        </div>
+        <!-- 닫을때 KcaUI.popClose(this) 함수실행 -->
+        <button class="pop_close-btn" onclick="KcaUI.popClose(this);"></button>
       </div>
     </article>
     <!-- //article - popup -->
@@ -303,6 +351,9 @@
   <script type="text/javascript" src="../../inc/js/swiper.min.js"></script>
   <!-- <script type="text/javascript" src="../../inc/js/plugins.js"></script> -->
   <script type="text/javascript" src="../../inc/js/com-ui.js"></script>
+  <script>
+      KcaUI.popOpen(".pop-wrap");
+  </script>
 </body>
 
 </html>
