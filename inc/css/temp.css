@@ -2383,6 +2383,9 @@ button.cal-acco {
     display: flex;
     flex-direction: column; 
   }
+  .cal-card{
+    padding-top:110%;
+  }
   .grid-2 .cal-card {
     padding-top: 0;
     height: 25rem;
@@ -2436,15 +2439,20 @@ button.cal-acco {
     margin-top: 3.75rem;
   }
   .swiper-top-wrap {
-    flex-direction: column;
+    /* flex-direction: column; */
     align-items: flex-start;
-    gap: 1rem;
+    gap: .75rem;
   }
   .swiper-top-wrap .swiper-tit {
     font-size: 1.5rem;
   }
-  .swiper-btn-wrap {
-    display: none;
+  .sub-swiper .swiper-top-wrap + .swiper-wrapper {
+    margin-top: 1.25rem;
+  }
+  .swiper-btn-wrap .swiper-button-prev,
+  .swiper-btn-wrap .swiper-button-next {
+    width: 2rem;
+    height: 2rem;
   }
   .sub-swiper .swiper-pagination {
     display: flex;

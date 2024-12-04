@@ -141,13 +141,13 @@ var KcaUI = {
           } else if (timeNum > 1800 && timeNum <= 2100) {
             timeNum = 1800;
           } else if (timeNum > 2100 && timeNum <= 2300) {
-            timeNum = 2100;
+            timeNum = 2200;
           } else if (timeNum > 2300 && timeNum <= 2500) {
-            timeNum = 2300;
+            timeNum = 2400;
           } else if (timeNum > 2500 && timeNum <= 2700) {
-            timeNum = 2500;
+            timeNum = 2600;
           } else if (timeNum > 2700 && timeNum <= 3000) {
-            timeNum = 2700;
+            timeNum = 2900;
           } else if (timeNum > 3000 && timeNum <= 3300) {
             timeNum = 3000;
           } else if (timeNum > 3300 && timeNum <= 3600) {
@@ -842,15 +842,32 @@ var KcaUI = {
 };
 
 var KcaSwiper = {
+  swiperPop01: function (obj) {
+
+    if (!KcaUI.checkObj(obj)) {
+      return;
+    }
+    var popSwiper = new Swiper(obj, {
+      pagination: {
+        el: ".swiper-pagination",
+        type: "fraction",
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  },
+  
   swiperResponsiveSub01: function (obj) {
     if (!KcaUI.checkObj(obj)) {
       return;
     }
     responsiveSwiper01 = new Swiper(obj, {
       slidesPerView: 1,
-      spaceBetween: 20,
+      spaceBetween:32,
       breakpoints: {
-        1024: {
+        768: {
           slidesPerView: 2,
           spaceBetween: 20,
         },
