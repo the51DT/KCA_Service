@@ -2086,22 +2086,22 @@ button.cal-acco {
   max-width: calc(120 / 16 * 1rem);
   width: 100%;
 }
-.error .txt-type_xs {
+.error .txt-type_xs.desc {
   color: #999;
 }
 .error .btn-wrap button {
   margin-top: calc(80 / 16 * 1rem);
 }
-.notification .txt-type_xs {
+.notification .txt-type_xs.desc {
   display: flex;
   flex-direction: column;
   gap: calc(8 / 16 * 1rem);
 }
-.notification .fw-type_l {
+.notification .txt-type_xs.desc strong {
   line-height: 160%;
   color: #999;
 }
-.notification .fw-type_sb {
+.notification .fw-type_sb.time {
   line-height: 160%;
   color: #333;
 }
