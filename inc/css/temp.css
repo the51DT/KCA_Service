@@ -2086,11 +2086,10 @@ button.cal-acco {
   max-width: calc(120 / 16 * 1rem);
   width: 100%;
 }
-.error .txt-type_xs.desc .fw-type_l {
+.error .txt-type_xs.desc {
   color: #999;
   font-weight: 400;
 }
-
 .error .btn-wrap button {
   margin-top: calc(80 / 16 * 1rem);
 }
@@ -2104,7 +2103,7 @@ button.cal-acco {
   color: #999;
   font-weight: 400;
 }
-.notification .fw-type_sb .time {
+.notification .txt-type_xs.desc .fw-type_sb.time {
   line-height: 160%;
   color: #333;
 }
