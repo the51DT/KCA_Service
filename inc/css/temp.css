@@ -2086,9 +2086,11 @@ button.cal-acco {
   max-width: calc(120 / 16 * 1rem);
   width: 100%;
 }
-.error .txt-type_xs.desc {
+.error .txt-type_xs.desc .fw-type_l {
   color: #999;
+  font-weight: 400;
 }
+
 .error .btn-wrap button {
   margin-top: calc(80 / 16 * 1rem);
 }
@@ -2097,11 +2099,12 @@ button.cal-acco {
   flex-direction: column;
   gap: calc(8 / 16 * 1rem);
 }
-.notification .txt-type_xs.desc strong {
+.notification .txt-type_xs.desc .fw-type_l {
   line-height: 160%;
   color: #999;
+  font-weight: 400;
 }
-.notification .fw-type_sb.time {
+.notification .fw-type_sb .time {
   line-height: 160%;
   color: #333;
 }
