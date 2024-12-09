@@ -17,7 +17,6 @@ $(document).ready(function () {
   KcaUI.mainAnimation(".main-wrap");
   KcaSwiper.swiperResponsiveSub01(".sub-swiper");
   KcaSwiper.swiperPop01(".pop-swiper");
-  
 });
 
 let $win_W = $(window).width();
@@ -637,10 +636,10 @@ var KcaUI = {
           }
         } else {
           if (!KcaUI.windowSize02()) {
-            scrollEventItem.css("top", $win_H - $header_h - 100);
+            scrollEventItem.css("top", $win_H - $header_h);
             scrollEventItem.find(".content-header_bg img").css("top", 0 + "%");
           } else {
-            scrollEventItem.css("top", $win_H - $header_h - 60);
+            scrollEventItem.css("top", $win_H - $header_h);
             scrollEventItem.find(".content-header_bg img").css("top", 0 + "%");
           }
         }
