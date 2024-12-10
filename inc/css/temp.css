@@ -244,7 +244,7 @@
   margin-top: 2.5rem;
 }
 .swiper-top-wrap .swiper-tit {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 700;
   line-height: 130%;
   color: #1a1a1a;
@@ -288,7 +288,7 @@
 }
 
 .board-list-wrap {
-  max-width: 66.25rem;
+  /* max-width: 66.25rem; */
   margin: 0 auto;
 }
 [class*="com-board"] + .btn-wrap {
@@ -1174,6 +1174,7 @@ img.ci-box {
   line-height: 160%;
 }
 .transport-mark {
+  margin-top:1px;
   flex-shrink: 0;
   display: flex;
   justify-content: center;
@@ -1222,7 +1223,7 @@ img.ci-box {
 }
 .bus-wrap .transport-text {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 2.5rem;
 }
 .bus-wrap .transport-text + .transport-text {
@@ -1250,7 +1251,7 @@ img.ci-box {
   margin-top: 5rem;
 }
 .line-con-text {
-  padding: 2.5rem 0;
+  padding: 1.25rem 0 2rem;
 }
 .line-con-text + .line-con-text {
   margin-top: 2.5rem;
@@ -2498,6 +2499,9 @@ button.cal-acco {
   .sub-swiper .swiper-top-wrap + .swiper-wrapper {
     margin-top: 1.25rem;
   }
+  .swiper-btn-wrap{
+    gap:0.75rem;
+  }
   .swiper-btn-wrap .swiper-button-prev,
   .swiper-btn-wrap .swiper-button-next {
     width: 2rem;
@@ -2505,8 +2509,8 @@ button.cal-acco {
   }
   .sub-swiper .swiper-pagination {
     display: flex;
-    gap: 0.69rem;
-    margin-top: 1.25rem;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
   }
   .sub-swiper .swiper-pagination .swiper-pagination-bullet {
     width: 0.5rem;
@@ -3021,7 +3025,7 @@ button.cal-acco {
 
   /* CAL 공통 */
   .cal-text {
-    font-size: 1.5rem;
+    font-size: 1.626rem;
     font-weight: 300;
     letter-spacing: -0.03rem;
   }
@@ -3029,7 +3033,7 @@ button.cal-acco {
     margin-top: 2.5rem;
   }
   .line-con-text {
-    padding: 1.25rem 0;
+    padding: 0.5rem 0 1rem;
   }
   .line-con-tit {
     font-size: 1rem;
@@ -3048,10 +3052,10 @@ button.cal-acco {
     padding-top: 57.14%;
   }
   .cal-card-text {
-    padding: 1.25rem 1.5rem;
+    padding: 1rem;
   }
   .cal-card-text:has(button.cal-acco) {
-    max-height: 4.125rem;
+    max-height: 3.625rem;
   }
   .cal-acco {
     gap: 0.5rem;
@@ -3070,6 +3074,8 @@ button.cal-acco {
   .cal-acco-detail {
     font-size: 0.875rem;
     column-gap: 0.5rem;
+    column-count:1;
+    
   }
   .cal-acco-detail p {
     padding-left: 0.5rem;

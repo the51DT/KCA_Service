@@ -644,6 +644,17 @@ var KcaUI = {
           }
         }
       });
+      $(window).resize(function(){
+        if(scrollTop > scrollEventItem.height()){
+          if (!KcaUI.windowSize02()) {
+            scrollEventItem.css("top", $win_H - $header_h);
+            scrollEventItem.find(".content-header_bg img").css("top", 0 + "%");
+          } else {
+            scrollEventItem.css("top", $win_H - $header_h);
+            scrollEventItem.find(".content-header_bg img").css("top", 0 + "%");
+          }
+        }
+      })
     }
     event();
   },
