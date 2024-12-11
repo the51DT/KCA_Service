@@ -163,12 +163,22 @@
     width: 2.5rem;
     background: url(../../inc/images/icon/leng-en-on_icon.svg) no-repeat center;
   }
-  .depth2-menu a{
+  .sitemap-wrap .nav-wrap .gnb__tab-btn-wrap a {
+    padding: 0.38rem 0;
+    width: 100%;
+    text-align: left;
+    font-size: 1.5625rem;
+    font-weight: 600;
+    line-height: 110%;
+  }
+  .sitemap-wrap .nav-wrap .depth2-menu a.inquiry{
     margin-top:.9rem;
     display: flex;
     width: 100%;
     padding: 0.75rem 1rem 0.75rem 1.5rem;
     align-items: center;
+    font-size: 0.875rem;
+    font-weight: 400;
     background: #F0F0F0 url(../images/icon/header_next_icon.svg) no-repeat right 1rem center;
   }
   .header-cont .mo-only.mo-utile-wrap{
