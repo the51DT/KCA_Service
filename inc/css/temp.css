@@ -22,6 +22,10 @@
   padding-bottom: 12.5rem;
   color: #1a1a1a;
 }
+.item-verti-last-center{
+  padding-top: 14.88rem;
+  padding-bottom: 2.33rem;
+}
 .item-verti.content-item01 {
   padding-top: 0;
 }
@@ -218,7 +222,7 @@
 }
 
 .tab-cont {
-  margin-top: 6.25rem;
+  margin-top: 5rem;
   display: none;
 }
 
@@ -328,7 +332,7 @@
   border-top: 4px solid #1a1a1a;
 }
 .board-tit-wrap + .board-table-wrap {
-  margin-top: 5rem;
+  margin-top: 3.75rem;
 }
 .board-table-wrap .non_data {
   padding: 13.59rem 0;
@@ -1232,7 +1236,7 @@ img.ci-box {
 
 /* CAL 공통 */
 .cal-text {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 400;
   line-height: 130%;
   color: #1a1a1a;
@@ -1674,13 +1678,13 @@ button.cal-acco {
   justify-content: center;
   align-items: center;
   gap: 1.5rem;
-  width: 100%;
-  max-width: 16.25rem;
+  width: 16.25rem;
+  /* max-width: 16.25rem; */
 }
 .person-item-sm .person-detail-wrap {
   max-width: 12.6825rem;
   position: absolute;
-  bottom: -21.625rem;
+  bottom: -14.25rem;
 }
 .person-detail-wrap::before {
   content: "";
@@ -2061,7 +2065,7 @@ button.cal-acco {
   font-size: 1rem;
   font-weight: 400;
   line-height: 160%;
-  color: #1a1a1a;
+  color: #333;
   opacity: 0;
   clip-path: polygon(0 0, 0 0, 0 0);
   transition-property: padding-top, padding-bottom, opacity;
@@ -2122,9 +2126,16 @@ button.cal-acco {
 }
 
 @media screen and (max-width: 1360px) {
+  .item-verti-last-center{
+    padding-top: 7.5rem;
+    padding-bottom: 0;
+  }
   .split {
     flex-direction: column;
     gap: 2.5rem;
+  }
+  .split.ty4{
+    gap: 3.75rem;
   }
   .split.ty3 {
     gap: 3.75rem;
@@ -2356,12 +2367,17 @@ button.cal-acco {
 
 @media screen and (max-width: 1023px) {
   .item-verti {
-    padding-top: 3.75rem;
-    padding-bottom: 3.75rem;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
   }
   .item-verti-12-5 {
+    margin-top:6.25rem;
     padding-top: 6.25rem;
     padding-bottom: 6.25rem;
+  }
+  .item-verti-last-center{
+    padding-top: 7.5rem;
+    padding-bottom: 1.25rem;
   }
   .item-horiz {
     padding-left: 1.88rem;
@@ -2393,7 +2409,7 @@ button.cal-acco {
     gap: 2.5rem;
   }
   .split.half {
-    gap: 3.75rem;
+    gap: 1.25rem;
   }
   .split.ty2 .split-left {
     width: 100%;
@@ -2425,9 +2441,13 @@ button.cal-acco {
   .split.ty2 .split-text + .split-text {
     margin-top: 1.25rem;
   }
+  .swiper-top-wrap + .grid-3{
+    margin-top:1.25rem;
+  }
   .grid-3 {
     display: flex;
     flex-direction: column;
+    gap:1.25rem;
   }
   .grid-2 {
     display: flex;
@@ -2486,7 +2506,7 @@ button.cal-acco {
     padding: 0 1.88rem;
   }
   .sub-swiper + .sub-swiper {
-    margin-top: 3.75rem;
+    margin-top: 2.5rem;
   }
   .swiper-top-wrap {
     /* flex-direction: column; */
@@ -2579,7 +2599,14 @@ button.cal-acco {
   .board-card-tit + .board-card-date {
     margin-top: 1rem;
   }
+  /* BSN_001 */
 
+  .retire-wrap + .retire-wrap {
+    margin-top: 3.75rem;
+  }
+  .retire-tit {
+    gap: .75rem;
+  }
   /* INT_001 */
   .int-text {
     font-size: 1.5rem;
@@ -3025,7 +3052,7 @@ button.cal-acco {
 
   /* CAL 공통 */
   .cal-text {
-    font-size: 1.626rem;
+    font-size: 1.5rem;
     font-weight: 300;
     letter-spacing: -0.03rem;
   }
@@ -3039,11 +3066,14 @@ button.cal-acco {
     font-size: 1rem;
     letter-spacing: -0.02rem;
   }
-  .line-con-detail {
+  .line-con-split .line-con-detail {
     font-size: 0.875rem;
     letter-spacing: -0.0175rem;
     color: #333;
     opacity: 0.8;
+  }
+  .line-con-tag{
+    font-size: 1rem;
   }
   .line-con-tit + .line-con-detail {
     margin-top: 0.25rem;

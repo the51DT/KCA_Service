@@ -320,16 +320,17 @@ min-width : 1024 css
   }
   .sensulting_process{
     padding:  2.5rem 0 0;
-    max-width:none;
+    max-width:auto;
     overflow-x: unset;
   }
 
   .sensulting_process ul{
-    min-width: none;
+    min-width: auto;
+    width:100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap:3.75rem;
+    gap:2.5rem;
   }
   .sensulting_process ul li{
     flex-direction:row;
@@ -340,6 +341,13 @@ min-width : 1024 css
     display: flex;
     align-items: center;
     justify-content: center;
+    flex:0 0 3.75rem;
+    height:3.75rem;
+    border-radius: 6.25rem;
+    background: #F5F5F5;
+  }
+  .sensulting_process ul li .icon-area img{
+    width:1.5rem;
   }
   .sensulting_process ul li .tit{
     margin-top:0;
@@ -373,7 +381,7 @@ min-width : 1024 css
     flex-direction: column;
   }
   .stap-wrap ul li.arrow-next{
-    padding:2.5rem 0;
+    padding:2.5rem 0 3.75rem;
   }
   .stap-wrap ul li.arrow-next img{
     margin-top:0;

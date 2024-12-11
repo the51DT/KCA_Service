@@ -7,11 +7,11 @@
   -webkit-text-size-adjust: none;
   text-size-adjust: 100%;
   box-sizing: border-box;
-  -ms-overflow-style: none;
+  /* -ms-overflow-style: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  user-select: none;
+  user-select: none; */
   box-sizing: border-box;
   -webkit-user-drag: none;
   -khtml-user-drag: none;
@@ -153,10 +153,10 @@ button {
 input,
 select,
 textarea {
-  -webkit-user-select: auto;
+  /* -webkit-user-select: auto;
   -moz-user-select: auto;
   -ms-user-select: auto;
-  user-select: auto;
+  user-select: auto; */
   transform: translateZ(0);
 }
 input[type="text"],
