@@ -229,8 +229,9 @@ pathApp.initSectionCount = function () {
     if ($(this).find("th").hasClass("dep1")) {
       setIndex += 1;
       setCount = 0;
-      if ($(this).find(".check span").attr("class") === "comp icon-state")
+      if ($(this).find(".check span").hasClass("examine") || $(this).find(".check span").hasClass("comp") ){
         setCount += 1;
+      }
     }
     $count.eq(setIndex).text(setCount);
   });
