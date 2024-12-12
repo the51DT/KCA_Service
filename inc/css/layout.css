@@ -299,7 +299,7 @@ body.fix {
 .header-inquiry_btn:after {
   content: "";
   display: block;
-  margin-left: 0.5rem;
+  /* margin-left: 0.5rem; */
   background-image: url(../images/icon/header_next_icon.svg);
   width: 2rem;
   height: 2rem;
