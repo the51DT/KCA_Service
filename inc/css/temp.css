@@ -458,6 +458,17 @@
   gap: 2.5rem;
   justify-content: center;
 }
+.int-video {
+  position: relative;
+  width: 100%;
+  padding-top: 30%;
+  overflow: hidden;
+}
+.int-video video {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
 
 /* INT_002 */
 .int-text.md {
@@ -2638,6 +2649,9 @@ button.cal-acco {
   .int-bg-text {
     gap: 1.25rem;
     justify-content: flex-start;
+  }
+  .int-video {
+    padding-top: 37.333%;
   }
 
   /* INT_002 */

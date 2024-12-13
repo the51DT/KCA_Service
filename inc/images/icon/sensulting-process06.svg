@@ -1,34 +1,6 @@
-<svg width="61" height="60" viewBox="0 0 61 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="61" height="60" fill="#CCCCCC"/>
-<g id="06_&#236;&#189;&#156;&#236;&#132;&#188;&#237;&#132;&#176; &#236;&#154;&#180;&#236;&#152;&#129; &#236;&#187;&#168;&#236;&#132;&#164;&#237;&#140;&#133;_241108">
-<path d="M-2513 -4102C-2513 -4103.1 -2512.1 -4104 -2511 -4104H5119C5120.1 -4104 5121 -4103.1 5121 -4102V2888C5121 2889.1 5120.1 2890 5119 2890H-2511C-2512.1 2890 -2513 2889.1 -2513 2888V-4102Z" fill="#999999"/>
-<g id="KCA&#236;&#132;&#156;&#235;&#185;&#132;&#236;&#138;&#164;_06&#236;&#189;&#156;&#236;&#132;&#188;&#237;&#132;&#176;&#236;&#154;&#180;&#236;&#152;&#129;&#236;&#187;&#168;&#236;&#132;&#164;&#237;&#140;&#133;" clip-path="url(#clip0_5_14)">
-<rect width="1920" height="4925" transform="translate(-1613 -3804)" fill="white"/>
-<g id="Frame 425">
-<g id="con">
-<g id="con02">
-<g id="Frame 6340508">
-<g id="Frame 6340499">
-<g id="Frame 6340497">
-<g id="interface-content-chart--product-data-analysis-analytics-graph-line-business-board-chart--Streamline-Core">
-<g id="Group">
-<rect id="Rectangle 3464378" x="7.99902" y="7" width="44" height="44" stroke="#1A1A1A" stroke-width="2"/>
-<path id="Vector" d="M15.999 15H23.499" stroke="#1A1A1A" stroke-width="2"/>
-<path id="Vector_2" d="M15.999 24H32.499" stroke="#1A1A1A" stroke-width="2"/>
-<path id="Vector_3" d="M44.999 25L34.7637 41.6667L22.8226 35L15.999 45" stroke="#1A1A1A" stroke-width="2"/>
-</g>
-</g>
-</g>
-</g>
-</g>
-</g>
-</g>
-</g>
-</g>
-</g>
-<defs>
-<clipPath id="clip0_5_14">
-<rect width="1920" height="4925" fill="white" transform="translate(-1613 -3804)"/>
-</clipPath>
-</defs>
+<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M47.5637 26.8111L45.4424 24.6898L30.0025 40.1296L24.5023 34.6295L12.4413 46.6904L14.5626 48.8118L24.5023 38.8721L30.0025 44.3723L47.5637 26.8111Z" fill="#429320"/>
+<path d="M27.6038 26.6406L27.6038 29.6406H17.501V26.6406H27.6038Z" fill="#429320"/>
+<path d="M17.501 15.7501H42.501L42.501 18.7501H17.501V15.7501Z" fill="#429320"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M7.00195 3.5H52.852V55.5H7.00195V3.5ZM10.002 6.5V52.5H49.852V6.5H10.002Z" fill="#429320"/>
 </svg>

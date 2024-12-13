@@ -308,15 +308,11 @@ min-width : 1024 css
 
   /* 콜센터 운영 컨설팅 프로세스 */
   .sensulting_process-wrap{
-    margin-top:3.75rem;
-    padding:1.25rem 1.88rem;
+    margin-top:0;
   }
   .sensulting_process-wrap .cal-text{
     padding-left: 0;
     padding-right: 0;
-  }
-  .sensulting_process-wrap:after{
-    display:none;
   }
   .sensulting_process{
     padding:  2.5rem 0 0;
@@ -330,29 +326,35 @@ min-width : 1024 css
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap:2.5rem;
+    gap:8rem;
   }
   .sensulting_process ul li{
-    flex-direction:row;
     max-width:100%;
-    gap:1.25rem;
+    gap:1rem;
+    padding: 0 1.09rem;
+  }
+  .sensulting_process ul li + li::before {
+    top: -5.5rem;
+    left: 50%;
+    transform: translateX(-50%) rotate(90deg);
   }
   .sensulting_process ul li .icon-area{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex:0 0 3.75rem;
-    height:3.75rem;
-    border-radius: 6.25rem;
-    background: #F5F5F5;
+    width:10rem;
+    height:10rem;
+  }
+  .sensulting_process ul li .icon-area p {
+    top: -1rem;
+    width: 2rem;
+    height: 2rem;
+    font-size: 0.875rem;
   }
   .sensulting_process ul li .icon-area img{
-    width:1.5rem;
+    width:3.75rem;
+    height:3.75rem;
   }
   .sensulting_process ul li .tit{
     margin-top:0;
-    font-size: 0.875rem;
-    text-align: left;
+    font-size: 1rem;
   }
   .sensulting_process ul li .text-area{
     display:flex;
@@ -360,13 +362,8 @@ min-width : 1024 css
     flex-direction: column;
     gap:0;
   }
-  .sensulting_process ul li .text-area::after{
-    display: none;
-  }
   .sensulting_process ul li .txt{
-    text-align: left;
-    font-size: .75rem;
-    padding: 0.5rem 0 0;
+    font-size: 0.875rem;
     justify-content: flex-start;
     align-items: flex-start;
     background: none;

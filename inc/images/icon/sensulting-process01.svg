@@ -1,11 +1,13 @@
-<svg width="61" height="60" viewBox="0 0 61 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="Chat_search_light">
-<path id="Rectangle 1" d="M37.2303 52H12.9995V8H47.9995V30.75" stroke="#1A1A1A" stroke-width="2"/>
-<path id="Vector 7" d="M18.9165 31L35.4165 31" stroke="#1A1A1A" stroke-width="2" stroke-linejoin="round"/>
-<path id="Vector 232" d="M18.6675 23.5L41.1675 23.5" stroke="#1A1A1A" stroke-width="2" stroke-linejoin="round"/>
-<path id="Vector 233" d="M18.6675 16L41.1675 16" stroke="#1A1A1A" stroke-width="2" stroke-linejoin="round"/>
-<path id="Vector 9" d="M18.9165 38.5L29.4165 38.5" stroke="#1A1A1A" stroke-width="2" stroke-linejoin="round"/>
-<circle id="Ellipse 127" cx="43.7925" cy="41.875" r="6.125" stroke="#1A1A1A" stroke-width="2"/>
-<path id="Vector 231" d="M48.6675 46.75L53.1675 51.25" stroke="#1A1A1A" stroke-width="2"/>
+<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_3462_41073)">
+<path d="M7.49805 4H53.3513V26.5001H50.3513V7H10.498V53.0066L42.499 53.0066V56.0066L7.49805 56.0066V4Z" fill="#648AE2"/>
+<path d="M17.998 16.0271H42.998V19.0271H17.998V16.0271Z" fill="#648AE2"/>
+<path d="M17.998 26.9176H28.1008V29.9176H17.998V26.9176Z" fill="#648AE2"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M31.0039 38.6896C31.0039 32.9948 35.8269 28.5001 41.6223 28.5001C47.4178 28.5001 52.2408 32.9948 52.2408 38.6896C52.2408 40.7816 51.5899 42.7117 50.4791 44.3165L56.4142 49.9724C57.0139 50.5439 57.0368 51.4934 56.4653 52.0931C55.8938 52.6928 54.9443 52.7157 54.3446 52.1442L48.4307 46.5085C46.5778 47.9927 44.196 48.8791 41.6223 48.8791C35.8269 48.8791 31.0039 44.3844 31.0039 38.6896ZM41.6223 31.5001C37.3459 31.5001 34.0039 34.7863 34.0039 38.6896C34.0039 42.593 37.3459 45.8791 41.6223 45.8791C45.8988 45.8791 49.2408 42.593 49.2408 38.6896C49.2408 34.7863 45.8988 31.5001 41.6223 31.5001Z" fill="#648AE2"/>
 </g>
+<defs>
+<clipPath id="clip0_3462_41073">
+<rect width="60" height="60" fill="white"/>
+</clipPath>
+</defs>
 </svg>
