@@ -1548,28 +1548,24 @@ input:checked + .slider:before {
   margin:0 auto;
   width:100%;
   max-width:105rem;
-  overflow-x: auto;
 }
 
 .sensulting_process ul{
-  min-width: 90rem;
+  width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   padding: 0 0.56rem;
-  gap: 3rem ;
+  row-gap: 3.75rem;
+  flex-wrap: wrap;
 }
 .sensulting_process ul li{
   display:flex;
   flex-direction: column;
   align-items: center;
-  min-width:13.97917rem;
-  position: relative;
+  width:13.97917rem;
 }
-.sensulting_process ul li + li::before {
-  content: "";
-  position: absolute;
-  top: 5.44rem;
-  left: -3.04rem;
+.sensulting_process .person-arrow {
+  margin-top: 5.44rem;
   width: 3rem;
   height: 3rem;
   background-image: url(../images/icon/arrow_right_step.svg);

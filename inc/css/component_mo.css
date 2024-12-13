@@ -326,17 +326,17 @@ min-width : 1024 css
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap:8rem;
+    align-items: center;
+    gap: 2.5rem;
   }
   .sensulting_process ul li{
-    max-width:100%;
+    width:100%;
     gap:1rem;
     padding: 0 1.09rem;
   }
-  .sensulting_process ul li + li::before {
-    top: -5.5rem;
-    left: 50%;
-    transform: translateX(-50%) rotate(90deg);
+  .sensulting_process .person-arrow  {
+    margin-top: 0;
+    transform: rotate(90deg);
   }
   .sensulting_process ul li .icon-area{
     width:10rem;
