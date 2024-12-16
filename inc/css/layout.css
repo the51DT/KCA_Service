@@ -707,12 +707,23 @@ body.fix {
   height: 32.5rem;
   overflow-y: auto;
 }
+.pop-cont-wrap{
+  height:calc(100% - 3.81rem);
+  overflow: hidden;
+}
+.pop-cont{
+  height:100%;
+  overflow-y: auto;
+
+}
 .pop-foot{
   height:3.81rem;
   display:flex; 
   align-items: center;
   padding:0 1.25rem;
   gap: 1rem;
+  position: absolute;
+  bottom:0;
 }
 .pop-foot .swiper_stop-btn{
   height: 1.75rem;  
