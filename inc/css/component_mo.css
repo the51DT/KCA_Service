@@ -34,6 +34,7 @@ min-width : 1024 css
     display: none !important;
   }
 }
+
 @media screen and (max-width: 1024px) {
   /*********************************
   모바일 css
@@ -43,6 +44,9 @@ min-width : 1024 css
   }
   .mo-only {
     display: block !important;
+  }
+  .tablet-only{
+    display: none !important;
   }
   /*********
     font
@@ -400,4 +404,10 @@ min-width : 1024 css
     font-size: 0.875rem;
   }
 
+}
+
+@media all and (min-width: 769px) and (max-width: 1360px) {
+.tablet-only{
+    display: block !important;
+  }
 }

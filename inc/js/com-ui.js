@@ -17,6 +17,7 @@ $(document).ready(function () {
   KcaUI.mainAnimation(".main-wrap");
   KcaSwiper.swiperResponsiveSub01(".sub-swiper");
   KcaSwiper.swiperPop01(".pop-swiper");
+  topScroll(".top-btn");
 });
 
 let $win_W = $(window).width();
@@ -35,6 +36,19 @@ $(window).resize(function () {
   timer = setTimeout(resizeDone, delta);
 });
 
+function topScroll(obj) {
+  if (!KcaUI.checkObj(obj)) {
+    return;
+  }
+  $(obj).on("click", () => {
+    $("body").animate(
+      {
+        scrollTop: 0,
+      },
+      300
+    );
+  });
+}
 function resizeDone() {
   if (!KcaUI.windowSize()) {
     //pc
@@ -79,6 +93,7 @@ var KcaUI = {
     navigationBtn = $(obj);
     navigationBtn.toggleClass("on");
   },
+  
   mainAnimation: function (obj) {
     if (!KcaUI.checkObj(obj)) {
       return;
@@ -121,17 +136,12 @@ var KcaUI = {
 
     function hoverEvnet(){
       $(".stop-cont").mouseenter(function(){
-        // e.preventDefault();
-        clearInterval(motionTime);
         clearTimeout(leaveTime);
-      });
-      mainCont03_1.find("li").mouseenter(function(){
-        $(this).siblings().removeClass("on")
-        $(this).addClass("on")
+        clearInterval(motionTime);
       });
       $(".stop-cont").mouseleave(function(){
-        clearInterval(motionTime);
         clearTimeout(leaveTime);
+        clearInterval(motionTime);
         leaveTime = setTimeout(function(){
           if (timeNum <= 600 && wheelDaea < 0) {
             timeNum = 0;
@@ -159,8 +169,12 @@ var KcaUI = {
             timeNum = 3900;
           }
           event();
-        },100)
-      })
+        },200)
+      });
+      mainCont03_1.find("li").mouseenter(function(){
+        $(this).siblings().removeClass("on")
+        $(this).addClass("on")
+      });
     }
     function setData () {
       clear();
@@ -222,6 +236,7 @@ var KcaUI = {
     function event() {
       motionTime = setInterval(function () {
         timeNum++;
+        // console.log(timeNum)
         if (timeNum > 0 && timeNum <= 600) {
           if (!mainWrap.hasClass("action-l01")) {
             mainWrap.addClass("action-l01");
@@ -435,6 +450,7 @@ var KcaUI = {
               mainCont04_1.find(".cont-center > .text-area").addClass("on");
               mainCont04_1.find(".cont04-area").addClass("on");
             }, 200);
+            clearTimeout(leaveTime);
             clearInterval(motionTime);
           }
         } else if (timeNum >= 4500) {
@@ -447,6 +463,7 @@ var KcaUI = {
               mainCont04_1.find(".cont-center > .text-area").addClass("on");
               mainCont04_1.find(".cont04-area").addClass("on");
             }, 200);
+            clearTimeout(leaveTime);
             clearInterval(motionTime);
           }
         }
@@ -457,21 +474,25 @@ var KcaUI = {
       clickItem.on("click", function(){
         var btnStop = $(this).parent().index();
         if(btnStop == 0){
+          clearTimeout(leaveTime);
           clearInterval(motionTime);
           timeNum = 0;
           clear();
           event();
         }else if(btnStop == 1){
+          clearTimeout(leaveTime);
           clearInterval(motionTime);
           timeNum = 1800;
           clear();
           event();
         }else if(btnStop == 2){
+          clearTimeout(leaveTime);
           clearInterval(motionTime);
           timeNum = 3000;
           clear();
           event();
         }else if(btnStop == 3){
+          clearTimeout(leaveTime);
           clearInterval(motionTime);
           timeNum = 3900;
           clear();
@@ -590,6 +611,7 @@ var KcaUI = {
         txtSet = (scrollTop / ($win_H - $header_h)) * 25;
 
         if ($win_H - $header_h >= scrollTop) {
+          $(".top-btn-wrap").hide()
           scrollEventItem.css("top", scrollTop);
           scrollEventItem
             .find(".content-header_bg img")
@@ -642,6 +664,8 @@ var KcaUI = {
             scrollEventItem.css("top", $win_H - $header_h);
             scrollEventItem.find(".content-header_bg img").css("top", 0 + "%");
           }
+
+          $(".top-btn-wrap").fadeIn(500)
         }
       });
       $(window).resize(function(){
@@ -654,7 +678,7 @@ var KcaUI = {
             scrollEventItem.find(".content-header_bg img").css("top", 0 + "%");
           }
         }
-      })
+      });
     }
     event();
   },
@@ -824,9 +848,7 @@ var KcaUI = {
     if (!KcaUI.checkObj(obj)) {
       return;
     }
-
     const moveTop = $(".move-con").offset().top - 150;
-    console.log(moveTop);
     $(".move-btn").on("click", () => {
       $("body").animate(
         {

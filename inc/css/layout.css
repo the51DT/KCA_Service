@@ -86,8 +86,7 @@ body.fix {
 /* header */
 .header-wrap {
   height: 9rem;
-
-  padding: 1.88rem 2.5rem 0 2.5rem;
+  padding: 1.88rem 2.5rem 1.88 2.5rem;
   position: fixed;
   top: 0;
   left: 0;
@@ -95,7 +94,6 @@ body.fix {
   z-index: 1000;
   transition: all 0.2s;
   opacity: 1;
-  padding-top: calc(env(safe-area-inset-top));
   overflow: hidden;
   transition: height 0.3s;
   background-color: #fff;
@@ -117,7 +115,7 @@ body.fix {
 }
 .header-cont:after{
   content:"";
-  display: block;
+  display: none;
   position: absolute;
   bottom:0;
   left:50%;
@@ -128,6 +126,9 @@ body.fix {
 }
 .header-wrap.on .header-cont {
   width: 100%;
+}
+.header-wrap.on .header-cont:after{
+  display:block;
 }
 .utile-wrap {
   position: absolute;
@@ -457,6 +458,18 @@ body.fix {
   display: flex;
   align-items: center;
 }
+.top-btn-wrap{
+  position: fixed;
+  bottom:4.75rem;
+  right:2.5rem;
+  display:none;
+}
+.top-btn-wrap .top-btn{
+  width:5rem;
+  height:5rem;
+  background: url(../images/icon/top-btn.svg)no-repeat;
+}
+
 .footer-util li::before {
   content: "";
   display: block;
@@ -661,6 +674,7 @@ body.fix {
 }
 .content-header .page-map-wrap.on button:after {
   background: url(../images/icon/sub-header_arrow-w.svg) no-repeat;
+  background-size:cover;
 }
 .content-header .content-header_bg {
   position: relative;
@@ -718,6 +732,7 @@ body.fix {
 }
 .pop-foot{
   height:3.81rem;
+  width:100%;
   display:flex; 
   align-items: center;
   padding:0 1.25rem;
