@@ -370,7 +370,7 @@ body.fix {
 }
 
 .footer-item01 .footer-site_map li ul a {
-  color: #d9d9d9;
+  color: #ccc;
   -webkit-text-stroke-width: 1;
   -webkit-text-stroke-color: #000;
   font-size: 1rem;
@@ -387,7 +387,7 @@ body.fix {
   bottom: 0;
   width: 0;
   height: 1px;
-  background-color: #d9d9d9;
+  background-color: #ccc;
   transition: width 0.3s;
 }
 .footer-item01 .footer-site_map li ul a:hover:after {
