@@ -603,16 +603,17 @@ var KcaUI = {
       scrollEventTxt = $(obj).find(".content-header-cont"),
       scrollTop = scrollWrap.scrollTop(),
       imgSet = 0;
-
+      $(".content-header + .content-area").css("top", $win_H * -1);
     function event() {
       scrollWrap.scroll(function () {
         scrollTop = scrollWrap.scrollTop();
         imgSet = (scrollTop / ($win_H - $header_h)) * 50;
         txtSet = (scrollTop / ($win_H - $header_h)) * 25;
 
-        if ($win_H - $header_h >= scrollTop) {
+        if ($win_H >= scrollTop) {
           $(".top-btn-wrap").hide()
           scrollEventItem.css("top", scrollTop);
+          $(".content-header + .content-area").css("top", ($win_H * -1) + scrollTop);
           scrollEventItem
             .find(".content-header_bg img")
             .css("top", 50 - imgSet + "%");
@@ -658,11 +659,13 @@ var KcaUI = {
           }
         } else {
           if (!KcaUI.windowSize02()) {
-            scrollEventItem.css("top", $win_H - $header_h);
+            scrollEventItem.css("top", $win_H);
             scrollEventItem.find(".content-header_bg img").css("top", 0 + "%");
+            $(".content-header + .content-area").css("top", 0);
           } else {
-            scrollEventItem.css("top", $win_H - $header_h);
+            scrollEventItem.css("top", $win_H);
             scrollEventItem.find(".content-header_bg img").css("top", 0 + "%");
+            $(".content-header + .content-area").css("top", 0);
           }
 
           $(".top-btn-wrap").fadeIn(500)
@@ -671,11 +674,13 @@ var KcaUI = {
       $(window).resize(function(){
         if(scrollTop > scrollEventItem.height()){
           if (!KcaUI.windowSize02()) {
-            scrollEventItem.css("top", $win_H - $header_h);
+            scrollEventItem.css("top", $win_H);
             scrollEventItem.find(".content-header_bg img").css("top", 0 + "%");
+            $(".content-header + .content-area").css("top", 0);
           } else {
-            scrollEventItem.css("top", $win_H - $header_h);
+            scrollEventItem.css("top", $win_H);
             scrollEventItem.find(".content-header_bg img").css("top", 0 + "%");
+            $(".content-header + .content-area").css("top", 0);
           }
         }
       });
@@ -798,6 +803,11 @@ var KcaUI = {
     let historyWrap = $(obj).height();
     const historyLine = $(obj).find(".histroy-line");
     const lineTopPos = historyLine.offset().top;
+    let triggerY = $(".content-header").height();
+    
+    $(window).resize(function () {
+      triggerY = $(".content-header").height();
+    });
 
     function event() {
       $(window).resize(function () {
@@ -808,11 +818,11 @@ var KcaUI = {
       });
       $("body").scroll(() => {
         let scrollVaule = $("body").scrollTop();
-        let lineTop = historyLine.offset().top;
-        let screenHeight = screen.height;
-        let triggerY = (screenHeight * 60) / 100;
+        console.log(scrollVaule)
+        let lineTop = historyLine.offset().top;        
+        let screenHeight = screen.height - $header_h;
         let heightValue =
-          ((scrollVaule - lineTopPos + triggerY) / historyWrap) * 100;
+          (((scrollVaule - lineTopPos) / historyWrap) * 100) - 15;
         if (triggerY >= lineTop) {
           historyLine.stop().animate({ height: heightValue + "%" }, 300);
         } else {

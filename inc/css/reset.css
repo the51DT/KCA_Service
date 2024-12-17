@@ -18,6 +18,7 @@
   -moz-user-drag: none;
   -o-user-drag: none;
   /* user-drag: none; */
+  overscroll-behavior: none;
 }
 body,
 p,
