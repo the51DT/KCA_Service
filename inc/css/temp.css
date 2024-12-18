@@ -1159,7 +1159,7 @@ img.ci-box {
   position: absolute;
   bottom: 2.755rem;
   right: 2.755rem;
-  display: flex;
+  display: flex !important;
   flex-direction: column;
   gap: 0.125rem;
 }
@@ -1676,7 +1676,7 @@ button.cal-acco {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 4.375rem;
+  min-height: 2.1875rem;
   text-align: center;
 }
 .person-round-tit {
@@ -2241,7 +2241,7 @@ button.cal-acco {
     padding: 8rem 2.5rem;
   }
   .greetings-img {
-    right: 0;
+    right: -6rem;
   }
 
   /* INT_004 */
@@ -2765,8 +2765,7 @@ button.cal-acco {
   /* INT_003 */
   .greetings-box {
     width: 100%;
-    height: 23.75rem;
-    padding: 3.75rem 1.88rem;
+    padding: 3.75rem 1.88rem 16.25rem;
   }
   .greetings-img {
     position: absolute;
@@ -3062,6 +3061,9 @@ button.cal-acco {
   }
   .map-wrap + .transport-wrap {
     margin-top: 2.5rem;
+  }
+  .map-btn_wrap{
+    display: none !important;
   }
   .transport-wrap {
     flex-direction: column;

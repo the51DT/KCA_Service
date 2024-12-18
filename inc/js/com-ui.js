@@ -555,7 +555,7 @@ var KcaUI = {
           });
           $(".header-wrap")
             .addClass("on")
-            .css("height", headerCont_h + Math.max.apply(null, max_h) + 32);
+            .css("height", headerCont_h + Math.max.apply(null, max_h) + 48);
         } else {
           return;
         }
@@ -601,19 +601,25 @@ var KcaUI = {
     var scrollWrap = $("body"),
       scrollEventItem = $(obj),
       scrollEventTxt = $(obj).find(".content-header-cont"),
-      scrollTop = scrollWrap.scrollTop(),
+      scrollTop = scrollWrap.scrollTop();
+      if (!KcaUI.windowSize02()) {
+        contHeaderH = 800;
+      }else{
+        contHeaderH = 500;
+      }
+
       imgSet = 0;
-      $(".content-header + .content-area").css("top", $win_H * -1);
+      $(".content-header + .content-area").css("top", contHeaderH * -1);
     function event() {
       scrollWrap.scroll(function () {
         scrollTop = scrollWrap.scrollTop();
-        imgSet = (scrollTop / ($win_H - $header_h)) * 50;
-        txtSet = (scrollTop / ($win_H - $header_h)) * 25;
+        imgSet = (scrollTop / contHeaderH) * 50;
+        txtSet = (scrollTop / contHeaderH) * 25;
 
-        if ($win_H >= scrollTop) {
+        if (contHeaderH >= scrollTop) {
           $(".top-btn-wrap").hide()
           scrollEventItem.css("top", scrollTop);
-          $(".content-header + .content-area").css("top", ($win_H * -1) + scrollTop);
+          $(".content-header + .content-area").css("top", (contHeaderH * -1) + scrollTop);
           scrollEventItem
             .find(".content-header_bg img")
             .css("top", 50 - imgSet + "%");
@@ -659,11 +665,11 @@ var KcaUI = {
           }
         } else {
           if (!KcaUI.windowSize02()) {
-            scrollEventItem.css("top", $win_H);
+            scrollEventItem.css("top", contHeaderH);
             scrollEventItem.find(".content-header_bg img").css("top", 0 + "%");
             $(".content-header + .content-area").css("top", 0);
           } else {
-            scrollEventItem.css("top", $win_H);
+            scrollEventItem.css("top", contHeaderH);
             scrollEventItem.find(".content-header_bg img").css("top", 0 + "%");
             $(".content-header + .content-area").css("top", 0);
           }
@@ -672,17 +678,26 @@ var KcaUI = {
         }
       });
       $(window).resize(function(){
-        if(scrollTop > scrollEventItem.height()){
-          if (!KcaUI.windowSize02()) {
-            scrollEventItem.css("top", $win_H);
+        scrollTop = scrollWrap.scrollTop();
+        if (!KcaUI.windowSize02()) {
+          contHeaderH = 800; 
+          if(scrollTop > scrollEventItem.height()){
+            scrollEventItem.css("top", contHeaderH);
             scrollEventItem.find(".content-header_bg img").css("top", 0 + "%");
-            $(".content-header + .content-area").css("top", 0);
-          } else {
-            scrollEventItem.css("top", $win_H);
+          }
+        } else {
+          contHeaderH = 500;
+          if(scrollTop > scrollEventItem.height()){
+            scrollEventItem.css("top", contHeaderH);
             scrollEventItem.find(".content-header_bg img").css("top", 0 + "%");
-            $(".content-header + .content-area").css("top", 0);
           }
         }
+        if (contHeaderH >= scrollTop) {
+          $(".content-header + .content-area").css("top", (contHeaderH * -1) + scrollTop);
+        } else {
+          $(".content-header + .content-area").css("top", 0);
+        }
+        
       });
     }
     event();
@@ -858,7 +873,12 @@ var KcaUI = {
     if (!KcaUI.checkObj(obj)) {
       return;
     }
-    const moveTop = $(".move-con").offset().top - 150;
+    
+    let moveTop = $(".move-con").offset().top + $win_H - $header_h;
+
+    $(window).resize(function () {
+      moveTop = $(".move-con").offset().top - $header_h + $("body").scrollTop();
+    })
     $(".move-btn").on("click", () => {
       $("body").animate(
         {
