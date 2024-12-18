@@ -641,10 +641,10 @@
   border-radius: 6.25rem;
   background-color: #fff;
   box-shadow: 4px 4px 12px 0px rgba(0, 0, 0, 0.1);
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   font-weight: 600;
   line-height: 160%;
-  color: #121c72;
+  color: #1a1a1a;
 }
 .org-ceo {
   position: relative;
@@ -657,7 +657,7 @@
   border-radius: 6.25rem;
   background-color: #121c72;
   box-shadow: 4px 4px 12px 0px rgba(0, 0, 0, 0.1);
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   font-weight: 600;
   line-height: 160%;
   color: #fff;
@@ -669,11 +669,11 @@
   left: 50%;
   transform: translateY(-100%);
   height: 3.75rem;
-  border-left: 2px solid #d9d9d9;
+  border-left: 4px solid #d9d9d9;
 }
 .org-etc {
   position: absolute;
-  top: 26.87rem;
+  top: 23.94rem;
   left: 50%;
   display: flex;
   flex-direction: column;
@@ -696,7 +696,7 @@
   top: 50%;
   transform: translateX(-100%);
   width: 15rem;
-  border-bottom: 2px solid #d9d9d9;
+  border-bottom: 4px solid #d9d9d9;
 }
 .org-etc::after {
   content: "";
@@ -704,28 +704,32 @@
   left: -1.25rem;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 0.75rem;
-  height: 0.75rem;
-  margin-top: 1px;
+  width: 0.85rem;
+  height: 0.85rem;
+  margin-top: 2px;
   border-radius: 1rem;
   background-color: #d9d9d9;
+}
+.org-etc + .org-council {
+  margin-top: 6.25rem;
+  z-index: 1;
 }
 .org-team-area {
   position: relative;
   display: flex;
   justify-content: space-between;
   gap: 1.5rem;
-  margin-top: 17.81rem;
+  margin-top: 10rem;
   width: 100%;
 }
 .org-team-area::before {
   content: "";
   position: absolute;
-  top: -1.25rem;
+  top: -3.75rem;
   left: 50%;
   transform: translateY(-100%);
-  height: 16.5rem;
-  border-left: 2px solid #d9d9d9;
+  height: 23.75rem;
+  border-left: 4px solid #d9d9d9;
 }
 .org-team-area::after {
   content: "";
@@ -733,15 +737,18 @@
   top: -1.25rem;
   left: 50%;
   transform: translate(-50%, -100%);
-  width: calc(55rem - 2px);
+  width: calc(55rem - 4px);
   height: 2.5rem;
-  border: 2px solid #d9d9d9;
+  border: 4px solid #d9d9d9;
   border-bottom: 0;
 }
 .org-team {
   position: relative;
   width: 100%;
   max-width: 22.5rem;
+}
+.org-team:nth-child(2) .org-major {
+  margin-left: 2rem;
 }
 .org-major {
   display: flex;
@@ -767,13 +774,10 @@
   top: -1.25rem;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 0.75rem;
-  height: 0.75rem;
+  width: 0.85rem;
+  height: 0.85rem;
   border-radius: 1rem;
   background-color: #d9d9d9;
-}
-.org-team:nth-child(2) .org-major:before {
-  margin-left: 1px;
 }
 .org-sub {
   position: relative;
@@ -800,53 +804,53 @@
   left: 50%;
   transform: translateY(-100%);
   height: 3.75rem;
-  border-left: 2px solid #d9d9d9;
+  border-left: 4px solid #d9d9d9;
 }
 .org-team:nth-child(2) .org-sub {
   position: absolute;
   top: 11.5rem;
-  left: 50%;
-  margin-left: 2.5rem;
+  right: 50%;
+  margin-right: 0.5rem;
 }
 .org-team:nth-child(2) .org-sub::before {
   top: 50%;
-  left: 0;
-  transform: translate(-100%, -100%);
+  left: 100%;
+  transform: translateY(-100%);
   width: 2.5rem;
   border: none;
-  border-bottom: 2px solid #d9d9d9;
+  border-bottom: 4px solid #d9d9d9;
 }
 .org-part {
   position: relative;
+  right: -2rem;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   gap: 1.88rem;
   width: 100%;
-  margin-top: 16.44rem;
+  margin-top: 17.06rem;
+  padding-right: 4.525rem;
 }
 .org-part::before {
   content: "";
   position: absolute;
-  top: -1.25rem;
+  top: -3.75rem;
   left: 50%;
   transform: translate(-50%, -100%);
-  height: 15.1875rem;
-  border-left: 2px solid #d9d9d9;
+  height: 13.3125rem;
+  border-left: 4px solid #d9d9d9;
 }
 .org-part::after {
   content: "";
   position: absolute;
-  top: -1.25rem;
-  left: 50%;
-  transform: translate(-50%, -100%);
-  width: 38.5rem;
-  height: 2.5rem;
-  border: 2px solid #d9d9d9;
-  border-bottom: none;
+  top: -3.75rem;
+  right: 11.25rem;
+  transform: translateY(-100%);
+  width: 49.75rem;
+  border-top: 4px solid #d9d9d9;
 }
 .org-part li {
   position: relative;
-  padding: 2.5rem 5rem;
+  padding: 2rem 3.75rem;
   border-radius: 0.5rem;
   background-color: #fff;
   box-shadow: 4px 4px 12px 0px rgba(0, 0, 0, 0.08);
@@ -861,10 +865,33 @@
   top: -1.25rem;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 0.75rem;
-  height: 0.75rem;
+  width: 0.85rem;
+  height: 0.85rem;
   border-radius: 1rem;
   background-color: #d9d9d9;
+}
+.org-part li::after {
+  content: "";
+  position: absolute;
+  top: -2.5rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 2.5rem;
+  border-right: 4px solid #d9d9d9;
+}
+@media screen and (max-width: 1460px) {
+  .org-team-area::after {
+    width: 54.75rem;
+  }
+  .org-team:nth-child(2) .org-major {
+    margin-left: 0;
+  }
+  .org-part {
+    right: 0;
+  }
+  .org-team:nth-child(2) .org-sub {
+    margin-right: 2.5rem;
+  }
 }
 
 /* INT_005 */
@@ -2219,42 +2246,59 @@ button.cal-acco {
 
   /* INT_004 */
   .org-wrap {
-    padding: 6.25rem 3.19rem;
+    padding: 6.25rem 1.88rem 7.5rem;
   }
   .org-caption {
     right: 3.25rem;
   }
   .org-etc {
-    margin-left: 5rem;
+    top: 27.06rem;
+    margin-left: 5.06rem;
   }
   .org-etc::before {
     width: 3.75rem;
   }
+  .org-etc + .org-council {
+    margin-top: 12.5rem;
+  }
   .org-team-area {
-    justify-content: center;
-    gap: 3.75rem;
+    margin-top: 7.5rem;
+  }
+  .org-team-area::before {
+    height: 27.5rem;
   }
   .org-team-area::after {
-    width: 37.438rem;
+    width: calc(100% - 22.75rem);
   }
   .org-team {
-    max-width: 15rem;
+  }
+  .org-major::before,
+  .org-team:nth-child(2) .org-major::before {
+    margin-left: 0;
+    margin-right: 0;
   }
   .org-team:nth-child(1) .org-sub::before {
-    left: 7.5rem;
+    left: 11.24rem;
+  }
+  .org-team:nth-child(2) .org-sub {
+    margin-right: -2.5rem;
   }
   .org-sub {
     margin-left: 0;
   }
+  .org-part {
+    right: -4.94rem;
+    padding-right: 5.05rem;
+  }
   .org-part::after {
-    top: -1.25rem;
-    left: 50%;
-    transform: translate(-50%, -100%);
-    width: 33.438rem;
-    height: 2.5rem;
+    top: -3.75rem;
+    width: 42.975rem;
   }
   .org-part li {
-    padding: 2.5rem 3.75rem;
+    padding: 2rem;
+    min-width: 12.40625rem;
+    height: 6.8125rem;
+    text-align: center;
   }
 
   /* INT_005 */
@@ -2745,7 +2789,7 @@ button.cal-acco {
 
   /* INT_004 */
   .org-wrap {
-    padding: 5rem 1.25rem 7.5rem;
+    padding: 5rem 1.88rem 7.5rem;
   }
   .org-caption {
     top: 1.88rem;
@@ -2786,7 +2830,7 @@ button.cal-acco {
     margin-top: 2.5rem;
     margin-left: 0;
     width: 100%;
-    max-width: 32.5rem;
+    max-width: 33.75rem;
     font-size: 0.875rem;
     line-height: 160%;
   }
@@ -2802,6 +2846,9 @@ button.cal-acco {
   .org-etc::after {
     display: none;
   }
+  .org-etc + .org-council {
+    margin-top: 2.5rem;
+  }
   .org-team-area {
     flex-direction: column;
     gap: 2.5rem;
@@ -2810,7 +2857,7 @@ button.cal-acco {
   }
   .org-team-area::before {
     top: 0rem;
-    height: 2.5rem;
+    height: 15rem;
     border-color: #ebebeb;
   }
   .org-team-area::after {
@@ -2819,7 +2866,7 @@ button.cal-acco {
   .org-team {
     position: relative;
     width: 100%;
-    max-width: 32.5rem;
+    max-width: 33.75rem;
     margin: 0 auto;
   }
   .org-major {
@@ -2854,11 +2901,13 @@ button.cal-acco {
     position: relative;
     top: auto;
     left: auto;
+    right: auto;
     flex-direction: column;
     justify-content: center;
     gap: 1rem;
     margin-top: 1rem;
     margin-left: 0;
+    padding-right: 0;
     font-size: 0.875rem;
     line-height: 125%;
   }
@@ -2870,10 +2919,13 @@ button.cal-acco {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: auto;
+    width: 100%;
     padding: 1.25rem;
     font-size: 1.25rem;
   }
-  .org-part li::before {
+  .org-part li::before,
+  .org-part li::after {
     display: none;
   }
 
