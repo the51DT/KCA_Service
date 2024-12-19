@@ -488,9 +488,10 @@ body.fix {
   display:none;
 }
 .top-btn-wrap .top-btn{
-  width:5rem;
-  height:5rem;
+  width:3.75rem;
+  height:3.75rem;
   background: url(../images/icon/top-btn.svg)no-repeat;
+  background-size: 100%;
 }
 
 .footer-util li::before {

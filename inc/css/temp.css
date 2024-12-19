@@ -3455,6 +3455,13 @@ button.cal-acco {
   }
 
   /* RCT_008 */
+  .rct-faq-wrap .btn-wrap .all-acco-btn {
+    height: auto;
+    padding: 0.5rem 3rem 0.5rem 1.25rem;
+    background: #000 url(../images/icon/arrow-down-white_icon.svg) no-repeat right
+      1rem center;
+    font-size: 1rem;
+  }
   .rct-faq + .rct-faq {
     margin-top: 0;
   }

@@ -36,6 +36,7 @@ min-width : 1024 css
 }
 
 @media screen and (max-width: 1024px) {
+
   /*********************************
   모바일 css
   *********************************/
@@ -103,7 +104,16 @@ min-width : 1024 css
   .txt-type05 {
     font-size: 0.75rem;
   }
-
+  /* 모바일 버튼 */
+  [class*="btn-lg"] {
+    padding: 1rem 2.25rem;
+    font-size: 1rem;
+  }
+  [class*="btn-md"] {
+    padding: 1rem 2.38rem;
+    font-size: 1rem;
+  }
+  
   /* 게시판 검색영역 */
   .search-area{
     width:100%;
