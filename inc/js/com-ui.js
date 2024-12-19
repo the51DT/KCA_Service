@@ -114,6 +114,7 @@ var KcaUI = {
       mainCont04_1 = mainCont04.find(".content-item01"),
       clickItem = $(".main_content-footer button");
       leaveTime = null;
+      motion2 = null;
     function clear() {
       mainWrap.removeClass("action-l01 action-l02 action-l03 action-l04 action-l05");
       mainCont01_1.removeClass("on");
@@ -292,7 +293,7 @@ var KcaUI = {
             setTimeout(function () {
               mainCont02_1.addClass("on");
               mainCont02_2.addClass("on");
-              setTimeout(function () {
+              motion2 = setTimeout(function () {
                 mainCont02_2
                   .find(".swipe-motion-area")
                   .addClass("on motion01 show");
@@ -380,6 +381,7 @@ var KcaUI = {
         } else if (timeNum > 3000 && timeNum <= 3300) {
           if (!mainWrap.hasClass("action-l03")) {
             mainWrap.addClass("action-l03").removeClass("action-l02");
+            clearTimeout(motion2)
             mainCont02_2
               .find(".swipe-motion-area").addClass("motion05")
               .removeClass("show")

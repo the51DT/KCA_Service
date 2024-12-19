@@ -59,8 +59,7 @@ aside {
   white-space: normal;
   font-family: "Pretendard", sans-serif;
 }
-html,
-body {
+html{
   overflow: hidden;
   position: relative;
   font-family: "Pretendard", sans-serif;
@@ -69,7 +68,19 @@ body {
   height: 100%;
   font-weight: 400;
   letter-spacing: -0.03125rem;
-  -webkit-overflow-scrolling: touch;
+  /* -webkit-overflow-scrolling: touch; */
+  height: -webkit-fill-available;
+  /* 익스플로러 IE 10 확대 제어 */
+  -ms-content-zooming: none;
+  -ms-touch-action: pan-x pan-y;
+}
+body{
+  overflow: hidden;
+  position: relative;
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
 }
 h1,
 h2,

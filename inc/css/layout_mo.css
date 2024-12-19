@@ -118,8 +118,11 @@
   }
   .sitemap-wrap .nav-wrap .gnb__tab-btn-wrap button.on::after {
     transform: rotateZ(180deg);
+    height:1.5rem;
   }
-
+  .nav-wrap .gnb__tab-btn-wrap li:hover button:after{
+    height:1.5rem;
+  }
   .header-wrap .utile-wrap,
   .header-wrap .header-inquiry_btn,
   .header-btn-wrap{
@@ -157,6 +160,9 @@
     color: #1a1a1a;
     font-weight: 600;
     border-bottom: 0;
+  }
+  .nav-wrap .gnb__tab-btn-wrap ul li a:hover::after{
+    display: none;
   }
   .mo-utile-wrap .lang-btn{
     margin-left:auto;

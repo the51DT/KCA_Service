@@ -8,7 +8,7 @@
 }
 
 .UTL-padding {
-  padding: 6.25rem 10rem;
+  padding: 6.25rem 10rem 0;
 }
 
 .login-wrap {
@@ -313,7 +313,7 @@
 /* 임시 레이아웃 깨짐 방지 미디어쿼리 적용 */ 
 @media screen and (max-width: 1360px) {
   .UTL-padding {
-    padding: 6.25rem 2.5rem;
+    padding: 6.25rem 2.5rem 0;
   } 
   .terms-agree-wrap {
     flex-direction: column;
@@ -327,7 +327,7 @@
 
 @media screen and (max-width: 1024px) {
   .UTL-padding {
-    padding: 3.75rem 1.88rem 1.25rem;
+    padding: 3.75rem 1.88rem 0;
   }
   .login-wrap {
     padding: 0;

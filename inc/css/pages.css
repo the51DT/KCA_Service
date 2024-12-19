@@ -3,7 +3,7 @@
 /* main page */
 .main-wrap {
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   overflow: hidden;
   background-color: #000;
   transition: all 0.5s;
@@ -955,9 +955,8 @@
   position: absolute;
   width: 100%;
   z-index: 10;
-  bottom: 0;
-  bottom:calc(constant(safe-area-inset-bottom));
-  bottom:calc(env(safe-area-inset-bottom));
+  bottom:constant(safe-area-inset-bottom);
+  bottom: env(safe-area-inset-bottom, 0px);
 }
 .main_content-footer:after {
   content: "";
@@ -1242,7 +1241,7 @@
   }
 
   /* 20241205 모바일에서 메인 푸터 수정 */
-  .main-wrap.action-l01 .main_content-footer .main-item-list .main-item01,
+  /* .main-wrap.action-l01 .main_content-footer .main-item-list .main-item01,
   .main-wrap.action-l01 .main_content-footer .main-item-list .main-item02,
   .main-wrap.action-l01 .main_content-footer .main-item-list .main-item03,
   .main-wrap.action-l01 .main_content-footer .main-item-list .main-item04 {
@@ -1260,7 +1259,7 @@
   .main-wrap.action-l03 .main_content-footer .main-item-list .main-item02,
   .main-wrap.action-l03 .main_content-footer .main-item-list .main-item03,
   .main-wrap.action-l03 .main_content-footer .main-item-list .main-item04 {
-    /*  컨텐츠 배경색은 #CCCCCC, 피그마 상에서는 #c8c8c8 */
+    
     background: #cccccc;
   }
 
@@ -1268,9 +1267,9 @@
   .main-wrap.action-l04 .main_content-footer .main-item-list .main-item02,
   .main-wrap.action-l04 .main_content-footer .main-item-list .main-item03,
   .main-wrap.action-l04 .main_content-footer .main-item-list .main-item04 {
-    /* 피그마 상에서는 #FEFEFE */
+    
     background: #fefefe;
-  }
+  } */
   /*  20241205 모바일에서 메인 푸터 수정 끝 */
 
   /* main_content02 */
